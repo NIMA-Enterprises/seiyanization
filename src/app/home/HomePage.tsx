@@ -1,6 +1,5 @@
 import React from "react";
 
-import { cn } from "@/lib/utils";
 import { HomeCards } from "./HomeCards";
 import { HomeFeaturedTopics } from "./HomeFeaturedTopics";
 import { HomeVideoTutorials } from "./HomeVideoTutorials";
@@ -9,14 +8,16 @@ import { HomeSupportedBy } from "./HomeSupportedBy";
 import { HomeCategories } from "./HomeCategories";
 import { HomeRoadMap } from "./HomeRoadMap";
 import { HomeBlogPosts } from "./HomeBlogPosts";
-import { HomeTrustedBy } from "./HomeTrustedBy";
+import { BuildingOnSei } from "./BuildingOnSei";
+import { cn } from "@/lib/utils";
+import { HomeSeiCommunity } from "./HomeSeiCommunity";
 
 const HomePage: React.FC<{ className?: string; children: React.ReactNode }> = ({
   className,
   children,
 }) => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className={cn("flex flex-col gap-6", className)}>
       <HomeIntroSection />
       <HomeCards />
       <HomeFeaturedTopics />
@@ -26,7 +27,8 @@ const HomePage: React.FC<{ className?: string; children: React.ReactNode }> = ({
       <HomeCategories />
       <HomeRoadMap />
       <HomeBlogPosts />
-      <HomeTrustedBy />
+      <BuildingOnSei />
+      <HomeSeiCommunity />
     </div>
   );
 };
