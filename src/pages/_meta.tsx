@@ -16,6 +16,10 @@ const meta: Meta = {
   guides: {
     title: "Guides",
     type: "page",
+    theme: {
+      layout: "full",
+      sidebar: true,
+    },
   },
   faq: {
     title: "FAQ",
