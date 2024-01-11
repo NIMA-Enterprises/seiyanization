@@ -3,4 +3,40 @@ title: FAQ
 description: Get answers to the most frequently asked questions about SEI.
 ---
 
-# FAQ
+import { Card } from '@/components/Card'
+
+# FAQ: frequently asked questions
+<div className="flex flex-col gap-4 mt-8">
+  <Card>
+    <div className="flex flex-col gap-4">
+      <h2 className="text-xl font-semibold">First question?</h2>
+      <div>
+        Answer to the first question.
+        
+      </div>
+    </div>
+  </Card>
+  <Card>
+    <div className="flex flex-col gap-4">
+      <h2 className="text-xl font-semibold">Second question?</h2>
+      <div>
+        Answer to the second question. contact@sei.com
+      </div>
+    </div>
+  </Card>
+  <Card>
+    <div className="flex flex-col gap-4">
+      <h2 className="text-xl font-semibold">
+        Third question
+      </h2>
+      <div>
+        Answer to the third question with code example
+        ```bash filename="example" showLineNumbers
+        https://example.com
+        ```
+      </div>
+    </div>
+  </Card>
+
+ 
+</div>

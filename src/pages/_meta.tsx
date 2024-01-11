@@ -17,7 +17,7 @@ const meta: Meta = {
     title: "Guides",
     type: "page",
     theme: {
-      layout: "full",
+      layout: "raw",
       sidebar: true,
     },
   },
