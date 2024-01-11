@@ -6,7 +6,7 @@ const Footer: React.FC<{ className?: string; menu: boolean }> = ({
   menu,
 }) => {
   return (
-    <div className="w-full border-t pt-10 border-light-gray dark:border-gray">
+    <div className="w-full border-t pt-10 border-gray-200 dark:border-gray-700">
       <div className="flex flex-col items-center justify-center gap-4">
         <div className="grid w-full place-items-center items-center justify-center gap-6  md:gap-0">
           <div className="flex items-center gap-2">

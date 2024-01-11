@@ -2,3 +2,94 @@
 title: SEI Docs
 description: Learn all about SEI and new things SEI brings to web3 world.
 ---
+
+import {HomePage} from '../app/home';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+<HomePage >
+ <div className="max-w-screen flex flex-col gap-4 mt-6">
+      <h1 className="text-3xl font-semibold">Code examples</h1>
+      <Tabs className="homepage-code-snippets grid grid-cols-auto-fill-full items-start gap-6 lg:grid-cols-4" defaultValue="example1">
+
+    <TabsList className="flex flex-col items-start rounded-xl bg-gray-50 border h-auto p-2 gap-2 lg:col-span-1 lg:p-4 lg:gap-6 text-inherit dark:bg-[#1a1a1a] dark:border-neutral-800">
+      <TabsTrigger
+        className="p-0 pb-2 lg:pb-5 border-b w-full dark:border-neutral-800 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+        value="example1"
+      >
+        <div className="flex items-center flex-wrap gap-1">
+          <span>code example 1</span>
+        </div>
+      </TabsTrigger>
+      <TabsTrigger
+        className="p-0 pb-2 lg:pb-5 border-b w-full dark:border-neutral-800 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+        value="example2"
+      >
+        <div className="flex items-center flex-wrap gap-1">
+          <span>code example 2</span>
+        </div>
+      </TabsTrigger>
+      <TabsTrigger
+        className="p-0 pb-2 lg:pb-5 border-b w-full dark:border-neutral-800 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+        value="example3"
+      >
+        <div className="flex items-center flex-wrap gap-1">
+          <span>code example 3</span>
+        </div>
+      </TabsTrigger>
+      <TabsTrigger
+        className="p-0 pb-2 lg:pb-5 border-b w-full dark:border-neutral-800 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+        value="example4"
+      >
+        <div className="flex items-center flex-wrap gap-1">
+          <span>code example 4</span>
+        </div>
+      </TabsTrigger>
+      <TabsTrigger
+        className="p-0 w-full text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+        value="example5"
+      >
+        <div className="flex items-center flex-wrap gap-1">
+          <span>code example 5</span>
+        </div>
+      </TabsTrigger>
+    </TabsList>
+    <div className="w-full -mt-2 lg:col-span-3">
+      <TabsContent value="example1">
+        ```bash filename="example1" showLineNumbers
+        code here1
+        ```
+
+        <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
+      </TabsContent>
+      <TabsContent value="example2">
+        ```bash filename="example2" showLineNumbers
+        code here2
+        ```
+
+        <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
+      </TabsContent>
+      <TabsContent value="example3">
+        ```bash filename="example3" showLineNumbers
+        code here3
+        ```
+
+        <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
+      </TabsContent>
+      <TabsContent value="example4">
+        ```bash filename="example4" showLineNumbers
+        code here4
+        ```
+
+        <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
+      </TabsContent>
+       <TabsContent value="example5">
+        ```bash filename="example5" showLineNumbers
+        code here5
+        ```
+
+        <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
+      </TabsContent>
+    </div>
+  </Tabs>
+</div>
+</HomePage>
