@@ -1,5 +1,4 @@
 import { Footer } from "@/components/Footer";
-
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
