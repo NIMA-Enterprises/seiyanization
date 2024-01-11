@@ -1,35 +1,5 @@
 import { Card } from "@/components/Card";
-import { LayoutPanelLeft, Layers, FileCode, FileQuestion } from "lucide-react";
-
-const homeCards = [
-  {
-    title: "Platform overview",
-    description: "Learn more about this platform.",
-    icon: <LayoutPanelLeft className="size-10" />,
-    href: "/overview",
-  },
-  {
-    title: "Ecosystem",
-    description:
-      "Explore Sei’s, infrastructure solutions, and development tooling.",
-    icon: <Layers className="size-10" />,
-    href: "/products",
-  },
-  {
-    title: "Developer guides",
-    description:
-      "Find step-by-step guides for building, testing, and launching dapps with Sei.",
-    icon: <FileCode className="size-10" />,
-    href: "/guides",
-  },
-  {
-    title: "FAQ",
-    description:
-      "Got questions? Browse our FAQs for quick answers, or reach out to our support team.",
-    icon: <FileQuestion className="size-10" />,
-    href: "/faq",
-  },
-];
+import { homeCards } from "@/common/constants";
 
 const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
   return (

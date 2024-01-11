@@ -5,33 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components";
 import { Card } from "@/components/Card";
-
-const posts = [
-  {
-    url: "/",
-    image: "/images/img-placeholder.jpg",
-    title: "Blog post 1",
-    description: "Blog post description 1",
-  },
-  {
-    url: "/",
-    image: "/images/img-placeholder.jpg",
-    title: "Blog post 2",
-    description: "Blog post description 2",
-  },
-  {
-    url: "/",
-    image: "/images/img-placeholder.jpg",
-    title: "Blog post 3",
-    description: "Blog post description 3",
-  },
-  {
-    url: "/",
-    image: "/images/img-placeholder.jpg",
-    title: "Blog post 4",
-    description: "Blog post description 4",
-  },
-];
+import { homePosts } from "@/common/constants";
 
 const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -52,7 +26,7 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
         </div>
       </div>
       <div className="grid grid-cols-auto-fill-full gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {posts.map((post) => (
+        {homePosts.map((post) => (
           <Card
             className="!p-0 link-text-hover overflow-hidden"
             key={post.title}

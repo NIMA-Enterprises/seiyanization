@@ -1,67 +1,7 @@
 import Link from "next/link";
 import { Card } from "@/components/Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const featuredTopics = [
-  {
-    title: "Featured Topics Title 1",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 2",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 3",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 4",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 5",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 6",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 7",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 8",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 9",
-    href: "/",
-  },
-  {
-    title: "Featured Topics Title 10",
-    href: "/",
-  },
-];
-
-const installs = [
-  {
-    title: "Other title 1",
-    image: "/images/img-placeholder.jpg",
-    href: "/",
-  },
-  {
-    title: "Other title 2",
-    image: "/images/img-placeholder.jpg",
-    href: "/",
-  },
-  {
-    title: "Other title 3",
-    image: "/images/img-placeholder.jpg",
-    href: "/",
-  },
-];
+import { featuredTopics, homeInstalls } from "@/common/constants";
 
 const HomeFeaturedTopics = () => {
   return (
@@ -112,7 +52,7 @@ const HomeFeaturedTopics = () => {
         </TabsContent>
         <TabsContent value="other">
           <div className="grid grid-cols-auto-fill-full sm:grid-cols-3 gap-4">
-            {installs.map((item) => (
+            {homeInstalls.map((item) => (
               <Link
                 className="flex flex-col gap-2 link-text-hover"
                 target="_blank"

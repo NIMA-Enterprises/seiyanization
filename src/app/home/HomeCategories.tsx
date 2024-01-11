@@ -1,132 +1,13 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { IconCard } from "@/components/IconCard";
-import { cx } from "class-variance-authority";
-
-const categories = [
-  {
-    title: "Category 1",
-    items: [
-      {
-        title: "Sub category 1",
-        desc: "Sub category description",
-        icon: "megaphone",
-        href: "/",
-      },
-      {
-        title: "Sub category 2",
-        desc: "Sub category description",
-        icon: "globe",
-        href: "/",
-      },
-      {
-        title: "Sub category 3",
-        desc: "Sub category description",
-        icon: "folder-open",
-        href: "/",
-      },
-      {
-        title: "Sub category 4",
-        desc: "Sub category description",
-        icon: "users",
-        href: "/",
-      },
-    ],
-  },
-  {
-    title: "Category 2",
-    items: [
-      {
-        title: "Sub category 1",
-        desc: "Sub category description",
-        icon: "megaphone",
-        href: "/",
-      },
-      {
-        title: "Sub category 2",
-        desc: "Sub category description",
-        icon: "globe",
-        href: "/",
-      },
-      {
-        title: "Sub category 3",
-        desc: "Sub category description",
-        icon: "folder-open",
-        href: "/",
-      },
-      {
-        title: "Sub category 4",
-        desc: "Sub category description",
-        icon: "users",
-        href: "/",
-      },
-    ],
-  },
-  {
-    title: "Category 3",
-    items: [
-      {
-        title: "Sub category 1",
-        desc: "Sub category description",
-        icon: "megaphone",
-        href: "/",
-      },
-      {
-        title: "Sub category 2",
-        desc: "Sub category description",
-        icon: "globe",
-        href: "/",
-      },
-      {
-        title: "Sub category 3",
-        desc: "Sub category description",
-        icon: "folder-open",
-        href: "/",
-      },
-      {
-        title: "Sub category 4",
-        desc: "Sub category description",
-        icon: "users",
-        href: "/",
-      },
-    ],
-  },
-  {
-    title: "Category 4",
-    items: [
-      {
-        title: "Sub category 1",
-        desc: "Sub category description",
-        icon: "megaphone",
-        href: "/",
-      },
-      {
-        title: "Sub category 2",
-        desc: "Sub category description",
-        icon: "globe",
-        href: "/",
-      },
-      {
-        title: "Sub category 3",
-        desc: "Sub category description",
-        icon: "folder-open",
-        href: "/",
-      },
-      {
-        title: "Sub category 4",
-        desc: "Sub category description",
-        icon: "users",
-        href: "/",
-      },
-    ],
-  },
-];
+import { homeCategories } from "@/common/constants";
 
 const HomeCategories: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={cx("flex flex-col gap-6")}>
+    <div className={cn("flex flex-col gap-6")}>
       <h1 className="text-2xl font-semibold">Categories</h1>
-      {categories
+      {homeCategories
         .filter((category) => category.title !== "Platform")
         .map((category) => (
           <div key={category.title} className="flex flex-col gap-4">

@@ -4,33 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components";
-
-const changelogs = [
-  {
-    id: "1",
-    title: "Changlelog title 1",
-    href: "/",
-    date: "2021-01-01",
-  },
-  {
-    id: "2",
-    title: "Changlelog title 1",
-    href: "/",
-    date: "2021-01-01",
-  },
-  {
-    id: "3",
-    title: "Changlelog title 1",
-    href: "/",
-    date: "2021-01-01",
-  },
-  {
-    id: "4",
-    title: "Changlelog title 1",
-    href: "/",
-    date: "2021-01-01",
-  },
-];
+import { homeChangelogs } from "@/common/constants";
 
 const HomeRoadMap: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -51,7 +25,7 @@ const HomeRoadMap: React.FC<{ className?: string }> = ({ className }) => {
       <div className="relative">
         <div className="bg-orange-400 w-full   absolute left-0 top-3 h-2" />
         <div className="grid grid-cols-auto-fill-full gap-4 md:grid-cols-4">
-          {changelogs.map((road) => (
+          {homeChangelogs.map((road) => (
             <div
               className="flex flex-col gap-2 pl-6 relative md:pt-6 md:pl-0"
               key={road.id}

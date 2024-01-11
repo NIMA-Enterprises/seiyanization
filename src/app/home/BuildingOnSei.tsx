@@ -1,59 +1,43 @@
 import React from "react";
-import { FileQuestion } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRightIcon } from "lucide-react";
 
+import { cn } from "@/lib/utils";
 import { Card } from "@/components/Card";
-
-const logos = [
-  {
-    name: "Company 1",
-    url: "/",
-    image: <FileQuestion />,
-  },
-  {
-    name: "Company 1",
-    url: "/",
-    image: <FileQuestion />,
-  },
-  {
-    name: "Company 1",
-    url: "/",
-    image: <FileQuestion />,
-  },
-  {
-    name: "Company 1",
-    url: "/",
-    image: <FileQuestion />,
-  },
-  {
-    name: "Company 1",
-    url: "/",
-    image: <FileQuestion />,
-  },
-  {
-    name: "Company 1",
-    url: "/",
-    image: <FileQuestion />,
-  },
-];
+import { homeBuildingOnSei } from "@/common/constants";
 
 const BuildingOnSei: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className="flex flex-col gap-8">
-      <h1 className="text-2xl font-semibold text-center">
-        Building on SEI ecosystem
-      </h1>
-      <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6 items-center">
-        {logos.map((logo) => (
-          <Card
-            className="flex items-center justify-center px-2 py-0 bg-gray-50"
-            href={logo.url}
-            key={logo.name}
-          >
-            <div className="h-20 flex items-center">{logo.image}</div>
-          </Card>
+    <Card
+      className={cn(
+        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+      )}
+    >
+      <div className="flex flex-col gap-2">
+        <span className="text-md font-semibold">Building on sei</span>
+        <Link
+          className="flex items-center gap-1 text-sm link-text-no-underline"
+          href="/"
+        >
+          <span>See all</span>
+          <ArrowRightIcon size={14} />
+        </Link>
+      </div>
+      <div className="flex flex-wrap items-center gap-4">
+        {homeBuildingOnSei.map((builder) => (
+          <Image
+            className="border dark:border-neutral-800"
+            key={builder.name}
+            alt={builder.name}
+            src={builder.image}
+            width={48}
+            height={48}
+            priority
+          />
         ))}
       </div>
-    </div>
+    </Card>
   );
 };
 
