@@ -1,4 +1,5 @@
-import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
@@ -7,6 +8,9 @@ const config: DocsThemeConfig = {
   },
   logo: <p>SEI Docs by NIMA</p>,
   logoLink: false,
+  footer: {
+    component: Footer,
+  },
 };
 
 export default config;
