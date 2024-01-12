@@ -21,7 +21,7 @@ export const guides: PostType[] = [
     date: "01.09.2023.",
     href: "jobs/example-job-post-1",
     image: "/images/img-placeholder.jpg",
-    tags: [JOB_TAGS.ENGINEERING],
+    tags: [JOB_TAGS.MARKETING],
     featured: true,
   },
 ];
