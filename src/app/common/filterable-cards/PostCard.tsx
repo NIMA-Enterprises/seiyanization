@@ -38,7 +38,7 @@ const PostCard = ({
         <p className="text-sm">{description}</p>
         {tags?.length > 0 && (
           <div className="flex items-center flex-wrap gap-2">
-            {tags.map((tag) => (
+            {tags.map((tag: string) => (
               <div
                 key={tag}
                 className="px-2 py-1 text-[8px] border border-gray-300 dark:border-gray-700 bg-[white/80] uppercase rounded"

@@ -24,16 +24,16 @@ const PostFilterItems = ({
             <div className="flex items-center pl-3">
               <Checkbox
                 id={tag}
-                checked={!!filters[filterTags[tag]]}
+                checked={!!filters[filterTags[tag as keyof typeof filterTags]]}
                 onCheckedChange={(value: boolean) =>
-                  onChange(filterTags[tag], value)
+                  onChange(filterTags[tag as keyof typeof filterTags], value)
                 }
               />
               <label
                 htmlFor={tag}
                 className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                {filterTags[tag]}
+                {filterTags[tag as keyof typeof filterTags]}
               </label>
             </div>
           </div>

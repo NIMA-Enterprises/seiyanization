@@ -32,7 +32,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
   const handleFilterChange = (name: string, checked: boolean) => {
     setFilters((prevState) => {
       if (!checked) {
-        delete prevState[name];
+        delete prevState[name as keyof typeof prevState];
         return { ...prevState };
       }
 
@@ -49,7 +49,9 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
     }
 
     return Object.keys(filters).some((filterKey) => {
-      return filters[filterKey] && tags.includes(filterKey);
+      return (
+        filters[filterKey as keyof typeof filters] && tags.includes(filterKey)
+      );
     });
   };
 
