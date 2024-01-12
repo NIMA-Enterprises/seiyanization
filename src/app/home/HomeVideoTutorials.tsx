@@ -11,7 +11,7 @@ const HomeVideoTutorials = () => {
       <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2">
         {homeVideos.map((video) => (
           <Link
-            className="flex flex-col gap-2 link-text-hover"
+            className="flex flex-col gap-2 text-link-hover"
             key={video.title}
             href={video.url}
           >

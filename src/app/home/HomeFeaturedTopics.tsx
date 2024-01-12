@@ -9,13 +9,13 @@ const HomeFeaturedTopics = () => {
       <Tabs defaultValue="Popular topics">
         <TabsList className="flex items-center justify-start overflow-auto gap-4 bg-transparent text-inherit">
           <TabsTrigger
-            className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+            className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
             value="Popular topics"
           >
             Popular topics
           </TabsTrigger>
           <TabsTrigger
-            className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none link-text-hover data-[state=active]:link-text-no-underline"
+            className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
             value="other"
           >
             Other
@@ -28,7 +28,7 @@ const HomeFeaturedTopics = () => {
               {featuredTopics.slice(0, 5).map((topic) => (
                 <li className="w-fit" key={topic.title}>
                   <Link
-                    className="flex items-center gap-1 link-text-hover"
+                    className="flex items-center gap-1 text-link-hover"
                     href={topic.href}
                   >
                     <h3 className="text-sm font-semibold">{topic.title}</h3>
@@ -40,7 +40,7 @@ const HomeFeaturedTopics = () => {
               {featuredTopics.slice(5).map((topic) => (
                 <li className="w-fit" key={topic.title}>
                   <Link
-                    className="flex items-center gap-1 link-text-hover"
+                    className="flex items-center gap-1 text-link-hover"
                     href={topic.href}
                   >
                     <h3 className="text-sm font-semibold">{topic.title}</h3>
@@ -54,7 +54,7 @@ const HomeFeaturedTopics = () => {
           <div className="grid grid-cols-auto-fill-full sm:grid-cols-3 gap-4">
             {homeInstalls.map((item) => (
               <Link
-                className="flex flex-col gap-2 link-text-hover"
+                className="flex flex-col gap-2 text-link-hover"
                 target="_blank"
                 rel="noopener noreferrer"
                 href={item.href}

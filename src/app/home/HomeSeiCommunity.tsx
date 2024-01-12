@@ -5,11 +5,11 @@ const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div className={cn("mt-20", className)}>
       <div className="text-center mx-auto px-6 ">
-        <div className="max-w-xl mx-auto flex flex-col gap-6 mb-6 text-white">
+        <div className="max-w-xl mx-auto flex flex-col gap-6 mb-6 ">
           <h1 className="text-2xl md:text-4xl font-semibold">
             Connect with the SEI developer community
           </h1>
-          <p className="md:text-lg">
+          <p className="md:text-lg ">
             Join discussions, contribute to the ecosystem, share knowledge and
             insights, and work together
           </p>

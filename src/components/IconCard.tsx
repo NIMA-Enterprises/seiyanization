@@ -53,7 +53,7 @@ const IconCard = ({
       >
         <div className="flex flex-col">
           <div className="flex items-start gap-4 p-2">
-            <div className="primary-text">
+            <div className="text-orange-400">
               {icon === "cloud" && <CloudIcon size={28} />}
               {icon === "settings" && <SettingsIcon size={28} />}
               {icon === "codesandbox" && <CodesandboxIcon size={28} />}
@@ -101,7 +101,7 @@ const IconCard = ({
     >
       <div className="flex flex-col">
         <div className="flex items-center gap-2 text-xl p-4 border-b rounded-t-xl bg-gray-50 dark:bg-[#141414] dark:border-neutral-800">
-          <div className="primary-text">
+          <div className="text-orange-400">
             {icon === "cloud" && <CloudIcon />}
             {icon === "settings" && <SettingsIcon />}
             {icon === "codesandbox" && <CodesandboxIcon />}

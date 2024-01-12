@@ -10,6 +10,16 @@ const config: DocsThemeConfig = {
   footer: {
     component: Footer,
   },
+  color: {
+    hue: {
+      dark: 39,
+      light: 39,
+    },
+    saturation: {
+      dark: 80,
+      light: 100,
+    },
+  },
 };
 
 export default config;

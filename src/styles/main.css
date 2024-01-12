@@ -1,0 +1,74 @@
+@import "globals.css";
+
+@tailwind base;
+@tailwind utilities;
+
+
+html.dark {
+    --ui-link-color: #fb923c;
+
+}
+
+html.dark ._text-primary-600 {
+    color: #fb923c;
+}
+
+html.dark ._border-primary-500 {
+    border-color: #fb923c;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    letter-spacing: -0.011em;
+    line-height: 1.35;
+}
+
+figure {
+    @apply !mt-4 flex flex-col items-center justify-center;
+}
+
+figcaption {
+    @apply mt-2 text-sm text-center text-neutral-600 dark:text-neutral-400;
+}
+
+pre {
+    max-height: 500px;
+}
+
+.nextra-content img,
+.nextra-content iframe {
+    border-radius: 0.5rem;
+}
+
+iframe {
+    margin-top: 1rem;
+}
+
+a {
+    cursor: pointer;
+}
+
+p {
+    line-height: 1.6 !important;
+}
+
+mark {
+    background-color: inherit;
+}
+
+
+@layer utilities {
+    .text-link {
+        @apply cursor-pointer underline hover:opacity-80;
+        color: var(--ui-link-color);
+    }
+
+    .text-link-no-underline {
+        @apply cursor-pointer hover:opacity-80;
+        color: var(--ui-link-color);
+    }
+
+    .text-link-hover {
+        @apply cursor-pointer hover:text-[var(--ui-link-color)];
+    }
+}
