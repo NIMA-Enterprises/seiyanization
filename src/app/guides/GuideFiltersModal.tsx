@@ -18,12 +18,12 @@ const GuideFiltersModal = ({ filters, onChange }: GuideFiltersModalProps) => {
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="flex items-center gap-2 p-2 border rounded-lg dark:border-neutral-800">
+        <div className="flex items-center gap-2 p-2 border rounded dark:border-neutral-800">
           <SlidersHorizontalIcon size={18} />
           <span>Filters</span>
         </div>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="bg-inherit border">
         <DialogHeader>
           <DialogTitle>Filters</DialogTitle>
         </DialogHeader>
