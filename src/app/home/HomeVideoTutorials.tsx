@@ -5,7 +5,7 @@ import { homeVideos } from "@/common/constants";
 const HomeVideoTutorials = () => {
   return (
     <Card className="rounded-xl">
-      <div className="flex flex-col mb-4 pb-2 border-b w-full dark:border-neutral-800">
+      <div className="flex flex-col mb-4 pb-2 border-b w-full dark:border-[#001724]">
         <h1 className="text-md font-semibold">Video tutorials</h1>
       </div>
       <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2">

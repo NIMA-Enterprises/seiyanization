@@ -27,7 +27,7 @@ const BuildingOnSei: React.FC<{ className?: string }> = ({ className }) => {
       <div className="flex flex-wrap items-center gap-4">
         {homeBuildingOnSei.map((builder) => (
           <Image
-            className="border dark:border-neutral-800"
+            className="border dark:border-[#001724]"
             key={builder.name}
             alt={builder.name}
             src={builder.image}

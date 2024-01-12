@@ -12,7 +12,7 @@ export const guides: PostType[] = [
     description: "Job post description 1",
     date: "01.09.2023.",
     href: "jobs/example-job-post-1",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [JOB_TAGS.ENGINEERING],
   },
   {
@@ -20,7 +20,7 @@ export const guides: PostType[] = [
     description: "Job post description 2",
     date: "01.09.2023.",
     href: "jobs/example-job-post-1",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [JOB_TAGS.MARKETING],
     featured: true,
   },
@@ -57,7 +57,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
 
   return (
     <div className="pb-12">
-      <div className="mb-12 py-20 border-b dark:border-neutral-800">
+      <div className="mb-12 py-20 border-b dark:border-[#001724]">
         <div className="mx-auto px-6 max-w-[90rem]">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Job posts</h1>
           <p className="opacity-80 text-xl">Find job in Sei ecosystem</p>

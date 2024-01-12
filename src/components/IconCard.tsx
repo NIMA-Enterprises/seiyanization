@@ -47,13 +47,13 @@ const IconCard = ({
       <Link
         href={href}
         className={cn(
-          "cursor-pointer block hover:bg-gray-100 dark:hover:bg-[#1a1a1a]/70",
+          "cursor-pointer block hover:bg-gray-100 dark:hover:bg-sei-black/70",
           className
         )}
       >
         <div className="flex flex-col">
           <div className="flex items-start gap-4 p-2">
-            <div className="text-orange-400">
+            <div className="text-sei-red">
               {icon === "cloud" && <CloudIcon size={28} />}
               {icon === "settings" && <SettingsIcon size={28} />}
               {icon === "codesandbox" && <CodesandboxIcon size={28} />}
@@ -95,13 +95,13 @@ const IconCard = ({
     <Link
       href={href}
       className={cn(
-        "cursor-pointer block bg-white border border-gray-200 rounded-xl hover:bg-gray-100 dark:bg-[#191919] dark:border-neutral-800 dark:hover:bg-[#1a1a1a]/70",
+        "cursor-pointer block bg-white border border-gray-200 rounded-xl hover:bg-gray-100 dark:bg-[#191919] dark:border-[#001724] dark:hover:bg-sei-black/70",
         className
       )}
     >
       <div className="flex flex-col">
-        <div className="flex items-center gap-2 text-xl p-4 border-b rounded-t-xl bg-gray-50 dark:bg-[#141414] dark:border-neutral-800">
-          <div className="text-orange-400">
+        <div className="flex items-center gap-2 text-xl p-4 border-b rounded-t-xl bg-gray-50 dark:bg-[#141414] dark:border-[#001724]">
+          <div className="text-sei-red">
             {icon === "cloud" && <CloudIcon />}
             {icon === "settings" && <SettingsIcon />}
             {icon === "codesandbox" && <CodesandboxIcon />}

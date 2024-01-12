@@ -35,7 +35,7 @@
 
     --ui-radius: 0.5rem;
 
-    --ui-link-color: #fb923c;
+    --ui-link-color: #C1121F;
 
   }
 
@@ -68,6 +68,6 @@
     --ui-input: 217.2 32.6% 17.5%;
     --ui-ring: 212.7 26.8% 83.9%;
 
-
+    --ui-link-color: #C1121F;
   }
 }

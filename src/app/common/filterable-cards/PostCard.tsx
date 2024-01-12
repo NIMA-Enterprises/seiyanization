@@ -27,7 +27,7 @@ const PostCard = ({
         {(date || featured) && (
           <div className="flex items-center gap-2">
             {featured && (
-              <p className="px-2 py-1 text-[8px] border rounded border-orange-600 bg-orange-500 text-white font-bold uppercase ">
+              <p className="px-2 py-1 text-[8px] border rounded border-sei-red bg-sei-red text-white font-bold uppercase ">
                 FEATURED
               </p>
             )}

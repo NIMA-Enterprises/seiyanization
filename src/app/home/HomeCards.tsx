@@ -7,13 +7,13 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
       {homeCards.map((card) => (
         <Card
           href={card.href}
-          className="hover:bg-gray-100 dark:hover:bg-[#191919]"
+          className="hover:bg-gray-100 dark:hover:bg-sei-black/70"
           key={card.title}
         >
           <div className="flex items-start gap-4">
             <div className="w-10">{card.icon}</div>
             <div className="flex flex-col gap-1">
-              <h1 className="text-xl font-semibold text-orange-400">
+              <h1 className="text-xl font-semibold text-sei-red">
                 {card.title}
               </h1>
               <p className="text-sm">{card.description}</p>

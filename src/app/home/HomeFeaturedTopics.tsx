@@ -21,7 +21,7 @@ const HomeFeaturedTopics = () => {
             Other
           </TabsTrigger>
         </TabsList>
-        <hr className="dark:border-neutral-800 mb-4" />
+        <hr className="dark:border-[#001724] mb-4" />
         <TabsContent value="Popular topics">
           <div className="grid grid-cols-auto-fill-full gap-2 sm:gap-4 sm:grid-cols-2">
             <ul className="pl-5 flex flex-col gap-2 list-disc">

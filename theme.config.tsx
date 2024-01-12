@@ -10,14 +10,17 @@ const config: DocsThemeConfig = {
   footer: {
     component: Footer,
   },
+  sidebar: {
+    toggleButton: false,
+  },
   color: {
     hue: {
-      dark: 39,
-      light: 39,
+      dark: 360,
+      light: 75,
     },
     saturation: {
-      dark: 80,
-      light: 100,
+      dark: 360,
+      light: 75,
     },
   },
 };

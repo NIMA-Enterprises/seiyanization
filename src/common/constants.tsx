@@ -15,28 +15,28 @@ export const homeCards = [
   {
     title: "Platform overview",
     description: "Learn more about this platform.",
-    icon: <LayoutPanelLeft className="size-10 text-orange-400" />,
+    icon: <LayoutPanelLeft className="size-10 text-sei-red" />,
     href: "/overview",
   },
   {
     title: "Ecosystem",
     description:
       "Explore Sei’s, infrastructure solutions, and development tooling.",
-    icon: <Layers className="size-10 text-orange-400" />,
+    icon: <Layers className="size-10 text-sei-red" />,
     href: "/products",
   },
   {
     title: "Developer guides",
     description:
       "Find step-by-step guides for building, testing, and launching dapps with Sei.",
-    icon: <FileCode className="size-10 text-orange-400" />,
+    icon: <FileCode className="size-10 text-sei-red" />,
     href: "/guides",
   },
   {
     title: "FAQ",
     description:
       "Got questions? Browse our FAQs for quick answers, or reach out to our support team.",
-    icon: <FileQuestion className="size-10 text-orange-400" />,
+    icon: <FileQuestion className="size-10 text-sei-red" />,
     href: "/faq",
   },
 ];
@@ -163,17 +163,17 @@ export const homeCategories: HomeCategory[] = [
 export const homeInstalls: Topic[] = [
   {
     title: "Other title 1",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     href: "/",
   },
   {
     title: "Other title 2",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     href: "/",
   },
   {
     title: "Other title 3",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     href: "/",
   },
 ];
@@ -208,25 +208,25 @@ export const homeChangelogs: Changelog[] = [
 export const homePosts: HomePost[] = [
   {
     url: "/",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     title: "Blog post 1",
     description: "Blog post description 1",
   },
   {
     url: "/",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     title: "Blog post 2",
     description: "Blog post description 2",
   },
   {
     url: "/",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     title: "Blog post 3",
     description: "Blog post description 3",
   },
   {
     url: "/",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     title: "Blog post 4",
     description: "Blog post description 4",
   },
@@ -291,26 +291,26 @@ export const homeVideos: HomeVideo[] = [
     title:
       "The fundamental use case of blockchains with Sei Labs Founder Jeff Feng",
     description: "description.",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     url: "https://www.youtube.com/watch?v=OOhwd7VoFcw",
   },
   {
     title:
       "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
     description: "description",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     url: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
   },
   {
     title: "What is Sei Network? - simply explained by Sei Co-Founder Jay Jog",
     description: "description",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     url: "https://www.youtube.com/watch?v=k3MhT8Ashig",
   },
   {
     title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
     description: "description.",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     url: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
   },
 ];
@@ -378,7 +378,7 @@ export const guides: PostType[] = [
     description: "Guide description",
     date: "01.09.2023.",
     href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [GUIDE_TAGS.TAG1, GUIDE_TAGS.TAG2],
   },
   {
@@ -386,7 +386,7 @@ export const guides: PostType[] = [
     description: "Guide description",
     date: "24.08.2023.",
     href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [GUIDE_TAGS.TAG1, GUIDE_TAGS.TAG2],
     featured: true,
   },
@@ -395,7 +395,7 @@ export const guides: PostType[] = [
     description: "Guide description",
     date: "31.08.2023.",
     href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [GUIDE_TAGS.TAG5],
     featured: true,
   },
@@ -404,7 +404,7 @@ export const guides: PostType[] = [
     description: "Guide description",
     date: "11.08.2023.",
     href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [GUIDE_TAGS.TAG3],
     featured: true,
   },
@@ -413,7 +413,7 @@ export const guides: PostType[] = [
     description: "Guide description",
     date: "02.06.2023.",
     href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [GUIDE_TAGS.TAG5],
     featured: false,
   },
@@ -422,14 +422,14 @@ export const guides: PostType[] = [
     description: "Guide description",
     date: "14.07.2023.",
     href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     tags: [GUIDE_TAGS.TAG1],
     featured: false,
   },
   {
     title: "Guide title 7",
     description: "Guide description",
-    image: "/images/img-placeholder.jpg",
+    image: "/images/image-placeholder.png",
     date: "04.08.2023.",
     href: "guides/guide-1-example",
     tags: [GUIDE_TAGS.TAG4],

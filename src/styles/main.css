@@ -3,18 +3,38 @@
 @tailwind base;
 @tailwind utilities;
 
-
-html.dark {
-    --ui-link-color: #fb923c;
-
+aside>:last-child {
+    background-color: #001B2A !important;
+    box-shadow: none !important;
 }
 
+.dark .nextra-scrollbar>* {
+    background-color: #001B2A !important;
+    box-shadow: none !important;
+}
+
+.dark body {
+    background-color: #001B2A !important;
+    --ui-bg-dark: #001B2A;
+}
+
+.header {
+    background: url("/images/sei-bg-ball.png") no-repeat center;
+    background-size: cover;
+}
+
+.community-background {
+    background: url("/images/sei-bg-simple.png") no-repeat center;
+    background-size: cover;
+}
+
+
 html.dark ._text-primary-600 {
-    color: #fb923c;
+    color: #C1121F;
 }
 
 html.dark ._border-primary-500 {
-    border-color: #fb923c;
+    border-color: #C1121F;
 }
 
 body {
