@@ -1,17 +1,20 @@
 import React from "react";
-
 import { Checkbox } from "@/components/ui";
-import { GUIDE_TAGS } from "@/common/constants";
 
-interface GuideFilterItemsProps {
+interface PostFilterItemsProps {
   filters: Record<string, boolean>;
   onChange: (name: string, checked: boolean) => void;
+  filterTags: any[];
 }
 
-const GuideFilterItems = ({ filters, onChange }: GuideFilterItemsProps) => {
+const PostFilterItems = ({
+  filters,
+  onChange,
+  filterTags,
+}: PostFilterItemsProps) => {
   return (
     <div className="flex flex-col gap-2 text-sm font-medium text-gray-900 dark:text-white">
-      {Object.keys(GUIDE_TAGS)
+      {Object.keys(filterTags)
         .sort()
         .map((tag) => (
           <div
@@ -21,16 +24,16 @@ const GuideFilterItems = ({ filters, onChange }: GuideFilterItemsProps) => {
             <div className="flex items-center pl-3">
               <Checkbox
                 id={tag}
-                checked={!!filters[GUIDE_TAGS[tag]]}
+                checked={!!filters[filterTags[tag]]}
                 onCheckedChange={(value: boolean) =>
-                  onChange(GUIDE_TAGS[tag], value)
+                  onChange(filterTags[tag], value)
                 }
               />
               <label
                 htmlFor={tag}
                 className="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
               >
-                {GUIDE_TAGS[tag]}
+                {filterTags[tag]}
               </label>
             </div>
           </div>
@@ -39,4 +42,4 @@ const GuideFilterItems = ({ filters, onChange }: GuideFilterItemsProps) => {
   );
 };
 
-export { GuideFilterItems };
+export { PostFilterItems };

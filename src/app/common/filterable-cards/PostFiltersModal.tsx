@@ -1,5 +1,6 @@
 import React from "react";
 import { SlidersHorizontalIcon } from "lucide-react";
+
 import {
   Dialog,
   DialogContent,
@@ -7,14 +8,19 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui";
-import { GuideFilterItems } from "./GuideFilterItems";
+import { PostFilterItems } from "./PostFilterItems";
 
-interface GuideFiltersModalProps {
+interface PostFilterModalProps {
   filters: Record<string, boolean>;
   onChange: (name: string, checked: boolean) => void;
+  filterTags: any[];
 }
 
-const GuideFiltersModal = ({ filters, onChange }: GuideFiltersModalProps) => {
+const PostFiltersModal = ({
+  filters,
+  onChange,
+  filterTags,
+}: PostFilterModalProps) => {
   return (
     <Dialog>
       <DialogTrigger>
@@ -28,11 +34,15 @@ const GuideFiltersModal = ({ filters, onChange }: GuideFiltersModalProps) => {
           <DialogTitle>Filters</DialogTitle>
         </DialogHeader>
         <div className="flex flex-col gap-2 text-sm">
-          <GuideFilterItems filters={filters} onChange={onChange} />
+          <PostFilterItems
+            filters={filters}
+            onChange={onChange}
+            filterTags={filterTags}
+          />
         </div>
       </DialogContent>
     </Dialog>
   );
 };
 
-export { GuideFiltersModal };
+export { PostFiltersModal };

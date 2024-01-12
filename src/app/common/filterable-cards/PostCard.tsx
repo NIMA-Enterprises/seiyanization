@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "@/components/Card";
 
-const GuideCard = ({
+const PostCard = ({
   title,
   description,
   image,
@@ -28,7 +28,7 @@ const GuideCard = ({
           <div className="flex items-center gap-2">
             {featured && (
               <p className="px-2 py-1 text-[8px] border rounded border-orange-600 bg-orange-500 text-white font-bold uppercase ">
-                Featured
+                FEATURED
               </p>
             )}
             {date && <p className="text-[12px]">{date}</p>}
@@ -53,4 +53,4 @@ const GuideCard = ({
   );
 };
 
-export { GuideCard };
+export { PostCard };

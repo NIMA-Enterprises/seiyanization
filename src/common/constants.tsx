@@ -1,5 +1,5 @@
 import {
-  GuideType,
+  PostType,
   HomeCategory,
   HomePost,
   Supporter,
@@ -367,7 +367,12 @@ export enum GUIDE_TAGS {
   TAG5 = "tag5",
 }
 
-export const guides: GuideType[] = [
+export enum JOB_TAGS {
+  ENGINEERING = "engineering",
+  MARKETING = "marketing",
+}
+
+export const guides: PostType[] = [
   {
     title: "Guide title 1",
     description: "Guide description",
@@ -428,24 +433,6 @@ export const guides: GuideType[] = [
     date: "04.08.2023.",
     href: "guides/guide-1-example",
     tags: [GUIDE_TAGS.TAG4],
-    featured: false,
-  },
-  {
-    title: "Guide title 3",
-    description: "Guide description",
-    date: "29.07.2023.",
-    href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
-    tags: [GUIDE_TAGS.TAG5],
-    featured: false,
-  },
-  {
-    title: "Guide title 3",
-    description: "Guide description",
-    date: "14.06.2023.",
-    href: "guides/guide-1-example",
-    image: "/images/img-placeholder.jpg",
-    tags: [GUIDE_TAGS.TAG5],
     featured: false,
   },
 ];

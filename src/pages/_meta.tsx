@@ -8,6 +8,13 @@ const meta: Meta = {
       sidebar: false,
     },
   },
+  overview: {
+    display: "hidden",
+    theme: {
+      layout: "full",
+      sidebar: false,
+    },
+  },
   documentation: {
     title: "Documentation",
     type: "page",
@@ -15,6 +22,14 @@ const meta: Meta = {
   },
   guides: {
     title: "Guides",
+    type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
+  },
+  jobs: {
+    title: "Jobs",
     type: "page",
     theme: {
       layout: "raw",

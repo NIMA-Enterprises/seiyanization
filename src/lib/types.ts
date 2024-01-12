@@ -1,6 +1,6 @@
 import React from "react";
 
-export type GuideType = {
+export type PostType = {
   title: string;
   description: string;
   date: string;

@@ -1,10 +1,32 @@
 import React, { useState } from "react";
-
-import { GUIDE_TAGS, guides } from "@/common/constants";
+import { cn } from "@/lib/utils";
+import { PostType } from "@/lib/types";
+import { JOB_TAGS } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
 
-const GuidesPage = () => {
+// not in contstants because it will change frequently
+export const guides: PostType[] = [
+  {
+    title: "Job post title 1",
+    description: "Job post description 1",
+    date: "01.09.2023.",
+    href: "jobs/example-job-post-1",
+    image: "/images/img-placeholder.jpg",
+    tags: [JOB_TAGS.ENGINEERING],
+  },
+  {
+    title: "Job post title 2",
+    description: "Job post description 2",
+    date: "01.09.2023.",
+    href: "jobs/example-job-post-1",
+    image: "/images/img-placeholder.jpg",
+    tags: [JOB_TAGS.ENGINEERING],
+    featured: true,
+  },
+];
+
+const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
   const [filters, setFilters] = useState({});
 
   const handleFilterChange = (name: string, checked: boolean) => {
@@ -35,10 +57,8 @@ const GuidesPage = () => {
     <div className="pb-12">
       <div className="mb-12 py-20 border-b dark:border-neutral-800">
         <div className="mx-auto px-6 max-w-[90rem]">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Guides</h1>
-          <p className="opacity-80 text-xl">
-            Learn how to use Sei by following our official guides and tutorials.
-          </p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Job posts</h1>
+          <p className="opacity-80 text-xl">Find job in Sei ecosystem</p>
         </div>
       </div>
       <div className="mx-auto px-6 max-w-[90rem]">
@@ -47,7 +67,7 @@ const GuidesPage = () => {
             <PostFilters
               filters={filters}
               onChange={handleFilterChange}
-              filtersTags={GUIDE_TAGS}
+              filtersTags={JOB_TAGS}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -80,4 +100,4 @@ const GuidesPage = () => {
   );
 };
 
-export { GuidesPage };
+export { JobsPage };
