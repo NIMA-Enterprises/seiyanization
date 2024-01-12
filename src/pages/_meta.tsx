@@ -1,13 +1,6 @@
 import { Meta } from "nextra";
 
 const meta: Meta = {
-  index: {
-    display: "hidden",
-    theme: {
-      layout: "full",
-      sidebar: false,
-    },
-  },
   overview: {
     display: "hidden",
     theme: {
@@ -15,10 +8,14 @@ const meta: Meta = {
       sidebar: false,
     },
   },
-  documentation: {
+  index: {
     title: "Documentation",
     type: "page",
     href: "/",
+    theme: {
+      layout: "full",
+      sidebar: false,
+    },
   },
   guides: {
     title: "Guides",
