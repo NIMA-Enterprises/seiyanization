@@ -3,7 +3,7 @@ import { homeCards } from "@/common/constants";
 
 const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className="grid grid-cols-auto-fill-full hover: gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid grid-cols-auto-fill-full hover: gap-6 md:grid-cols-2">
       {homeCards.map((card) => (
         <Card
           href={card.href}
