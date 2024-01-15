@@ -19,7 +19,7 @@ const PostFilterItems = ({
         .map((tag) => (
           <div
             key={tag}
-            className="w-full  cursor-pointer border-gray-200 border-2 rounded hover:bg-gray-100 dark:border-[#001724] dark:hover:bg-sei-black/70 dark:bg-sei-black"
+            className="w-full  cursor-pointer border-sei-border-light border-2 rounded hover:bg-gray-100 dark:border-sei-border-dark dark:hover:bg-sei-black/70 dark:bg-sei-black"
           >
             <div className="flex items-center pl-3">
               <Checkbox

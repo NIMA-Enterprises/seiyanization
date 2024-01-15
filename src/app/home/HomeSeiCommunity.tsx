@@ -14,7 +14,7 @@ const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
             insights, and work together
           </p>
         </div>
-        <div className="flex items-center justify-center mx-auto w-fit py-2 px-4 gap-4 border border-[#001724] rounded-full">
+        <div className="flex items-center justify-center mx-auto w-fit py-2 px-4 gap-4 border border-sei-border-dark rounded-full">
           <a href="" className="hover:opacity-80">
             <svg
               width="20"

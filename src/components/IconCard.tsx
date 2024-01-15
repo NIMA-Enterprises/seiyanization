@@ -95,12 +95,12 @@ const IconCard = ({
     <Link
       href={href}
       className={cn(
-        "cursor-pointer block bg-white border border-gray-200 rounded-xl hover:bg-gray-100 dark:bg-[#191919] dark:border-[#001724] dark:hover:bg-sei-black/70",
+        "cursor-pointer block bg-white border border-sei-border-light rounded-xl hover:bg-gray-100 dark:bg-[#191919] dark:border-sei-border-dark dark:hover:bg-sei-black/70",
         className
       )}
     >
       <div className="flex flex-col">
-        <div className="flex items-center gap-2 text-xl p-4 border-b rounded-t-xl bg-gray-50 dark:bg-[#141414] dark:border-[#001724]">
+        <div className="flex items-center gap-2 text-xl p-4 border-b rounded-t-xl bg-gray-50 dark:bg-[#141414] border-sei-border-light dark:border-sei-border-dark">
           <div className="text-sei-red">
             {icon === "cloud" && <CloudIcon />}
             {icon === "settings" && <SettingsIcon />}

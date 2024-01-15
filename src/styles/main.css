@@ -4,12 +4,12 @@
 @tailwind utilities;
 
 .dark aside>:last-child {
-    background-color: #001B2A !important;
+    background-color: #18181B !important;
     box-shadow: none !important;
 }
 
 .dark .nextra-scrollbar>* {
-    background-color: #001B2A !important;
+    background-color: #18181B !important;
     box-shadow: none !important;
 }
 
@@ -19,9 +19,10 @@
 }
 
 .dark body {
-    background-color: #001B2A !important;
-    --ui-bg-dark: #001B2A;
+    background-color: #18181B !important;
+    --ui-bg-dark: #18181B;
 }
+
 
 .header {
     background: url("/images/sei-bg-ball.png") no-repeat center;
@@ -35,11 +36,11 @@
 
 
 html.dark ._text-primary-600 {
-    color: #C1121F;
+    color: #F87171;
 }
 
 html.dark ._border-primary-500 {
-    border-color: #C1121F;
+    border-color: #F87171;
 }
 
 body {

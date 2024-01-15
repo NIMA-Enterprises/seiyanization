@@ -24,7 +24,7 @@ const PostFiltersModal = ({
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="flex items-center gap-2 p-2 border rounded dark:border-[#001724]">
+        <div className="flex items-center gap-2 p-2 border rounded border-sei-border-light dark:border-sei-border-dark">
           <SlidersHorizontalIcon size={18} />
           <span>Filters</span>
         </div>

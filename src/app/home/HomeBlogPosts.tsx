@@ -38,8 +38,12 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
               alt={post.title}
             />
             <div className="flex flex-col gap-2 p-4">
-              <h3 className="text-md font-semibold">{post.title}</h3>
-              <p className="text-sm">{post.description}</p>
+              <h3 className="text-md font-semibold text-sei-heading-light dark:text-sei-heading-dark">
+                {post.title}
+              </h3>
+              <p className="text-sm text-sei-subheading-light dark:text-sei-subheading-dark">
+                {post.description}
+              </p>
             </div>
           </Card>
         ))}

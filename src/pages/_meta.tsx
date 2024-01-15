@@ -9,7 +9,7 @@ const meta: Meta = {
     },
   },
   index: {
-    title: "Documentation",
+    title: "Home",
     type: "page",
     href: "/",
     theme: {

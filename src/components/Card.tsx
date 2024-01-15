@@ -16,7 +16,7 @@ const Card = ({
       <Link
         href={href}
         className={cn(
-          "block cursor-pointer p-4 bg-white border border-gray-200 rounded-xl hover:bg-gray-100 dark:bg-sei-black dark:border-[#001724] dark:hover:bg-sei-black/70",
+          "block cursor-pointer p-4 bg-sei-card-bg-light border border-sei-border-light rounded-xl  dark:bg-sei-card-bg-dark dark:border-sei-border-dark hover:dark:bg-sei-card-hover-dark hover:dark:border-transparent hover:border-transparent hover:bg-sei-card-hover-light",
           className
         )}
       >
@@ -28,7 +28,7 @@ const Card = ({
   return (
     <div
       className={cn(
-        "block p-4 bg-white border border-gray-200 rounded-xl dark:bg-sei-black dark:border-[#001724]",
+        "block p-4 bg-sei-card-bg-light border border-sei-border-light rounded-xl dark:bg-sei-card-bg-dark dark:border-sei-border-dark",
         className
       )}
     >

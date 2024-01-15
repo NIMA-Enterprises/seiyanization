@@ -36,10 +36,12 @@ const GuidesPage = () => {
 
   return (
     <div className="pb-12">
-      <div className="mb-12 py-20 border-b header dark:border-[#001724]">
+      <div className="mb-12 py-20 border-b header border-sei-border-light dark:border-sei-border-dark">
         <div className="mx-auto px-6 max-w-[90rem]">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Guides</h1>
-          <p className="opacity-80 text-xl">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-light">
+            Guides
+          </h1>
+          <p className="opacity-80 text-xl text-sei-subheading-light">
             Learn how to use Sei by following our official guides and tutorials.
           </p>
         </div>

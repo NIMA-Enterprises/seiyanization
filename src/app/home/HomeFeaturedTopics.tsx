@@ -5,9 +5,9 @@ import { featuredTopics, homeInstalls } from "@/common/constants";
 
 const HomeFeaturedTopics = () => {
   return (
-    <Card className="pt-2 rounded-xl">
-      <Tabs defaultValue="Popular topics">
-        <TabsList className="flex items-center justify-start overflow-auto gap-4 bg-transparent text-inherit">
+    <Card className="rounded-xl p-0 overflow-hidden">
+      <Tabs defaultValue="Popular topics" className="">
+        <TabsList className="flex items-center justify-start overflow-auto gap-4 p-6 bg-sei-card-bg-light dark:bg-sei-card-bg-dark text-inherit">
           <TabsTrigger
             className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
             value="Popular topics"
@@ -21,8 +21,11 @@ const HomeFeaturedTopics = () => {
             Other
           </TabsTrigger>
         </TabsList>
-        <hr className="dark:border-[#001724] mb-4" />
-        <TabsContent value="Popular topics">
+        <hr className="border-sei-border-light dark:border-sei-border-dark" />
+        <TabsContent
+          value="Popular topics"
+          className="p-4 mt-0 bg-sei-card-inner-light dark:bg-sei-card-inner-dark"
+        >
           <div className="grid grid-cols-auto-fill-full gap-2 sm:gap-4 sm:grid-cols-2">
             <ul className="pl-5 flex flex-col gap-2 list-disc">
               {featuredTopics.slice(0, 5).map((topic) => (
@@ -50,7 +53,10 @@ const HomeFeaturedTopics = () => {
             </ul>
           </div>
         </TabsContent>
-        <TabsContent value="other">
+        <TabsContent
+          value="other"
+          className="p-4 mt-0 bg-sei-card-inner-light dark:bg-sei-card-inner-dark"
+        >
           <div className="grid grid-cols-auto-fill-full sm:grid-cols-3 gap-4">
             {homeInstalls.map((item) => (
               <Link

@@ -23,13 +23,13 @@ export const routes = {
 
 const externalLinks = {
   sei: "https://sei.io/",
-  seiGithub: "",
-  seiTwitter: "",
-  seiDiscord: "",
-  seiTelegram: "",
-  resources: "",
-  seiFoundation: "",
-  seiDocs: "",
+  seiGithub: "/",
+  seiTwitter: "/",
+  seiDiscord: "/",
+  seiTelegram: "/",
+  resources: "/",
+  seiFoundation: "/",
+  seiDocs: "/",
 };
 // HOME PAGE
 export const homeCards = [

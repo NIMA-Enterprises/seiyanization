@@ -17,8 +17,30 @@ const config: Config = {
         ...colors,
         white: "#FFFFFF",
         black: "#001B2A",
+
+        "sei-border-dark": "#3F3F46",
+        "sei-border-light": "#E4E4E7",
+
+        "sei-card-bg-dark": "#18181B",
+        "sei-card-bg-light": "#FFFFFF",
+
+        "sei-card-inner-dark": "#27272A",
+        "sei-card-inner-light": "#FAFAFA",
+
+        "sei-card-hover-dark": "#27272A",
+        "sei-card-hover-light": "#FAFAFA",
+
+        "sei-heading-dark": "#F4F4F5",
+        "sei-heading-light": "#27272A",
+
+        "sei-subheading-dark": "#A1A1AA",
+        "sei-subheading-light": "#52525B",
+
+        "sei-text-dark": "",
+        "sei-text-light": "",
+
         border: "hsl(var(--border))",
-        "sei-red": "#C1121F",
+        "sei-red": "#F87171",
         "sei-black": "#001119",
         "sei-blue": "#001B2A",
         "sei-dark-blue": "#001119",
