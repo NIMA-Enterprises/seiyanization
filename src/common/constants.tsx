@@ -36,20 +36,20 @@ export const homeCards = [
   {
     title: "Platform overview",
     description: "Learn more about this platform.",
-    icon: <LayoutPanelLeft className="size-10 text-sei-red" />,
+    icon: <LayoutPanelLeft className="size-8 text-sei-red" />,
     href: routes.overview,
   },
   {
     title: "Developer guides",
     description:
       "Find step-by-step guides for building, testing, and launching dapps with Sei.",
-    icon: <FileCode className="size-10 text-sei-red" />,
+    icon: <FileCode className="size-8 text-sei-red" />,
     href: routes.guides,
   },
   {
     title: "Ecosystem",
     description: "Explore Sei’s, ecosystem.",
-    icon: <Layers className="size-10 text-sei-red" />,
+    icon: <Layers className="size-8 text-sei-red" />,
     href: routes.ecosystem,
     subItems: [
       {
@@ -67,12 +67,12 @@ export const homeCards = [
   {
     title: "Sei foundation",
     description: "Learn more about Sei foundation.",
-    icon: <Layers className="size-10 text-sei-red" />,
-    href: "/products",
+    icon: <Layers className="size-8 text-sei-red" />,
+    href: externalLinks.seiFoundation,
     subItems: [
       {
         title: "Twitter accounts",
-        href: externalLinks.seiFoundation,
+        href: "/",
         isExternal: true,
       },
       {
@@ -91,28 +91,28 @@ export const homeCards = [
     title: "Open sourced resources",
     description:
       "Explore Sei’s, infrastructure solutions, and development tooling.",
-    icon: <Layers className="size-10 text-sei-red" />,
+    icon: <Layers className="size-8 text-sei-red" />,
     href: externalLinks.resources,
   },
   {
     title: "Ecosystem KOLs",
     description:
       "Explore Sei’s, infrastructure solutions, and development tooling.",
-    icon: <Layers className="size-10 text-sei-red" />,
+    icon: <Layers className="size-8 text-sei-red" />,
     href: routes.ecosystemKOls,
   },
   {
     title: "Open jobs in Sei ecosystem",
     description:
       "Explore Sei’s, infrastructure solutions, and development tooling.",
-    icon: <Layers className="size-10 text-sei-red" />,
+    icon: <Layers className="size-8 text-sei-red" />,
     href: routes.jobs,
   },
   {
     title: "FAQ",
     description:
       "Got questions? Browse our FAQs for quick answers, or reach out to our support team.",
-    icon: <FileQuestion className="size-10 text-sei-red" />,
+    icon: <FileQuestion className="size-8 text-sei-red" />,
     href: routes.faq,
   },
 ];

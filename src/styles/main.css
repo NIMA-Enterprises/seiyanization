@@ -3,6 +3,22 @@
 @tailwind base;
 @tailwind utilities;
 
+
+main a {
+    color: #F87171 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+
+}
+
+main a:hover {
+    color: #27272A !important;
+}
+
+.dark main a:hover {
+    color: #F4F4F5 !important;
+}
+
 .dark aside>:last-child {
     background-color: #18181B !important;
     box-shadow: none !important;

@@ -10,7 +10,7 @@ const Card = ({
 }: {
   children: React.ReactNode;
   className?: string;
-  onClick: () => void;
+  onClick?: () => void;
   href?: string;
 }) => {
   if (href) {

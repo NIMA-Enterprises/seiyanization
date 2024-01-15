@@ -25,6 +25,15 @@ const meta: Meta = {
       sidebar: true,
     },
   },
+  ecosystem: {
+    display: "hidden",
+    title: "Ecosystem",
+    type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
+  },
   jobs: {
     title: "Jobs",
     type: "page",

@@ -47,7 +47,7 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
                       return;
                     }
                   }}
-                  className="text-sm underline font-semibold text-sei-red cursor-pointer"
+                  className="text-sm font-semibold cursor-pointer text-sei-red hover:dark:text-sei-heading-dark hover:text-sei-heading-light"
                 >
                   {subItem.title}
                 </p>

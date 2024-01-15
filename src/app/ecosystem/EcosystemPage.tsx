@@ -1,10 +1,31 @@
-import React, { useEffect, useState } from "react";
-
-import { GUIDE_TAGS, guides } from "@/common/constants";
+import React, { useState } from "react";
+import { PostType } from "@/lib/types";
+import { JOB_TAGS } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
 
-const GuidesPage = () => {
+// not in contstants because it will change frequently
+export const ecosystemPosts: PostType[] = [
+  {
+    title: "Ecosystem post title 1",
+    description: "Job post description 1",
+    date: "01.09.2023.",
+    href: "ecosystem/example-1",
+    image: "/images/image-placeholder.png",
+    tags: [JOB_TAGS.ENGINEERING],
+  },
+  {
+    title: "Ecosystem post title 2",
+    description: "Job post description 2",
+    date: "01.09.2023.",
+    href: "ecosystem/example-1",
+    image: "/images/image-placeholder.png",
+    tags: [JOB_TAGS.MARKETING],
+    featured: true,
+  },
+];
+
+const EcosystemPage: React.FC<{ className?: string }> = ({ className }) => {
   const [filters, setFilters] = useState({});
 
   const handleFilterChange = (name: string, checked: boolean) => {
@@ -35,14 +56,10 @@ const GuidesPage = () => {
 
   return (
     <div className="pb-12">
-      <div className="mb-12 py-20 border-b header border-sei-border-light dark:border-sei-border-dark">
+      <div className="mb-12 py-20 border-b header dark:border-sei-border-dark">
         <div className="mx-auto px-6 max-w-[90rem]">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-light">
-            Guides
-          </h1>
-          <p className="opacity-80 text-xl text-sei-subheading-light">
-            Learn how to use Sei by following our official guides and tutorials.
-          </p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Job posts</h1>
+          <p className="opacity-80 text-xl">Find job in Sei ecosystem</p>
         </div>
       </div>
       <div className="mx-auto px-6 max-w-[90rem]">
@@ -51,17 +68,21 @@ const GuidesPage = () => {
             <PostFilters
               filters={filters}
               onChange={handleFilterChange}
-              filtersTags={GUIDE_TAGS}
+              filtersTags={JOB_TAGS}
             />
           </div>
           <div className="flex flex-col gap-2">
             <p className="opacity-70">
               Showing{" "}
-              {guides.filter((guide) => checkEnabledFilters(guide.tags)).length}{" "}
-              of {guides.length} guides
+              {
+                ecosystemPosts.filter((guide) =>
+                  checkEnabledFilters(guide.tags)
+                ).length
+              }{" "}
+              of {ecosystemPosts.length} guides
             </p>
             <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {guides
+              {ecosystemPosts
                 .filter(
                   (guide) => guide.featured && checkEnabledFilters(guide.tags)
                 )
@@ -69,7 +90,7 @@ const GuidesPage = () => {
                   <PostCard key={guide.title} {...guide} />
                 ))}
 
-              {guides
+              {ecosystemPosts
                 .filter(
                   (guide) => !guide.featured && checkEnabledFilters(guide.tags)
                 )
@@ -84,4 +105,4 @@ const GuidesPage = () => {
   );
 };
 
-export { GuidesPage };
+export { EcosystemPage };
