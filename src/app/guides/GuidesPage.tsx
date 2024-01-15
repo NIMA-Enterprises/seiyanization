@@ -7,6 +7,11 @@ import { PostCard } from "../common/filterable-cards/PostCard";
 const GuidesPage = () => {
   const [filters, setFilters] = useState({});
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.href);
+    console.log(params.get("filter"));
+  }, []);
+
   const handleFilterChange = (name: string, checked: boolean) => {
     setFilters((prevState) => {
       if (!checked) {
@@ -35,12 +40,12 @@ const GuidesPage = () => {
 
   return (
     <div className="pb-12">
-      <div className="mb-12 py-20 border-b header border-sei-border-light dark:border-sei-border-dark">
+      <div className="mb-12 py-20 header ">
         <div className="mx-auto px-6 max-w-[90rem]">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-light">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-dark">
             Guides
           </h1>
-          <p className="opacity-80 text-xl text-sei-subheading-light">
+          <p className="opacity-80 text-xl text-sei-subheading-dark">
             Learn how to use Sei by following our official guides and tutorials.
           </p>
         </div>

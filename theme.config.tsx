@@ -15,12 +15,12 @@ const config: DocsThemeConfig = {
   },
   color: {
     hue: {
-      dark: 5,
-      light: 10,
+      dark: 184,
+      light: 168,
     },
     saturation: {
-      dark: 52,
-      light: 79,
+      dark: 69,
+      light: 59,
     },
   },
 };

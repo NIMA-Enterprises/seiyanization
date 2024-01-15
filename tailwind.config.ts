@@ -18,29 +18,29 @@ const config: Config = {
         white: "#FFFFFF",
         black: "#001B2A",
 
-        "sei-border-dark": "#3F3F46",
-        "sei-border-light": "#E4E4E7",
+        "sei-border-dark": "#334155",
+        "sei-border-light": "#E2E8F0",
 
-        "sei-card-bg-dark": "#18181B",
+        "sei-card-bg-dark": "#0F172A",
         "sei-card-bg-light": "#FFFFFF",
 
-        "sei-card-inner-dark": "#27272A",
-        "sei-card-inner-light": "#FAFAFA",
+        "sei-card-inner-dark": "#1E293B",
+        "sei-card-inner-light": "#F8FAFC",
 
-        "sei-card-hover-dark": "#27272A",
-        "sei-card-hover-light": "#FAFAFA",
+        "sei-card-hover-dark": "#1E293B",
+        "sei-card-hover-light": "#F8FAFC",
 
-        "sei-heading-dark": "#F4F4F5",
-        "sei-heading-light": "#27272A",
+        "sei-heading-dark": "#F1F5F9",
+        "sei-heading-light": "#1E293B",
 
-        "sei-subheading-dark": "#A1A1AA",
-        "sei-subheading-light": "#52525B",
+        "sei-subheading-dark": "#94A3B8",
+        "sei-subheading-light": "#475569",
 
         "sei-text-dark": "",
         "sei-text-light": "",
 
         border: "hsl(var(--border))",
-        "sei-red": "#F87171",
+        "sei-red": "#2DD4BF",
         "sei-black": "#001119",
         "sei-blue": "#001B2A",
         "sei-dark-blue": "#001119",

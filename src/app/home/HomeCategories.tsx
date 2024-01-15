@@ -18,7 +18,6 @@ const HomeCategories: React.FC<{ className?: string }> = ({ className }) => {
                   key={product.title}
                   {...product}
                   description={product.desc}
-                  className="rounded-lg hover:bg-white dark:hover:bg-[#111]"
                   noCard
                 />
               ))}

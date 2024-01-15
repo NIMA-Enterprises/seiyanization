@@ -10,7 +10,7 @@ const SupportedBy: React.FC<{ className?: string }> = ({ className }) => {
       <div className="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-6 items-center">
         {homeSupportedBy.map((supporter) => (
           <Card
-            className="flex items-center justify-center px-2 py-0 bg-gray-50"
+            className="flex items-center justify-center px-2 py-0 bg-gray-50 border-none"
             href={supporter.url}
             key={supporter.name}
           >

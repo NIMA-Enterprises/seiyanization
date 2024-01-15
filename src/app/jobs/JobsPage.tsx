@@ -57,10 +57,14 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
 
   return (
     <div className="pb-12">
-      <div className="mb-12 py-20 border-b header dark:border-sei-border-dark">
+      <div className="mb-12 py-20  header">
         <div className="mx-auto px-6 max-w-[90rem]">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">Job posts</h1>
-          <p className="opacity-80 text-xl">Find job in Sei ecosystem</p>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-dark">
+            Job posts
+          </h1>
+          <p className="opacity-80 text-xl text-sei-subheading-dark">
+            Find job in Sei ecosystem
+          </p>
         </div>
       </div>
       <div className="mx-auto px-6 max-w-[90rem]">

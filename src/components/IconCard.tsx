@@ -47,7 +47,7 @@ const IconCard = ({
       <Link
         href={href}
         className={cn(
-          "cursor-pointer block hover:bg-gray-100 dark:hover:bg-sei-black/70",
+          "cursor-pointer block bg-sei-card-bg-light rounded-xl  dark:bg-sei-card-bg-dark  hover:dark:bg-sei-card-hover-dark hover:dark:border-transparent hover:border-transparent hover:bg-sei-card-hover-light",
           className
         )}
       >

@@ -5,27 +5,54 @@
 
 
 main a {
-    color: #F87171 !important;
+    color: #2DD4BF !important;
     font-weight: 600 !important;
     text-decoration: none !important;
 
 }
 
+
+.nextra-code div {
+    background-color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+.dark .nextra-code div {
+    background-color: #0F172A !important;
+    box-shadow: none !important;
+
+}
+
+.nextra-code pre {
+    background-color: #F8FAFC !important;
+    box-shadow: none !important;
+    border: 1px solid #E2E8F0 !important;
+
+}
+
+
+
+.dark .nextra-code pre {
+    background-color: #1E293B !important;
+    box-shadow: none !important;
+    border: 1px solid #334155 !important;
+}
+
 main a:hover {
-    color: #27272A !important;
+    color: #1E293B !important;
 }
 
 .dark main a:hover {
-    color: #F4F4F5 !important;
+    color: #F1F5F9 !important;
 }
 
 .dark aside>:last-child {
-    background-color: #18181B !important;
+    background-color: #0F172A !important;
     box-shadow: none !important;
 }
 
 .dark .nextra-scrollbar>* {
-    background-color: #18181B !important;
+    background-color: #0F172A !important;
     box-shadow: none !important;
 }
 
@@ -35,28 +62,28 @@ main a:hover {
 }
 
 .dark body {
-    background-color: #18181B !important;
-    --ui-bg-dark: #18181B;
+    background-color: #0F172A !important;
+    --ui-bg-dark: #0F172A;
 }
 
 
 .header {
-    background: url("/images/sei-bg-ball.png") no-repeat center;
+    background: url("/images/cover-image.png") no-repeat center;
     background-size: cover;
 }
 
 .community-background {
-    background: url("/images/sei-bg-simple.png") no-repeat center;
+    background: url("/images/cover-image.png") no-repeat center;
     background-size: cover;
 }
 
 
 html.dark ._text-primary-600 {
-    color: #F87171;
+    color: #2DD4BF;
 }
 
 html.dark ._border-primary-500 {
-    border-color: #F87171;
+    border-color: #2DD4BF;
 }
 
 body {

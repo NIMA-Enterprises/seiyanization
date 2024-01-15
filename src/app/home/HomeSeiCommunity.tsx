@@ -3,13 +3,13 @@ import { cn } from "@/lib/utils";
 
 const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={cn("mt-20 community-background rounded", className)}>
-      <div className="text-center mx-auto px-6 text-sei-blue py-10">
+    <div className={cn("mt-20 community-background rounded-xl", className)}>
+      <div className="text-center mx-auto px-6 text-sei-heading-dark py-10">
         <div className="max-w-xl mx-auto flex flex-col gap-6 mb-6 ">
           <h1 className="text-2xl md:text-4xl font-semibold">
             Connect with the SEI developer community
           </h1>
-          <p className="md:text-lg ">
+          <p className="md:text-lg text-sei-subheading-dark">
             Join discussions, contribute to the ecosystem, share knowledge and
             insights, and work together
           </p>

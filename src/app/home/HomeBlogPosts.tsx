@@ -28,7 +28,7 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
       <div className="grid grid-cols-auto-fill-full gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {homePosts.map((post) => (
           <Card
-            className="!p-0 text-link-hover overflow-hidden"
+            className="!p-0 overflow-hidden border-none"
             key={post.title}
             href={post.url}
           >
