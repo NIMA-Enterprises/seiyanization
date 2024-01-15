@@ -10,34 +10,110 @@ import {
 } from "@/lib/types";
 import { LayoutPanelLeft, Layers, FileCode, FileQuestion } from "lucide-react";
 
+// GLOBAL
+export const routes = {
+  home: "/",
+  overview: "/overview",
+  ecosystem: "/ecosystem",
+  ecosystemKOls: "/ecosystem-kols",
+  guides: "/guides",
+  jobs: "/jobs",
+  faq: "/faq",
+};
+
+const externalLinks = {
+  sei: "https://sei.io/",
+  seiGithub: "",
+  seiTwitter: "",
+  seiDiscord: "",
+  seiTelegram: "",
+  resources: "",
+  seiFoundation: "",
+  seiDocs: "",
+};
 // HOME PAGE
 export const homeCards = [
   {
     title: "Platform overview",
     description: "Learn more about this platform.",
     icon: <LayoutPanelLeft className="size-10 text-sei-red" />,
-    href: "/overview",
-  },
-  {
-    title: "Ecosystem",
-    description:
-      "Explore Sei’s, infrastructure solutions, and development tooling.",
-    icon: <Layers className="size-10 text-sei-red" />,
-    href: "/products",
+    href: routes.overview,
   },
   {
     title: "Developer guides",
     description:
       "Find step-by-step guides for building, testing, and launching dapps with Sei.",
     icon: <FileCode className="size-10 text-sei-red" />,
-    href: "/guides",
+    href: routes.guides,
+  },
+  {
+    title: "Ecosystem",
+    description: "Explore Sei’s, ecosystem.",
+    icon: <Layers className="size-10 text-sei-red" />,
+    href: routes.ecosystem,
+    subItems: [
+      {
+        title: "CosmWasm projects",
+        href: `${routes.ecosystem}?filter=cosmwasm`,
+        isExternal: false,
+      },
+      {
+        title: "EVM projects",
+        href: `${routes.ecosystem}?filter=evm`,
+        isExternal: false,
+      },
+    ],
+  },
+  {
+    title: "Sei foundation",
+    description: "Learn more about Sei foundation.",
+    icon: <Layers className="size-10 text-sei-red" />,
+    href: "/products",
+    subItems: [
+      {
+        title: "Twitter accounts",
+        href: externalLinks.seiFoundation,
+        isExternal: true,
+      },
+      {
+        title: "Resources",
+        href: externalLinks.resources,
+        isExternal: true,
+      },
+      {
+        title: "Official documentation",
+        href: externalLinks.seiDocs,
+        isExternal: true,
+      },
+    ],
+  },
+  {
+    title: "Open sourced resources",
+    description:
+      "Explore Sei’s, infrastructure solutions, and development tooling.",
+    icon: <Layers className="size-10 text-sei-red" />,
+    href: externalLinks.resources,
+  },
+  {
+    title: "Ecosystem KOLs",
+    description:
+      "Explore Sei’s, infrastructure solutions, and development tooling.",
+    icon: <Layers className="size-10 text-sei-red" />,
+    href: routes.ecosystemKOls,
+  },
+  {
+    title: "Open jobs in Sei ecosystem",
+    description:
+      "Explore Sei’s, infrastructure solutions, and development tooling.",
+    icon: <Layers className="size-10 text-sei-red" />,
+    href: routes.jobs,
   },
   {
     title: "FAQ",
     description:
       "Got questions? Browse our FAQs for quick answers, or reach out to our support team.",
     icon: <FileQuestion className="size-10 text-sei-red" />,
-    href: "/faq",
+    href: routes.faq,
   },
 ];
 

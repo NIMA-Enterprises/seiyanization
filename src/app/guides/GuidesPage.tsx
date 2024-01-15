@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { GUIDE_TAGS, guides } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
+import { useSearchParams } from "next/navigation";
 
 const GuidesPage = () => {
   const [filters, setFilters] = useState({});
