@@ -11,7 +11,6 @@ main a {
 
 }
 
-
 .nextra-code div {
     background-color: #FFFFFF !important;
     box-shadow: none !important;
@@ -22,6 +21,23 @@ main a {
     box-shadow: none !important;
 
 }
+
+.nextra-nav-container {
+    background-color: #FFFFFF !important;
+
+}
+
+.dark .nextra-nav-container {
+    background-color: #0F172A !important;
+}
+
+.dark .nextra-nav-container-blur {
+    display: none !important;
+
+
+}
+
+
 
 .nextra-code pre {
     background-color: #F8FAFC !important;
