@@ -27,7 +27,7 @@ const PostCard = ({
         {(date || featured) && (
           <div className="flex items-center gap-2">
             {featured && (
-              <p className="px-2 py-1 text-[8px] border rounded border-sei-red bg-sei-red text-white font-bold uppercase ">
+              <p className="px-2 py-1 text-[10px] border rounded border-sei-red bg-sei-red text-white font-bold uppercase ">
                 FEATURED
               </p>
             )}
@@ -41,7 +41,7 @@ const PostCard = ({
             {tags.map((tag: string) => (
               <div
                 key={tag}
-                className="px-2 py-1 text-[8px] border border-gray-300 dark:border-gray-700 bg-[white/80] uppercase rounded"
+                className="px-2 py-1 text-[10px] border border-gray-300 dark:border-gray-700 bg-[white/80] uppercase rounded"
               >
                 {tag}
               </div>

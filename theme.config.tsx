@@ -16,11 +16,11 @@ const config: DocsThemeConfig = {
   color: {
     hue: {
       dark: 360,
-      light: 75,
+      light: 0,
     },
     saturation: {
       dark: 360,
-      light: 75,
+      light: 79,
     },
   },
 };
