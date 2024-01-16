@@ -33,6 +33,24 @@ const meta: Meta = {
       sidebar: true,
     },
   },
+  videos: {
+    display: "hidden",
+    title: "Videos",
+    type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
+  },
+  articles: {
+    display: "hidden",
+    title: "Articles",
+    type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
+  },
   jobs: {
     title: "Jobs",
     type: "page",

@@ -437,6 +437,31 @@ export enum JOB_TAGS {
   MARKETING = "marketing",
 }
 
+export enum ARTICLE_TAGS {
+  ENGINEERING = "engineering",
+  MARKETING = "marketing",
+}
+
+export const articles: PostType[] = [
+  {
+    title: "Article title 1",
+    description: "Article description",
+    date: "01.09.2023.",
+    href: "articles/article-1-example",
+    image: "",
+    tags: [ARTICLE_TAGS.MARKETING],
+  },
+  {
+    title: "Article title 2",
+    description: "Article description",
+    date: "24.08.2023.",
+    href: "articles/article-1-example",
+    image: "",
+    tags: [ARTICLE_TAGS.ENGINEERING],
+    featured: true,
+  },
+];
+
 export const guides: PostType[] = [
   {
     title: "Guide title 1",
