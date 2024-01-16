@@ -23,7 +23,7 @@ const HomeFeaturedTopics = () => {
             value="communityArticles"
             // onClick={() => setActive("Comminity Articles")}
           >
-            Comminity Articles
+            Community Articles
           </TabsTrigger>
           {/* <TabsTrigger
             className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
