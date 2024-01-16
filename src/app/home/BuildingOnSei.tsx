@@ -11,7 +11,7 @@ const BuildingOnSei: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <Card
       className={cn(
-        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between mt-10"
       )}
     >
       <div className="flex flex-col gap-2">
@@ -26,15 +26,19 @@ const BuildingOnSei: React.FC<{ className?: string }> = ({ className }) => {
       </div>
       <div className="flex flex-wrap items-center gap-4">
         {homeBuildingOnSei.map((builder) => (
-          <Image
-            className="border border-sei-border-light dark:border-sei-border-dark"
+          <div
             key={builder.name}
-            alt={builder.name}
-            src={builder.image}
-            width={48}
-            height={48}
-            priority
-          />
+            className="w-10 h-10 rounded-full overflow-hidden"
+          >
+            <Image
+              className="w-full"
+              alt={builder.name}
+              src={builder.image}
+              width={50}
+              height={50}
+              priority
+            />
+          </div>
         ))}
       </div>
     </Card>

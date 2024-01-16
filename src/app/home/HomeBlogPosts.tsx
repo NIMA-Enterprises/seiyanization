@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components";
 import { Card } from "@/components/Card";
 import { homePosts } from "@/common/constants";
+import { ImageWithLoading } from "@/components/ImageWithLoadings";
 
 const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -34,11 +35,8 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
               key={post.title}
               href={post.url}
             >
-              <img
-                className="object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
-                src={postImg}
-                alt={post.title}
-              />
+              <ImageWithLoading url={postImg} />
+
               <div className="flex flex-col gap-2 p-4">
                 <h3 className="text-md font-semibold text-sei-heading-light dark:text-sei-heading-dark">
                   {post.title}

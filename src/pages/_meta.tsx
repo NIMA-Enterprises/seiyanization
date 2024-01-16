@@ -26,7 +26,6 @@ const meta: Meta = {
     },
   },
   ecosystem: {
-    display: "hidden",
     title: "Ecosystem",
     type: "page",
     theme: {

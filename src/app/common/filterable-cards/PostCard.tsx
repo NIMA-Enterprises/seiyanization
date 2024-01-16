@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "@/components/Card";
+import { ImageWithLoading } from "@/components/ImageWithLoadings";
 
 const PostCard = ({
   title,
@@ -17,21 +18,21 @@ const PostCard = ({
     )}&description=${encodeURIComponent(description)}`;
 
   return (
-    <Card className="!p-0 overflow-hidden" href={href}>
-      <img
+    <Card className="!p-0 overflow-hidden w-full" href={href}>
+      <ImageWithLoading
+        url={imageUrl}
         className="rounded-lg object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
-        src={imageUrl}
-        alt="seiyanization"
       />
+
       <div className="flex flex-col gap-2 p-4">
         {(date || featured) && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between gap-2">
+            {date && <p className="text-[12px]">{date}</p>}
             {featured && (
-              <p className="px-2 py-1 text-[10px] border rounded border-sei-red bg-sei-red text-white font-bold uppercase ">
+              <p className="px-1 text-[10px] rounded  bg-sei-main-light dark:bg-sei-main-dark text-sei-card-bg-dark font-bold uppercase ">
                 FEATURED
               </p>
             )}
-            {date && <p className="text-[12px]">{date}</p>}
           </div>
         )}
         <h3 className="font-bold text-lg">{title}</h3>

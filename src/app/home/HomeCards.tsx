@@ -8,7 +8,11 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
   const router = useRouter();
 
   return (
-    <div className={cn("grid grid-cols-auto-fill-full gap-6 md:grid-cols-2")}>
+    <div
+      className={cn(
+        "grid grid-cols-auto-fill-full gap-6 grid-cols-2 md:grid-cols-4"
+      )}
+    >
       {homeCards.map((card) => (
         <Card
           onClick={() => {
@@ -34,7 +38,7 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
           </div>
 
           <div className="flex flex-col gap-2 pl-14 mt-2">
-            {card?.subItems?.map((subItem) => {
+            {/* {card?.subItems?.map((subItem) => {
               return (
                 <p
                   key={subItem.title}
@@ -49,12 +53,12 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
 
                     router.push(subItem.href);
                   }}
-                  className="w-fit text-sm font-semibold cursor-pointer text-sei-red hover:dark:text-sei-heading-dark hover:text-sei-heading-light"
+                  className="w-fit text-sm font-semibold cursor-pointer text-sei-main-light dark:text-sei-main-dark hover:dark:text-sei-heading-dark hover:text-sei-heading-light"
                 >
                   {subItem.title}
                 </p>
               );
-            })}
+            })} */}
           </div>
         </Card>
       ))}

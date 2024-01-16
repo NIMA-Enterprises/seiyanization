@@ -15,7 +15,7 @@ export type HomeCategory = {
   items: {
     title: string;
     desc: string;
-    icon: string;
+    img: string;
     href: string;
   }[];
 };

@@ -67,12 +67,12 @@ const config: DocsThemeConfig = {
   },
   color: {
     hue: {
-      dark: 184,
-      light: 168,
+      dark: 93,
+      light: 115,
     },
     saturation: {
-      dark: 69,
-      light: 59,
+      dark: 80,
+      light: 78,
     },
   },
 };

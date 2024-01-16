@@ -119,7 +119,7 @@ export function OGImage({
       <div
         style={{
           fontSize: 18,
-          color: "#2DD4BF",
+          color: "#78FFCC",
         }}
       >
         Seiyanization

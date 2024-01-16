@@ -20,14 +20,14 @@ const HomePage: React.FC<{ className?: string; children: React.ReactNode }> = ({
     <div className={cn("flex flex-col gap-6", className)}>
       <HomeIntroSection />
       <HomeCards />
-      <HomeFeaturedTopics />
       <HomeVideoTutorials />
+      <HomeFeaturedTopics />
       <div className="w-full">{children}</div>
-      <BuildingOnSei />
       <HomeCategories />
-      <HomeRoadMap />
-      <HomeBlogPosts />
-      <SupportedBy />
+      <BuildingOnSei />
+      {/* <HomeRoadMap /> */}
+      {/* <HomeBlogPosts /> */}
+      {/* <SupportedBy /> */}
       <HomeSeiCommunity />
     </div>
   );

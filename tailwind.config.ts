@@ -39,8 +39,11 @@ const config: Config = {
         "sei-text-dark": "",
         "sei-text-light": "",
 
+        "sei-main-light": "#00D181",
+        "sei-main-dark": "#78FFCC",
+
         border: "hsl(var(--border))",
-        "sei-red": "#2DD4BF",
+
         "sei-black": "#001119",
         "sei-blue": "#001B2A",
         "sei-dark-blue": "#001119",
