@@ -25,7 +25,7 @@ export const routes = {
 export const homeCards = [
   {
     title: "Seiyanization overview",
-    description: "Learn more about this platform.",
+    description: "Learn more about this platform, idea, inspiration, and future plans.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -45,9 +45,9 @@ export const homeCards = [
     href: routes.overview,
   },
   {
-    title: "Ecosystem Products",
+    title: "Ecosystem Projects",
     description:
-      "Explore Sei’s, infrastructure solutions, and development tooling.",
+      "Discover all the apps and projects in the Sei ecosystem.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -78,9 +78,9 @@ export const homeCards = [
     // ],
   },
   {
-    title: "Developer guides",
+    title: "Guides",
     description:
-      "Find step-by-step guides for building, testing, and launching dapps with Sei.",
+      "Find step-by-step guides for using, building, and launching dapps on SEI.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -138,8 +138,8 @@ export const homeCards = [
   //   href: routes.ecosystemKOls,
   // },
   {
-    title: "Jobs in Sei ecosystem",
-    description: "Explore job opportunities in Sei ecosystem.",
+    title: "JOB Board",
+    description: "Explore job opportunities in the SEI ecosystem projects.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -350,26 +350,26 @@ export const homeVideos: HomeVideo[] = [
   {
     title:
       "The fundamental use case of blockchains with Sei Labs Founder Jeff Feng",
-    description: "description.",
+    description: "Sei Labs Founder Jeff Feng discussing the pivotal roles of blockchain in modern industries, highlighting its core applications and future potential.",
     image: "",
     url: "https://www.youtube.com/watch?v=OOhwd7VoFcw",
   },
   {
     title:
       "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
-    description: "description",
+    description: "Explore the \"trading trilemma\" that web3 applications face on existing blockchain infrastructure, and Sei’s unique approach and implementation in their native L1",
     image: "",
     url: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
   },
   {
     title: "What is Sei Network? - simply explained by Sei Co-Founder Jay Jog",
-    description: "description",
+    description: "What is Sei Network? In this video, Sei Network Co-Founder Jayendra Jog explains to you the project from a high level in simple words in less than 1 1/5 minutes.",
     image: "",
     url: "https://www.youtube.com/watch?v=k3MhT8Ashig",
   },
   {
     title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
-    description: "description.",
+    description: "Find out what Sei Network is all about, how it works, and what makes it different from the others! Are you excited about Sei, or is it just another L1?",
     image: "",
     url: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
   },
