@@ -12,11 +12,7 @@ const HomeRoadMap: React.FC<{ className?: string }> = ({ className }) => {
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-2xl font-semibold">Changelog</h1>
         <Link href="/">
-          <Button
-            className="hidden sm:flex rounded"
-            size="sm"
-            variant="outline"
-          >
+          <Button className="hidden sm:flex rounded" size="sm">
             <span className="mr-1">View all changes</span>
             <ArrowRightIcon size={14} />
           </Button>
