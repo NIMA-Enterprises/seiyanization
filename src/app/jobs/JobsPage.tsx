@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { PostType } from "@/lib/types";
 import { JOB_TAGS } from "@/common/constants";
@@ -27,19 +27,42 @@ export const guides: PostType[] = [
 ];
 
 const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlFilters = params.getAll("filter");
+    const initialFilters = {} as Record<string, boolean>;
+
+    urlFilters.forEach((filter) => {
+      initialFilters[filter] = true;
+    });
+
+    setFilters(initialFilters);
+  }, []);
 
   const handleFilterChange = (name: string, checked: boolean) => {
     setFilters((prevState) => {
+      const newFilters = { ...prevState };
+
       if (!checked) {
-        delete prevState[name as keyof typeof prevState];
-        return { ...prevState };
+        delete newFilters[name];
+      } else {
+        newFilters[name] = checked;
       }
 
-      return {
-        ...prevState,
-        [name]: checked,
-      };
+      const params = new URLSearchParams();
+      Object.keys(newFilters).forEach((filter) => {
+        params.append("filter", filter);
+      });
+
+      window.history.replaceState(
+        {},
+        "",
+        `${window.location.pathname}?${params}`
+      );
+
+      return newFilters;
     });
   };
 
@@ -49,9 +72,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
     }
 
     return Object.keys(filters).some((filterKey) => {
-      return (
-        filters[filterKey as keyof typeof filters] && tags.includes(filterKey)
-      );
+      return filters[filterKey] && tags.includes(filterKey);
     });
   };
 

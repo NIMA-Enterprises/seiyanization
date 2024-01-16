@@ -5,24 +5,42 @@ import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
 
 const GuidesPage = () => {
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.href);
-    console.log(params.get("filter"));
+    const params = new URLSearchParams(window.location.search);
+    const urlFilters = params.getAll("filter");
+    const initialFilters = {} as Record<string, boolean>;
+
+    urlFilters.forEach((filter) => {
+      initialFilters[filter] = true;
+    });
+
+    setFilters(initialFilters);
   }, []);
 
   const handleFilterChange = (name: string, checked: boolean) => {
     setFilters((prevState) => {
+      const newFilters = { ...prevState };
+
       if (!checked) {
-        delete prevState[name as keyof typeof prevState];
-        return { ...prevState };
+        delete newFilters[name];
+      } else {
+        newFilters[name] = checked;
       }
 
-      return {
-        ...prevState,
-        [name]: checked,
-      };
+      const params = new URLSearchParams();
+      Object.keys(newFilters).forEach((filter) => {
+        params.append("filter", filter);
+      });
+
+      window.history.replaceState(
+        {},
+        "",
+        `${window.location.pathname}?${params}`
+      );
+
+      return newFilters;
     });
   };
 
@@ -32,9 +50,7 @@ const GuidesPage = () => {
     }
 
     return Object.keys(filters).some((filterKey) => {
-      return (
-        filters[filterKey as keyof typeof filters] && tags.includes(filterKey)
-      );
+      return filters[filterKey] && tags.includes(filterKey);
     });
   };
 
