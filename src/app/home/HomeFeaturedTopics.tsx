@@ -9,7 +9,7 @@ import { featuredTopics, homeInstalls } from "@/common/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const urls = {
-  communityArticles: "/Comminity Articles",
+  communityArticles: "/articles",
   // Videos: "/videos",
 };
 const HomeFeaturedTopics = () => {
@@ -35,7 +35,7 @@ const HomeFeaturedTopics = () => {
           <div className="ml-auto">
             <Link href={urls[active]}>
               <Button className="hidden sm:flex rounded" size="sm">
-                <span className="mr-1">View all {active}</span>
+                <span className="mr-1">View all articles</span>
                 <ArrowRightIcon size={14} />
               </Button>
             </Link>
