@@ -9,19 +9,29 @@ const HomeVideoTutorials = () => {
         <h1 className="text-md font-semibold">Video tutorials</h1>
       </div>
       <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
-        {homeVideos.map((video) => (
-          <Link
-            className="flex flex-col gap-2 text-link-hover"
-            key={video.title}
-            href={video.url}
-          >
-            <img src={video.image} alt={video.title} />
-            <div className="flex flex-col gap-1">
-              <h3 className="text-sm leading-5 font-semibold">{video.title}</h3>
-              <p className="text-xs opacity-80">{video.description}</p>
-            </div>
-          </Link>
-        ))}
+        {homeVideos.map((video) => {
+          const videoImg =
+            video.image ||
+            `https://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
+              video.title
+            )}&description=${encodeURIComponent(video.description)}`;
+
+          return (
+            <Link
+              className="flex flex-col gap-2 text-link-hover"
+              key={video.title}
+              href={video.url}
+            >
+              <img src={videoImg} alt={video.title} />
+              <div className="flex flex-col gap-1">
+                <h3 className="text-sm leading-5 font-semibold">
+                  {video.title}
+                </h3>
+                <p className="text-xs opacity-80">{video.description}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </Card>
   );

@@ -12,7 +12,7 @@ const PostCard = ({
 }: any) => {
   const imageUrl =
     image ||
-    `${process.env.WEBSITE_URL}/api/og?title=${encodeURIComponent(
+    `https://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
       title
     )}&description=${encodeURIComponent(description)}`;
 
@@ -21,7 +21,7 @@ const PostCard = ({
       <img
         className="rounded-lg object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
         src={imageUrl}
-        alt="Sei docs"
+        alt="seiyanization"
       />
       <div className="flex flex-col gap-2 p-4">
         {(date || featured) && (
