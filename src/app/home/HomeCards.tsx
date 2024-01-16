@@ -46,6 +46,8 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
                       window.open(subItem.href, "_blank");
                       return;
                     }
+
+                    router.push(subItem.href);
                   }}
                   className="w-fit text-sm font-semibold cursor-pointer text-sei-red hover:dark:text-sei-heading-dark hover:text-sei-heading-light"
                 >

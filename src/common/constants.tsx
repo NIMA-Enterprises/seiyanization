@@ -443,6 +443,11 @@ export enum GUIDE_TAGS {
   TAG5 = "tag5",
 }
 
+export enum ECOSYSTEM_TAGS {
+  COSMWASM = "cosmwasm",
+  EVM = "evm",
+}
+
 export enum JOB_TAGS {
   ENGINEERING = "engineering",
   MARKETING = "marketing",

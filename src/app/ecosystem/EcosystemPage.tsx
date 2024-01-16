@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PostType } from "@/lib/types";
-import { JOB_TAGS } from "@/common/constants";
+import { ECOSYSTEM_TAGS } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
 
@@ -12,7 +12,7 @@ export const ecosystemPosts: PostType[] = [
     date: "01.09.2023.",
     href: "ecosystem/example-1",
     image: "/images/image-placeholder.png",
-    tags: [JOB_TAGS.ENGINEERING],
+    tags: [ECOSYSTEM_TAGS.COSMWASM],
   },
   {
     title: "Ecosystem post title 2",
@@ -20,7 +20,7 @@ export const ecosystemPosts: PostType[] = [
     date: "01.09.2023.",
     href: "ecosystem/example-1",
     image: "/images/image-placeholder.png",
-    tags: [JOB_TAGS.MARKETING],
+    tags: [ECOSYSTEM_TAGS.EVM],
     featured: true,
   },
 ];
@@ -93,7 +93,7 @@ const EcosystemPage: React.FC<{ className?: string }> = ({ className }) => {
             <PostFilters
               filters={filters}
               onChange={handleFilterChange}
-              filtersTags={JOB_TAGS}
+              filtersTags={ECOSYSTEM_TAGS}
             />
           </div>
           <div className="flex flex-col gap-2">
