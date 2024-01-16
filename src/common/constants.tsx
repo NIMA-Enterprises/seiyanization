@@ -177,11 +177,15 @@ export const homeCards = [
   //   href: routes.faq,
   // },
 ];
+export const TOOL_TAGS = {
+  APPS: "Apps",
+  CODE: "Code",
+};
 
 //TODO: TOOLS
 export const homeTools: HomeTool[] = [
   {
-    title: "Apps",
+    title: TOOL_TAGS.APPS,
     items: [
       {
         title: "Sei Faucet",
@@ -198,7 +202,7 @@ export const homeTools: HomeTool[] = [
     ],
   },
   {
-    title: "Code",
+    title: TOOL_TAGS.CODE,
     items: [
       {
         title: "Sei Solidity Boilerplate",
