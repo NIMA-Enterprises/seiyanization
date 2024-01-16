@@ -12,7 +12,7 @@ export const guides: PostType[] = [
     description: "Job post description 1",
     date: "01.09.2023.",
     href: "jobs/example-job-post-1",
-    image: "/images/image-placeholder.png",
+    image: "",
     tags: [JOB_TAGS.ENGINEERING],
   },
   {
@@ -20,7 +20,7 @@ export const guides: PostType[] = [
     description: "Job post description 2",
     date: "01.09.2023.",
     href: "jobs/example-job-post-1",
-    image: "/images/image-placeholder.png",
+    image: "",
     tags: [JOB_TAGS.MARKETING],
     featured: true,
   },
