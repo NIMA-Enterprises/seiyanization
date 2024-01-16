@@ -6,7 +6,7 @@ import { HomeRoadMap } from "./HomeRoadMap";
 import { SupportedBy } from "./SupportedBy";
 import { BuildingOnSei } from "./BuildingOnSei";
 import { HomeBlogPosts } from "./HomeBlogPosts";
-import { HomeCategories } from "./HomeCategories";
+import { HomeTools } from "./HomeTools";
 import { HomeIntroSection } from "./HomeIntroSection";
 import { HomeSeiCommunity } from "./HomeSeiCommunity";
 import { HomeVideoTutorials } from "./HomeVideoTutorials";
@@ -23,7 +23,7 @@ const HomePage: React.FC<{ className?: string; children: React.ReactNode }> = ({
       <HomeVideoTutorials />
       <HomeFeaturedTopics />
       <div className="w-full">{children}</div>
-      <HomeCategories />
+      <HomeTools />
       <BuildingOnSei />
       {/* <HomeRoadMap /> */}
       {/* <HomeBlogPosts /> */}

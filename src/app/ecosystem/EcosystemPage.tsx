@@ -1,80 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { PostType } from "@/lib/types";
-import { ECOSYSTEM_TAGS } from "@/common/constants";
-import { PostFilters } from "../common/filterable-cards/PostFilters";
-import { PostCard } from "../common/filterable-cards/PostCard";
+import React from "react";
+import { HomeTool, PostType } from "@/lib/types";
 
-// not in contstants because it will change frequently
-export const ecosystemPosts: PostType[] = [
+import { Card } from "@/components/Card";
+
+export const ecosystem: HomeTool[] = [
   {
-    title: "Ecosystem post title 1",
-    description: "Job post description 1",
-    date: "01.09.2023.",
-    href: "ecosystem/example-1",
-    image: "/images/image-placeholder.png",
-    tags: [ECOSYSTEM_TAGS.COSMWASM],
+    title: "Ecosystem category 1",
+    items: [
+      {
+        title: "Ecosystem product 1",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-1.webp",
+        href: "/",
+      },
+      {
+        title: "Ecosystem product 2",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-2.webp",
+        href: "/",
+      },
+      {
+        title: "Ecosystem product 3",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-3.webp",
+        href: "/",
+      },
+      {
+        title: "Ecosystem product 4",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-1.webp",
+        href: "/",
+      },
+    ],
   },
   {
-    title: "Ecosystem post title 2",
-    description: "Job post description 2",
-    date: "01.09.2023.",
-    href: "ecosystem/example-1",
-    image: "/images/image-placeholder.png",
-    tags: [ECOSYSTEM_TAGS.EVM],
-    featured: true,
+    title: "Ecosystem category 2",
+    items: [
+      {
+        title: "Ecosystem product 1",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-2.webp",
+        href: "/",
+      },
+      {
+        title: "Ecosystem product 2",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-1.webp",
+        href: "/",
+      },
+      {
+        title: "Ecosystem product 3",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-3.webp",
+        href: "/",
+      },
+      {
+        title: "Ecosystem product 4",
+        desc: "Short description about ecosystem product",
+        img: "/tools/tool-2.webp",
+        href: "/",
+      },
+    ],
   },
 ];
 
 const EcosystemPage: React.FC<{ className?: string }> = ({ className }) => {
-  const [filters, setFilters] = useState<Record<string, boolean>>({});
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlFilters = params.getAll("filter");
-    const initialFilters = {} as Record<string, boolean>;
-
-    urlFilters.forEach((filter) => {
-      initialFilters[filter] = true;
-    });
-
-    setFilters(initialFilters);
-  }, []);
-
-  const handleFilterChange = (name: string, checked: boolean) => {
-    setFilters((prevState) => {
-      const newFilters = { ...prevState };
-
-      if (!checked) {
-        delete newFilters[name];
-      } else {
-        newFilters[name] = checked;
-      }
-
-      const params = new URLSearchParams();
-      Object.keys(newFilters).forEach((filter) => {
-        params.append("filter", filter);
-      });
-
-      window.history.replaceState(
-        {},
-        "",
-        `${window.location.pathname}?${params}`
-      );
-
-      return newFilters;
-    });
-  };
-
-  const checkEnabledFilters = (tags: string[]): boolean => {
-    if (Object.keys(filters).length === 0) {
-      return true;
-    }
-
-    return Object.keys(filters).some((filterKey) => {
-      return filters[filterKey] && tags.includes(filterKey);
-    });
-  };
-
   return (
     <div className="pb-12">
       <div className="mb-12 py-20 header">
@@ -83,48 +73,39 @@ const EcosystemPage: React.FC<{ className?: string }> = ({ className }) => {
             Ecosystem
           </h1>
           <p className="opacity-80 text-xl text-sei-subheading-dark">
-            Learn more about sei ecosystem
+            Explore products in Sei ecosystem
           </p>
         </div>
       </div>
-      <div className="mx-auto px-6 max-w-[90rem]">
-        <div className="flex flex-col items-start gap-8 md:flex-row">
-          <div className="flex flex-col gap-4 w-[250px]">
-            <PostFilters
-              filters={filters}
-              onChange={handleFilterChange}
-              filtersTags={ECOSYSTEM_TAGS}
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="opacity-70">
-              Showing{" "}
-              {
-                ecosystemPosts.filter((guide) =>
-                  checkEnabledFilters(guide.tags)
-                ).length
-              }{" "}
-              of {ecosystemPosts.length} guides
-            </p>
-            <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {ecosystemPosts
-                .filter(
-                  (guide) => guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
-
-              {ecosystemPosts
-                .filter(
-                  (guide) => !guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
+      <div className="mx-auto flex flex-col gap-6 px-6 max-w-[90rem]">
+        {ecosystem.map((category) => (
+          <div key={category.title} className="flex flex-col gap-4">
+            <h2 className="text-md uppercase opacity-80">{category.title}</h2>
+            <div className="grid gap-4 grid-cols-auto-fill-full md:grid-cols-2 xl:grid-cols-4">
+              {category.items.slice(0, 4).map((tool) => (
+                <Card
+                  className="flex items-center  cursor-pointer bg-sei-card-inner-light dark:bg-sei-card-inner-dark border-none p-6"
+                  href={tool.href}
+                  key={tool.title}
+                >
+                  <div className="flex items-center gap-6">
+                    <div>
+                      <div className="w-10 h-10 rounded-full overflow-hidden">
+                        <img src={tool.img} className="w-10 h-10" />
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-md">{tool.title}</p>
+                      <p className="text-sm text-sei-subheading-light dark:text-sei-subheading-dark">
+                        {tool.desc}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

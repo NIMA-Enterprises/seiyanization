@@ -86,7 +86,7 @@ export default async function openGraphImage(
     return new Response(undefined, {
       status: 302,
       headers: {
-        Location: "https://sei-docs.vercel.app/og/og-default.png",
+        Location: "http://sei-docs.vercel.app/og/og-red.png",
       },
     });
   }
@@ -111,7 +111,7 @@ export function OGImage({
         fontWeight: 500,
         padding: 80,
         gap: 8,
-        backgroundImage: `url(https://sei-docs.vercel.app/images/image-placeholder.png)`,
+        backgroundImage: `url(http://sei-docs.vercel.app/og/og-red.png)`,
         backgroundSize: "1200px 630px",
         color: "#fff",
       }}

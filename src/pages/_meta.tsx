@@ -17,14 +17,6 @@ const meta: Meta = {
       sidebar: false,
     },
   },
-  guides: {
-    title: "Guides",
-    type: "page",
-    theme: {
-      layout: "raw",
-      sidebar: true,
-    },
-  },
   ecosystem: {
     title: "Ecosystem",
     type: "page",
@@ -33,8 +25,24 @@ const meta: Meta = {
       sidebar: true,
     },
   },
+  guides: {
+    title: "Guides",
+    type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
+  },
   jobs: {
     title: "Jobs",
+    type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
+  },
+  tools: {
+    title: "Tools",
     type: "page",
     theme: {
       layout: "raw",

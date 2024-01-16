@@ -11,6 +11,25 @@ main a {
 
 }
 
+.logo-light {
+    display: block !important;
+
+}
+
+.logo-dark {
+    display: none !important;
+}
+
+.dark .logo-light {
+    display: none !important;
+}
+
+.dark .logo-dark {
+    display: block !important;
+}
+
+
+
 .dark main a {
     color: #78FFCC !important;
     font-weight: 600 !important;
@@ -96,7 +115,7 @@ main a:hover {
 }
 
 .community-background {
-    background: url("/images/cover-image.png") no-repeat center;
+    background: url("/images/footer.png") no-repeat center;
     background-size: cover;
 }
 

@@ -23,24 +23,18 @@ const ImageWithLoading = ({
   url: string;
 }) => {
   const [loading, setLoading] = useState(true);
-  //   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const load = async () => {
       try {
         await loadImage({ src: url });
         setLoading(false);
-      } catch (e) {
-        // setError(e?.message);
-      }
+      } catch (e) {}
     };
 
     load();
 
-    // Cleanup if needed (e.g., cancel ongoing requests)
-    return () => {
-      // Your cleanup logic here, if any
-    };
+    return () => {};
   }, [url]);
 
   const shouldRenderImageSkeleton = loading;

@@ -10,7 +10,7 @@ export type PostType = {
   featured?: boolean;
 };
 
-export type HomeCategory = {
+export type HomeTool = {
   title: string;
   items: {
     title: string;
