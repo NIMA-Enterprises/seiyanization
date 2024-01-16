@@ -2,10 +2,9 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 import { HomeCards } from "./HomeCards";
-import { HomeRoadMap } from "./HomeRoadMap";
-import { SupportedBy } from "./SupportedBy";
+
 import { BuildingOnSei } from "./BuildingOnSei";
-import { HomeBlogPosts } from "./HomeBlogPosts";
+
 import { HomeTools } from "./HomeTools";
 import { HomeIntroSection } from "./HomeIntroSection";
 import { HomeSeiCommunity } from "./HomeSeiCommunity";

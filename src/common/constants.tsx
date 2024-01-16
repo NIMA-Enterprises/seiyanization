@@ -181,60 +181,30 @@ export const homeCards = [
 //TODO: TOOLS
 export const homeTools: HomeTool[] = [
   {
-    title: "Tool Category 1",
+    title: "Apps",
     items: [
       {
-        title: "Sub category 1",
-        desc: "Sub category description",
-        img: "/tools/tool-1.webp",
-        href: "/",
+        title: "Sei Faucet",
+        desc: "",
+        img: "/images/sei.png",
+        href: "https://sei-faucet.nima.enterprises/",
       },
       {
-        title: "Sub category 2",
-        desc: "Sub category description",
-        img: "/tools/tool-2.webp",
-        href: "/",
-      },
-      {
-        title: "Sub category 3",
-        desc: "Sub category description",
-        img: "/tools/tool-3.webp",
-        href: "/",
-      },
-      {
-        title: "Sub category 4",
-        desc: "Sub category description",
-        img: "/tools/tool-1.webp",
-        href: "/",
+        title: "Sei Bridge",
+        desc: "",
+        img: "/images/sei.png",
+        href: "https://app.sei.io/bridge",
       },
     ],
   },
   {
-    title: "Tool Category 2",
+    title: "Code",
     items: [
       {
-        title: "Sub category 1",
-        desc: "Sub category description",
-        img: "/tools/tool-2.webp",
-        href: "/",
-      },
-      {
-        title: "Sub category 2",
-        desc: "Sub category description",
-        img: "/tools/tool-1.webp",
-        href: "/",
-      },
-      {
-        title: "Sub category 3",
-        desc: "Sub category description",
-        img: "/tools/tool-3.webp",
-        href: "/",
-      },
-      {
-        title: "Sub category 4",
-        desc: "Sub category description",
-        img: "/tools/tool-2.webp",
-        href: "/",
+        title: "Sei Solidity Boilerplate",
+        desc: "",
+        img: "/images/sei.png",
+        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
       },
     ],
   },
