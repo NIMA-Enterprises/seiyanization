@@ -357,9 +357,7 @@ export const embeddedVideos = [
     tags: [VIDEO_TAGS.CONCEPTS],
     embedded: (
       <iframe
-        width=""
-        height=""
-        src="https://www.youtube.com/embed/OOhwd7VoFcw?si=p8KRF6VXg3Au7Cjb"
+        src="https://www.youtube.com/embed/1UgL7IXgjQM?si=I7pnw5-mmNyRGKiC"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -371,9 +369,7 @@ export const embeddedVideos = [
     tags: [VIDEO_TAGS.CONCEPTS],
     embedded: (
       <iframe
-        width=""
-        height=""
-        src="https://www.youtube.com/embed/VdEWHZIQrQE?si=OiuLoh9KGvieUUT5"
+        src="https://www.youtube.com/embed/k3MhT8Ashig?si=7Zszink3_hxBSmSU"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -385,9 +381,7 @@ export const embeddedVideos = [
     tags: [VIDEO_TAGS.CONCEPTS],
     embedded: (
       <iframe
-        width=""
-        height=""
-        src="https://www.youtube.com/embed/VdEWHZIQrQE?si=OiuLoh9KGvieUUT5"
+        src="https://www.youtube.com/embed/VdEWHZIQrQE?si=nQOjpoPQsNDLoYpQ"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
@@ -399,9 +393,7 @@ export const embeddedVideos = [
     tags: [VIDEO_TAGS.TUTORIAL],
     embedded: (
       <iframe
-        width=""
-        height=""
-        src="https://www.youtube.com/embed/k3MhT8Ashig?si=fAOr2Es3kKNSw-nC"
+        src="https://www.youtube.com/embed/OOhwd7VoFcw?si=ggbDX2YogHq7vmbL"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
