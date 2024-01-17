@@ -8,7 +8,7 @@ import {
   Changelog,
   HomeVideo,
 } from "@/lib/types";
-import { FileQuestion } from "lucide-react";
+import { Cog, FileQuestion, Settings, Wrench } from "lucide-react";
 
 // GLOBAL
 export const routes = {
@@ -178,6 +178,7 @@ export const homeCards = [
   // },
 ];
 export const TOOL_TAGS = {
+  GENERAL: "General",
   APPS: "Apps",
   CODE: "Code",
 };
@@ -185,29 +186,62 @@ export const TOOL_TAGS = {
 //TODO: TOOLS
 export const homeTools: HomeTool[] = [
   {
-    title: TOOL_TAGS.APPS,
+    title: TOOL_TAGS.GENERAL,
     items: [
       {
         title: "Sei Faucet",
         desc: "Sei faucet description",
-        img: "/images/sei.png",
+        icon: (
+          <Wrench className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
         href: "https://sei-faucet.nima.enterprises/",
       },
       {
         title: "Sei Bridge",
-        desc: "",
-        img: "/images/sei.png",
+        desc: "Sei bridge description",
+        icon: (
+          <Settings className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
         href: "https://app.sei.io/bridge",
       },
-    ],
-  },
-  {
-    title: TOOL_TAGS.CODE,
-    items: [
       {
         title: "Sei Solidity Boilerplate",
-        desc: "",
-        img: "/images/sei.png",
+        desc: "Sei solidy description",
+        icon: (
+          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
+      },
+      {
+        title: "example tool",
+        desc: "Sei solidy description",
+        icon: (
+          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
+      },
+      {
+        title: "example tool 1",
+        desc: "Sei solidy description",
+        icon: (
+          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
+      },
+      {
+        title: "example tool 2",
+        desc: "Sei solidy description",
+        icon: (
+          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
+      },
+      {
+        title: "example tool 3",
+        desc: "Sei solidy description",
+        icon: (
+          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
         href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
       },
     ],

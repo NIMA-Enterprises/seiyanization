@@ -16,7 +16,7 @@ export type HomeTool = {
   items: {
     title: string;
     desc: string;
-    img: string;
+    icon: JSX.Element;
     href: string;
   }[];
 };

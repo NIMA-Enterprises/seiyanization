@@ -69,42 +69,45 @@ const ToolsPage: React.FC<{ className?: string }> = ({ className }) => {
       </div>
       <div className="mx-auto px-6 max-w-[90rem]">
         <div className="flex flex-col items-start gap-8 md:flex-row">
-          <div className="flex flex-col gap-4 w-[250px]">
+          {/* <div className="flex flex-col gap-4 w-[250px]">
             <PostFilters
               filters={filters}
               onChange={handleFilterChange}
               filtersTags={TOOL_TAGS}
             />
-          </div>
+          </div> */}
           <div className="flex flex-col gap-2">
-            <p className="opacity-70">
+            {/* <p className="opacity-70">
               Showing{" "}
               {
                 homeTools.filter((guide) => checkEnabledFilters([guide.title]))
                   .length
               }{" "}
               of {homeTools.length} tools categories
-            </p>
+            </p> */}
             <div className="flex flex-col gap-6">
               {homeTools
-                .filter((guide) => checkEnabledFilters([guide.title]))
+                // .filter((guide) => checkEnabledFilters([guide.title]))
                 .map((category) => (
                   <div key={category.title} className="flex flex-col gap-4">
-                    <h2 className="text-md uppercase opacity-80">
+                    {/* <h2 className="text-md uppercase opacity-80">
                       {category.title}
-                    </h2>
-                    <div className="grid gap-4 grid-cols-auto-fill-full md:grid-cols-2 xl:grid-cols-4">
-                      {category.items.slice(0, 4).map((tool) => (
+                    </h2> */}
+                    <div className="grid gap-4 grid-cols-auto-fill-full grid-cols-2 md:grid-cols-4 2xl:grid-cols-5">
+                      {category.items.map((tool) => (
                         <Card
-                          className="flex items-center  cursor-pointer bg-sei-card-inner-light dark:bg-sei-card-inner-dark border-none p-6"
+                          className="flex items-center  cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
                           href={tool.href}
                           key={tool.title}
                         >
                           <div className="flex items-center gap-6">
-                            <div className="w-10 h-10 rounded-full overflow-hidden">
-                              <img src={tool.img} className="w-10 h-10" />
+                            <div className="">{tool.icon}</div>
+                            <div className="flex flex-col">
+                              <p>{tool.title}</p>
+                              <p className="text-sei-subheading-light dark:text-sei-subheading-dark">
+                                {tool.desc}
+                              </p>
                             </div>
-                            <p>{tool.title}</p>
                           </div>
                         </Card>
                       ))}

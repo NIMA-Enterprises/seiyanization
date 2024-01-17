@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon, Wrench } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/Card";
@@ -25,21 +25,21 @@ const HomeTools: React.FC<{ className?: string }> = ({ className }) => {
 
       {homeTools.map((category) => (
         <div key={category.title} className="flex flex-col gap-4">
-          <h2 className="text-md uppercase opacity-80">{category.title}</h2>
+          {/* <h2 className="text-md uppercase opacity-80">{category.title}</h2> */}
           <div className="grid gap-4 grid-cols-auto-fill-full md:grid-cols-2 xl:grid-cols-4">
             {category.items.slice(0, 4).map((tool) => (
               <Card
-                className="flex items-center  cursor-pointer bg-sei-card-inner-light dark:bg-sei-card-inner-dark border-none p-10"
+                className="flex items-center  cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
                 href={tool.href}
                 key={tool.title}
               >
                 <div className="flex items-center gap-6">
-                  <div className="w-10 h-10 rounded-full overflow-hidden">
-                    <img src={tool.img} className="w-10 h-10" />
-                  </div>
-                  <div>
+                  <div className="">{tool.icon}</div>
+                  <div className="flex flex-col">
                     <p>{tool.title}</p>
-                    <p className="">{tool.desc}</p>
+                    <p className="text-sei-subheading-light dark:text-sei-subheading-dark">
+                      {tool.desc}
+                    </p>
                   </div>
                 </div>
               </Card>
