@@ -70,6 +70,10 @@ const meta: Meta = {
   faq: {
     title: "FAQ",
     type: "page",
+    theme: {
+      layout: "raw",
+      sidebar: true,
+    },
   },
 };
 

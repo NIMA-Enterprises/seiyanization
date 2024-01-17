@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { Card } from "@/components/Card";
+import { ArrowRightIcon } from "lucide-react";
 
 import { Button } from "@/components";
-import { ArrowRightIcon } from "lucide-react";
-import { embeddedVideos } from "@/common/constants";
+import { Card } from "@/components/Card";
+
+import { videos } from "@/common/constants";
 
 const HomeVideoTutorials = () => {
   return (
@@ -20,12 +21,25 @@ const HomeVideoTutorials = () => {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
-        {embeddedVideos.map((video, i) => (
-          <div key={video?.id} className="flex flex-col gap-2 text-link-hover">
-            {video.embedded}
-          </div>
-        ))}
+      <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-2 md:grid-cols-4 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
+        {videos.map((video) => {
+          return (
+            <Link
+              target="_blank"
+              className="flex flex-col gap-2 text-link-hover"
+              key={video.title}
+              href={video.href}
+            >
+              <img src={video.image} className="h-[200px]" />
+              <div className="flex flex-col gap-1">
+                <h3 className="text-sm leading-5 font-semibold">
+                  {video.title}
+                </h3>
+                <p className="text-xs opacity-80">{video.description}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </Card>
   );

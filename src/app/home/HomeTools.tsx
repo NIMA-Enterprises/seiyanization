@@ -37,7 +37,10 @@ const HomeTools: React.FC<{ className?: string }> = ({ className }) => {
                   <div className="w-10 h-10 rounded-full overflow-hidden">
                     <img src={tool.img} className="w-10 h-10" />
                   </div>
-                  <p>{tool.title}</p>
+                  <div>
+                    <p>{tool.title}</p>
+                    <p className="">{tool.desc}</p>
+                  </div>
                 </div>
               </Card>
             ))}

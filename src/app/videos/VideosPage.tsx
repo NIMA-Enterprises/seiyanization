@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import { VIDEO_TAGS, embeddedVideos } from "@/common/constants";
+import { VIDEO_TAGS, videos } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
+import Link from "next/link";
+import { ImageWithLoading } from "@/components/ImageWithLoadings";
 
 const VideosPage = () => {
   const [filters, setFilters] = useState<Record<string, boolean>>({});
@@ -77,20 +79,27 @@ const VideosPage = () => {
           <div className="flex flex-col gap-2">
             <p className="opacity-70">
               Showing{" "}
-              {
-                embeddedVideos.filter((video) =>
-                  checkEnabledFilters(video.tags)
-                ).length
-              }{" "}
-              of {embeddedVideos.length} guides
+              {videos.filter((video) => checkEnabledFilters(video.tags)).length}{" "}
+              of {videos.length} guides
             </p>
             <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {embeddedVideos
+              {videos
                 .filter((video) => checkEnabledFilters(video.tags))
                 .map((video) => (
-                  <React.Fragment key={video.id}>
-                    {video.embedded}
-                  </React.Fragment>
+                  <Link
+                    target="_blank"
+                    className="flex flex-col gap-2 text-link-hover"
+                    key={video.title}
+                    href={video.href}
+                  >
+                    <img src={video.image} className="h-[200px]" />
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-sm leading-5 font-semibold">
+                        {video.title}
+                      </h3>
+                      <p className="text-xs opacity-80">{video.description}</p>
+                    </div>
+                  </Link>
                 ))}
             </div>
           </div>

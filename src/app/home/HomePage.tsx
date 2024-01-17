@@ -10,7 +10,7 @@ import { HomeIntroSection } from "./HomeIntroSection";
 import { HomeSeiCommunity } from "./HomeSeiCommunity";
 import { HomeVideoTutorials } from "./HomeVideoTutorials";
 import { HomeFeaturedTopics } from "./HomeFeaturedTopics";
-import {HomeBlogPosts} from "@/app/home/HomeBlogPosts";
+import { HomeBlogPosts } from "@/app/home/HomeBlogPosts";
 
 const HomePage: React.FC<{ className?: string; children: React.ReactNode }> = ({
   className,
@@ -26,7 +26,7 @@ const HomePage: React.FC<{ className?: string; children: React.ReactNode }> = ({
       <HomeTools />
       <BuildingOnSei />
       {/* <HomeRoadMap /> */}
-       <HomeBlogPosts />
+      <HomeBlogPosts />
       {/* <SupportedBy /> */}
       <HomeSeiCommunity />
     </div>

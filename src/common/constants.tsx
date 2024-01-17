@@ -189,7 +189,7 @@ export const homeTools: HomeTool[] = [
     items: [
       {
         title: "Sei Faucet",
-        desc: "",
+        desc: "Sei faucet description",
         img: "/images/sei.png",
         href: "https://sei-faucet.nima.enterprises/",
       },
@@ -262,27 +262,35 @@ export const homeChangelogs: Changelog[] = [
 export const homePosts: HomePost[] = [
   {
     url: "https://blog.sei.io/sei-blockchain-carbon-neutral/",
-    image: "https://blog.sei.io/content/images/size/w2000/2023/12/NEW-Templates--41--1.png",
+    image:
+      "https://blog.sei.io/content/images/size/w2000/2023/12/NEW-Templates--41--1.png",
     title: "The Sei Blockchain is going Carbon Neutral\n",
-    description: "Sei team understands the concerns around the sustainability of this tech and the importance of reducing the environmental impact.",
+    description:
+      "Sei team understands the concerns around the sustainability of this tech and the importance of reducing the environmental impact.",
   },
   {
     url: "https://blog.sei.io/real-world-assets-on-sei-what-are-rwas/",
-    image: "https://blog.sei.io/content/images/size/w2000/2023/12/NEW-Templates--38-.png",
+    image:
+      "https://blog.sei.io/content/images/size/w2000/2023/12/NEW-Templates--38-.png",
     title: "Real World Assets on Sei: what are RWAs?",
-    description: "Real World Assets (RWAs) are transforming the blockchain landscape, bridging the gap between physical and digital worlds.",
+    description:
+      "Real World Assets (RWAs) are transforming the blockchain landscape, bridging the gap between physical and digital worlds.",
   },
   {
     url: "https://blog.sei.io/sei-v2-the-first-parallelized-evm/",
-    image: "https://blog.sei.io/content/images/size/w2000/2023/11/image--70--1.png",
+    image:
+      "https://blog.sei.io/content/images/size/w2000/2023/11/image--70--1.png",
     title: "Sei v2 - The First Parallelized EVM Blockchain",
-    description: "Sei Labs introduces and proposes an upgrade to Sei: v2 - the first parallelized EVM.",
+    description:
+      "Sei Labs introduces and proposes an upgrade to Sei: v2 - the first parallelized EVM.",
   },
   {
     url: "https://blog.sei.io/sei-acc/",
-    image: "https://blog.sei.io/content/images/size/w2000/2024/01/Sei-Launchpad-Program.jpeg",
+    image:
+      "https://blog.sei.io/content/images/size/w2000/2024/01/Sei-Launchpad-Program.jpeg",
     title: "The sei/acc Accelerator (Launchpad) Program is here",
-    description: "Aims to identify the strongest founders in crypto, facilitate revolutionary decentralized applications (dapps) and accelerate ecosystem expansion",
+    description:
+      "Aims to identify the strongest founders in crypto, facilitate revolutionary decentralized applications (dapps) and accelerate ecosystem expansion",
   },
 ];
 
@@ -351,54 +359,40 @@ export enum VIDEO_TAGS {
   CONCEPTS = "concepts",
 }
 
-export const embeddedVideos = [
+export const videos = [
   {
     id: 1,
     tags: [VIDEO_TAGS.CONCEPTS],
-    embedded: (
-      <iframe
-        src="https://www.youtube.com/embed/1UgL7IXgjQM?si=I7pnw5-mmNyRGKiC"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    ),
+    title:
+      "The fundamental use case of blockchains with Sei Labs Founder Jeff Feng | EP #96",
+    image: "/videos/videos-1.jpg",
+    href: "https://www.youtube.com/watch?v=OOhwd7VoFcw",
+    description: "",
   },
   {
     id: 2,
     tags: [VIDEO_TAGS.CONCEPTS],
-    embedded: (
-      <iframe
-        src="https://www.youtube.com/embed/k3MhT8Ashig?si=7Zszink3_hxBSmSU"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    ),
+    title:
+      "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
+    image: "/videos/videos-2.jpg",
+    href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
+    description: "",
   },
   {
     id: 3,
     tags: [VIDEO_TAGS.CONCEPTS],
-    embedded: (
-      <iframe
-        src="https://www.youtube.com/embed/VdEWHZIQrQE?si=nQOjpoPQsNDLoYpQ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    ),
+    title: "What is Sei Network? - simply explained by Sei Co-Founder Jay Jog",
+    image: "/videos/videos-3.jpg",
+    href: "https://www.youtube.com/watch?v=k3MhT8Ashig",
+    description: "",
   },
   {
     id: 4,
-    tags: [VIDEO_TAGS.TUTORIAL],
-    embedded: (
-      <iframe
-        src="https://www.youtube.com/embed/OOhwd7VoFcw?si=ggbDX2YogHq7vmbL"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    ),
+    tags: [VIDEO_TAGS.CONCEPTS],
+    title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
+    image: "/videos/videos-4.jpg",
+    href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
+    description: "",
   },
 ];
 
