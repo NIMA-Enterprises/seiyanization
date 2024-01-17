@@ -73,7 +73,7 @@ const EcosystemPage: React.FC<{ className?: string }> = ({ className }) => {
             Ecosystem
           </h1>
           <p className="opacity-80 text-xl text-sei-subheading-dark">
-            Explore products in Sei ecosystem
+            Explore projects in SEI Ecosystem.
           </p>
         </div>
       </div>
