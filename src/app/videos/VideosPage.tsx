@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import { GUIDE_TAGS, guides } from "@/common/constants";
+import { VIDEO_TAGS, embeddedVideos } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
-import { PostCard } from "../common/filterable-cards/PostCard";
 
 const VideosPage = () => {
   const [filters, setFilters] = useState<Record<string, boolean>>({});
@@ -59,10 +58,10 @@ const VideosPage = () => {
       <div className="mb-12 py-20 header ">
         <div className="mx-auto px-6 max-w-[90rem]">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-dark">
-            Guides
+            Videos
           </h1>
           <p className="opacity-80 text-xl text-sei-subheading-dark">
-            Learn how to use Sei by following our official guides and tutorials.
+            Learn more about sei, by watching sei ecosystem videos.
           </p>
         </div>
       </div>
@@ -72,30 +71,26 @@ const VideosPage = () => {
             <PostFilters
               filters={filters}
               onChange={handleFilterChange}
-              filtersTags={GUIDE_TAGS}
+              filtersTags={VIDEO_TAGS}
             />
           </div>
           <div className="flex flex-col gap-2">
             <p className="opacity-70">
               Showing{" "}
-              {guides.filter((guide) => checkEnabledFilters(guide.tags)).length}{" "}
-              of {guides.length} guides
+              {
+                embeddedVideos.filter((video) =>
+                  checkEnabledFilters(video.tags)
+                ).length
+              }{" "}
+              of {embeddedVideos.length} guides
             </p>
             <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {guides
-                .filter(
-                  (guide) => guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
-
-              {guides
-                .filter(
-                  (guide) => !guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
+              {embeddedVideos
+                .filter((video) => checkEnabledFilters(video.tags))
+                .map((video) => (
+                  <React.Fragment key={video.id}>
+                    {video.embedded}
+                  </React.Fragment>
                 ))}
             </div>
           </div>
