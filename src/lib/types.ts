@@ -3,6 +3,7 @@ import React from "react";
 export type PostType = {
   title: string;
   description: string;
+  xUsername?: string;
   date: string;
   href: string;
   image: string;

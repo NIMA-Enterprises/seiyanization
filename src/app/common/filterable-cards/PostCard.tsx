@@ -5,6 +5,7 @@ import { ImageWithLoading } from "@/components/ImageWithLoadings";
 const PostCard = ({
   title,
   description,
+  xUsername,
   image,
   href,
   featured,
@@ -13,9 +14,11 @@ const PostCard = ({
 }: any) => {
   const imageUrl =
     image ||
-    `https://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
+    `http://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
       title
-    )}&description=${encodeURIComponent(description)}`;
+    )}&description=${encodeURIComponent(
+      description
+    )}&x_username=${encodeURIComponent(xUsername)}`;
 
   return (
     <Card className="!p-0 overflow-hidden w-full" href={href}>

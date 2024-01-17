@@ -69,12 +69,14 @@ export default async function openGraphImage(
     const title = hasTitle ? searchParams.get("title") : "";
     // ?description=<description>
     const hasDescription = searchParams.has("description");
+    const xUsername = searchParams.get("x_username");
     const description = hasDescription ? searchParams.get("description") : "";
 
     return new ImageResponse(
       createElement(OGImage, {
         title: title || "",
         description: description || "",
+        xUsername: xUsername || "",
       }),
       {
         width: 1200,
@@ -95,9 +97,11 @@ export default async function openGraphImage(
 export function OGImage({
   title,
   description,
+  xUsername,
 }: {
   title: string;
   description: string;
+  xUsername: string;
 }): React.JSX.Element {
   return (
     <div
@@ -116,8 +120,49 @@ export function OGImage({
         color: "#fff",
       }}
     >
+      {xUsername && xUsername != "undefined" && (
+        <div
+          style={{
+            fontSize: 18,
+            color: "#fff",
+            position: "absolute",
+            top: 50,
+            left: 80,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_101_632)">
+              <path
+                d="M24 0C10.7456 0 0 10.7456 0 24C0 37.2544 10.7456 48 24 48C37.2544 48 48 37.2544 48 24C48 10.7456 37.2544 0 24 0Z"
+                fill="white"
+              />
+              <path
+                d="M26.6259 21.8281L36.9 9.88525H34.4654L25.5444 20.2551L18.4192 9.88525H10.2012L20.9758 25.5662L10.2012 38.0901H12.6359L22.0568 27.1392L29.5815 38.0901H37.7995L26.6253 21.8281H26.6259ZM13.5132 11.7181H17.2529L34.4665 36.3406H30.7269L13.5132 11.7181Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_101_632">
+                <rect width="48" height="48" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p>@{xUsername}</p>
+        </div>
+      )}
+
       <div
         style={{
+          display: "flex",
           fontSize: 18,
           color: "#78FFCC",
         }}

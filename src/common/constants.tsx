@@ -482,6 +482,7 @@ export const articles: PostType[] = [
     title: "Article title 1",
     description: "Article description",
     date: "01.09.2023.",
+    xUsername: "author_1",
     href: "articles/article-1-example",
     image: "",
     tags: [ARTICLE_TAGS.MARKETING],
@@ -501,6 +502,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 1",
     description: "Guide description",
+    xUsername: "author_1",
     date: "01.09.2023.",
     href: "guides/guide-1-example",
     image: "",
@@ -509,6 +511,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 2",
     description: "Guide description",
+    xUsername: "author_2",
     date: "24.08.2023.",
     href: "guides/guide-1-example",
     image: "",
@@ -518,6 +521,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 3",
     description: "Guide description",
+    xUsername: "author_3",
     date: "31.08.2023.",
     href: "guides/guide-1-example",
     image: "",
@@ -527,6 +531,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 4",
     description: "Guide description",
+    xUsername: "author_4",
     date: "11.08.2023.",
     href: "guides/guide-1-example",
     image: "",
@@ -536,6 +541,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 5",
     description: "Guide description",
+    xUsername: "author_5",
     date: "02.06.2023.",
     href: "guides/guide-1-example",
     image: "",
@@ -545,6 +551,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 6",
     description: "Guide description",
+    xUsername: "author_6",
     date: "14.07.2023.",
     href: "guides/guide-1-example",
     image: "",
@@ -554,6 +561,7 @@ export const guides: PostType[] = [
   {
     title: "Guide title 7",
     description: "Guide description",
+    xUsername: "author_6",
     image: "",
     date: "04.08.2023.",
     href: "guides/guide-1-example",
