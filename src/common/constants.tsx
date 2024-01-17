@@ -365,34 +365,35 @@ export const homeBuildingOnSei: SeiBuilder[] = [
 ];
 
 export enum VIDEO_TAGS {
-  TUTORIAL = "tutorial",
-  CONCEPTS = "concepts",
+  TUTORIAL = "Tutorials",
+  FOUNDERS = "SEI Founders",
+  CONCEPTS = "Concepts",
 }
 
 export const videos = [
   {
     id: 1,
-    tags: [VIDEO_TAGS.CONCEPTS],
+    tags: [VIDEO_TAGS.FOUNDERS],
     title:
       "The fundamental use case of blockchains with Sei Labs Founder Jeff Feng | EP #96",
-    image: "/videos/videos-1.jpg",
+    image: "https://img.youtube.com/vi/OOhwd7VoFcw/hqdefault.jpg",
     href: "https://www.youtube.com/watch?v=OOhwd7VoFcw",
     description: "",
   },
   {
     id: 2,
-    tags: [VIDEO_TAGS.CONCEPTS],
+    tags: [VIDEO_TAGS.FOUNDERS],
     title:
       "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
-    image: "/videos/videos-2.jpg",
+    image: "https://img.youtube.com/vi/VdEWHZIQrQE/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
     description: "",
   },
   {
     id: 3,
-    tags: [VIDEO_TAGS.CONCEPTS],
+    tags: [VIDEO_TAGS.FOUNDERS],
     title: "What is Sei Network? - simply explained by Sei Co-Founder Jay Jog",
-    image: "/videos/videos-3.jpg",
+    image: "https://img.youtube.com/vi/k3MhT8Ashig/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=k3MhT8Ashig",
     description: "",
   },
@@ -400,8 +401,16 @@ export const videos = [
     id: 4,
     tags: [VIDEO_TAGS.CONCEPTS],
     title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
-    image: "/videos/videos-4.jpg",
+    image: "https://img.youtube.com/vi/1UgL7IXgjQM/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
+    description: "",
+  },
+  {
+    id: 5,
+    tags: [VIDEO_TAGS.FOUNDERS],
+    title: "Sei Network: Interview with Sei Labs Co-Founder Jay Jog",
+    image: "https://img.youtube.com/vi/J0AfMFLvc80/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=J0AfMFLvc80",
     description: "",
   },
 ];

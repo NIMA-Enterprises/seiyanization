@@ -15,7 +15,7 @@ const BuildingOnSei: React.FC<{ className?: string }> = ({ className }) => {
       )}
     >
       <div className="flex flex-col gap-2">
-        <span className="text-md font-semibold">Building on sei</span>
+        <span className="text-md font-semibold">Projects building on SEI</span>
         <Link
           className="flex items-center gap-1 text-sm text-link-no-underline"
           href="/"

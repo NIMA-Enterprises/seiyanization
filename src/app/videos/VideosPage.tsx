@@ -63,7 +63,7 @@ const VideosPage = () => {
             Videos
           </h1>
           <p className="opacity-80 text-xl text-sei-subheading-dark">
-            Learn more about sei, by watching sei ecosystem videos.
+            Learn more about SEI, by watching some of the videos.
           </p>
         </div>
       </div>
@@ -80,7 +80,7 @@ const VideosPage = () => {
             <p className="opacity-70">
               Showing{" "}
               {videos.filter((video) => checkEnabledFilters(video.tags)).length}{" "}
-              of {videos.length} guides
+              of {videos.length} videos.
             </p>
             <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {videos
