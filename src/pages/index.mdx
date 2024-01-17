@@ -8,14 +8,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 <HomePage >
  <div className="max-w-screen flex flex-col justify-center gap-4 mt-6 w-full h-full">
-    <h1 className="text-2xl font-semibold">Code examples</h1>
-    <Tabs className="flex flex-col md:flex-row gap-6 items-start h-[300px]" defaultValue="example1">
+    <h1 className="text-2xl font-semibold">Code snippets</h1>
+    <Tabs className="flex flex-col md:flex-row gap-6 items-start h-[300px]" defaultValue="web3connect.js">
 
 
     <TabsList className="flex mt-2 h-[350px] flex-col items-start justify-center rounded p-4 gap-2 lg:p-4 lg:gap-6 text-inherit bg-sei-card-bg-light border   dark:bg-sei-card-bg-dark  dark:border-sei-border-dark">
       <TabsTrigger
         className="p-0 pb-2 lg:pb-5 border-b w-full border-sei-border-light dark:border-sei-border-dark text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
-        value="example1"
+        value="web3connect.js"
       >
         <div className="flex items-center flex-wrap gap-1 p-6">
           <span>Connecting to SEI Network[EVM]</span>
@@ -23,7 +23,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
       </TabsTrigger>
       <TabsTrigger
         className="p-0 pb-2 lg:pb-5 border-b w-full border-sei-border-light dark:border-sei-border-dark text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
-        value="example2"
+        value="listener.js"
       >
         <div className="flex items-center flex-wrap gap-1 p-6">
           <span>Listening to Chain Events [EVM]</span>
@@ -31,7 +31,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
       </TabsTrigger>
       <TabsTrigger
         className="p-0 pb-2 lg:pb-5 border-b w-full border-sei-border-light dark:border-sei-border-dark text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
-        value="example3"
+        value="generateWallet.js"
       >
         <div className="flex items-center flex-wrap gap-1 p-6">
           <span>Generate or restore a wallet</span>
@@ -39,7 +39,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
       </TabsTrigger>
       <TabsTrigger
         className="p-0 pb-2 lg:pb-5 border-b w-full border-sei-border-light dark:border-sei-border-dark text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
-        value="example4"
+        value="validateAddress.js"
       >
         <div className="flex items-center flex-wrap gap-1 p-6">
           <span>Address validation</span>
@@ -47,17 +47,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
       </TabsTrigger>
       <TabsTrigger
         className="p-0 w-full text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
-        value="example5"
+        value="hardhat.config.js"
       >
         <div className="flex items-center flex-wrap gap-1 p-6">
           <span>Hardhat config for SEI Testnet</span>
         </div>
       </TabsTrigger>
     </TabsList>
-    
+
     <div className='w-full flex-1 h-[350px]'>
-      <TabsContent value="example1">
-        ```bash filename="example1" showLineNumbers
+      <TabsContent value="web3connect.js">
+        ```bash filename="web3connect.js" showLineNumbers
             const Web3 = require('web3');
             const rpc_url = 'https://evm-devnet.seinetwork.io';
             const web3 = new Web3(rpc_url);
@@ -69,8 +69,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
-      <TabsContent value="example2">
-        ```bash filename="example2" showLineNumbers
+      <TabsContent value="listener.js">
+        ```bash filename="listener.js" showLineNumbers
             const Web3 = require('web3');
             // Connect to a local Ethereum node
             const web3 = new Web3('https://evm-devnet.seinetwork.io');
@@ -99,8 +99,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
-      <TabsContent value="example3">
-        ```bash filename="example3" showLineNumbers
+      <TabsContent value="generateWallet.js">
+        ```bash filename="generateWallet.js" showLineNumbers
         import { generateWallet, restoreWallet } from "@sei-js/core";
 
         // 12 word mnemonic by default
@@ -116,8 +116,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
-      <TabsContent value="example4">
-        ```bash filename="example4" showLineNumbers
+      <TabsContent value="validateAddress.js">
+        ```bash filename="validateAddress.js" showLineNumbers
         import { isValidAddress } from '@sei-js/core';
 
         const isValidSeiAddress = isValidAddress(ADDRESS_TO_TEST);
@@ -125,8 +125,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
-       <TabsContent value="example5">
-        ```bash filename="example5" showLineNumbers
+       <TabsContent value="hardhat.config.js">
+        ```bash filename="hardhat.config.js" showLineNumbers
             module.exports = {
               networks: {
                 testnet: {
