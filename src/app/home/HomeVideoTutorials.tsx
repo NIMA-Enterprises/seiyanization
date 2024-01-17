@@ -20,7 +20,7 @@ const HomeVideoTutorials = () => {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-2 md:grid-cols-4 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
+      <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
         {embeddedVideos.map((video, i) => (
           <div key={video?.id} className="flex flex-col gap-2 text-link-hover">
             {video.embedded}

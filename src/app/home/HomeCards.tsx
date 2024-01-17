@@ -10,7 +10,7 @@ const HomeCards: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-auto-fill-full gap-6 grid-cols-2 md:grid-cols-4"
+        "grid grid-cols-auto-fill-full gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
       )}
     >
       {homeCards.map((card) => (
