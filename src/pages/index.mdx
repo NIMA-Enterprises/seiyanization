@@ -17,7 +17,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
         value="example1"
       >
         <div className="flex items-center flex-wrap gap-1">
-          <span>code example 1</span>
+          <span>Connecting to SEI Network[EVM]</span>
         </div>
       </TabsTrigger>
       <TabsTrigger
@@ -25,7 +25,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
         value="example2"
       >
         <div className="flex items-center flex-wrap gap-1">
-          <span>code example 2</span>
+          <span>Listening to Chain Events [EVM]</span>
         </div>
       </TabsTrigger>
       <TabsTrigger
@@ -33,7 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
         value="example3"
       >
         <div className="flex items-center flex-wrap gap-1">
-          <span>code example 3</span>
+          <span>Generate or restore a wallet</span>
         </div>
       </TabsTrigger>
       <TabsTrigger
@@ -41,7 +41,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
         value="example4"
       >
         <div className="flex items-center flex-wrap gap-1">
-          <span>code example 4</span>
+          <span>Address validation</span>
         </div>
       </TabsTrigger>
       <TabsTrigger
@@ -56,28 +56,69 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
     <div className="w-full -mt-2 lg:col-span-3">
       <TabsContent value="example1">
         ```bash filename="example1" showLineNumbers
-        code here1
+            const Web3 = require('web3');
+            const rpc_url = 'https://evm-devnet.seinetwork.io';
+            const web3 = new Web3(rpc_url);
+            // Check connection
+            web3.eth.net.isListening()
+              .then(() => console.log('Connected to Sei node'))
+              .catch(err => console.error('Error connecting to Sei node:', err));
         ```
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
       <TabsContent value="example2">
         ```bash filename="example2" showLineNumbers
-        code here2
+            const Web3 = require('web3');
+            // Connect to a local Ethereum node
+            const web3 = new Web3('https://evm-devnet.seinetwork.io');
+            const contract_address = 'YourContractAddress';
+            const abi = [''];
+            const myContract = new web3.eth.Contract(abi, contractAddress);
+            // Specify the event you want to listen to
+            const eventName = 'MyEvent';
+            // Subscribe to the event
+            const eventSubscription = myContract.events[eventName]({}, (error, event) => {
+              if (error) {
+                console.error('Error in event subscription:', error);
+              } else {
+                console.log(`Received event ${eventName}:`, event.returnValues);
+              }
+            });
+            // To stop listening to the event after a certain time or condition
+            // Uncomment the following lines:
+            // setTimeout(() => {
+            //   eventSubscription.unsubscribe();
+            //   console.log(`Stopped listening to ${eventName} event.`);
+            // }, 60000); // Stop listening after 60 seconds
+            // Keep the process running
+            process.stdin.resume();
         ```
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
       <TabsContent value="example3">
         ```bash filename="example3" showLineNumbers
-        code here3
+        import { generateWallet, restoreWallet } from "@sei-js/core";
+
+        // 12 word mnemonic by default
+        const generatedWallet = await generateWallet();
+        console.log('generated mnemonic', generatedWallet.mnemonic);
+
+        // or restore a wallet given a seed phrase
+        const restoredWallet = await restoreWallet(SEED_PHRASE);
+        console.log('restored mnemonic', restoredWallet.mnemonic);
+
+        //Both the above functions have optional parameters for selecting a certain account index in a given wallet
         ```
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
       </TabsContent>
       <TabsContent value="example4">
         ```bash filename="example4" showLineNumbers
-        code here4
+        import { isValidAddress } from '@sei-js/core';
+
+        const isValidSeiAddress = isValidAddress(ADDRESS_TO_TEST);
         ```
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
