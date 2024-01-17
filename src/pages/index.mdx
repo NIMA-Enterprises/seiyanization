@@ -49,7 +49,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
         value="example5"
       >
         <div className="flex items-center flex-wrap gap-1">
-          <span>code example 5</span>
+          <span>Hardhat config for SEI Testnet</span>
         </div>
       </TabsTrigger>
     </TabsList>
@@ -125,7 +125,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
       </TabsContent>
        <TabsContent value="example5">
         ```bash filename="example5" showLineNumbers
-        code here5
+            module.exports = {
+              networks: {
+                testnet: {
+                  url: 'https://evm-devnet.seinetwork.io',
+                  chainId: 713715,
+                  timeout,
+                  accounts,
+                },
+              },
+            }
         ```
 
         <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
