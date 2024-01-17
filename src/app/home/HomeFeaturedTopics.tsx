@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "lucide-react";
 import { Button } from "@/components";
 import { Card } from "@/components/Card";
 import { ImageWithLoading } from "@/components/ImageWithLoadings";
-import { featuredTopics, homeInstalls } from "@/common/constants";
+import { articles } from "@/common/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const urls = {
@@ -48,7 +48,7 @@ const HomeFeaturedTopics = () => {
         >
           <div className="grid grid-cols-auto-fill-full gap-2 sm:gap-4 sm:grid-cols-2">
             <ul className="pl-5 flex flex-col gap-2 list-disc">
-              {featuredTopics.slice(0, 5).map((topic) => (
+              {articles.slice(0, 5).map((topic) => (
                 <li className="w-fit" key={topic.title}>
                   <Link
                     className="flex items-center gap-1 text-link-hover"
@@ -60,7 +60,7 @@ const HomeFeaturedTopics = () => {
               ))}
             </ul>
             <ul className="pl-5 flex flex-col gap-2 list-disc">
-              {featuredTopics.slice(5).map((topic) => (
+              {articles.slice(5, 10).map((topic) => (
                 <li className="w-fit" key={topic.title}>
                   <Link
                     className="flex items-center gap-1 text-link-hover"
@@ -73,7 +73,7 @@ const HomeFeaturedTopics = () => {
             </ul>
           </div>
         </TabsContent>
-        <TabsContent
+        {/* <TabsContent
           value="Other"
           className="p-4 mt-0 bg-sei-card-inner-light dark:bg-sei-card-inner-dark"
         >
@@ -99,7 +99,7 @@ const HomeFeaturedTopics = () => {
               );
             })}
           </div>
-        </TabsContent>
+        </TabsContent> */}
       </Tabs>
     </Card>
   );

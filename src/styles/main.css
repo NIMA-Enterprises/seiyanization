@@ -29,6 +29,10 @@ main a {
 }
 
 
+.nextra-code {
+    max-height: 348px !important;
+    width: 100% !important;
+}
 
 .dark main a {
     color: #78FFCC !important;
