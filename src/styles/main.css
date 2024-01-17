@@ -10,6 +10,13 @@ main a {
     text-decoration: none !important;
 }
 
+.faq-container {
+
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .logo-light {
     display: block !important;
 }
@@ -38,6 +45,10 @@ main a {
     text-decoration: none !important;
 }
 
+.nextra-code pre {
+    height: 378px !important;
+}
+
 .nextra-code div {
     background-color: #FFFFFF !important;
     box-shadow: none !important;
@@ -61,19 +72,13 @@ main a {
 .dark .nextra-nav-container-blur {
     display: none !important;
 
-
 }
-
-
 
 .nextra-code pre {
     background-color: #F8FAFC !important;
     box-shadow: none !important;
     border: 1px solid #E2E8F0 !important;
-
 }
-
-
 
 .dark .nextra-code pre {
     background-color: #1E293B !important;

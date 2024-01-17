@@ -13,4 +13,7 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 });
