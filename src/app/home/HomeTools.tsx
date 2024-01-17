@@ -29,7 +29,7 @@ const HomeTools: React.FC<{ className?: string }> = ({ className }) => {
           <div className="grid gap-4 grid-cols-auto-fill-full md:grid-cols-2 xl:grid-cols-4">
             {category.items.slice(0, 4).map((tool) => (
               <Card
-                className="flex items-center  cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
+                className="flex items-center cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
                 href={tool.href}
                 key={tool.title}
               >
