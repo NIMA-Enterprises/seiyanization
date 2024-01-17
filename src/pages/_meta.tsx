@@ -9,6 +9,7 @@ const meta: Meta = {
     },
   },
   index: {
+    display: "hidden",
     title: "Home",
     type: "page",
     href: "/",
@@ -43,7 +44,6 @@ const meta: Meta = {
     },
   },
   articles: {
-    display: "hidden",
     title: "Articles",
     type: "page",
     theme: {
