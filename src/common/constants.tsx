@@ -261,28 +261,28 @@ export const homeChangelogs: Changelog[] = [
 
 export const homePosts: HomePost[] = [
   {
-    url: "/",
-    image: "",
-    title: "Blog post 1",
-    description: "Blog post description 1",
+    url: "https://blog.sei.io/sei-blockchain-carbon-neutral/",
+    image: "https://blog.sei.io/content/images/size/w2000/2023/12/NEW-Templates--41--1.png",
+    title: "The Sei Blockchain is going Carbon Neutral\n",
+    description: "Sei team understands the concerns around the sustainability of this tech and the importance of reducing the environmental impact.",
   },
   {
-    url: "/",
-    image: "",
-    title: "Blog post 2",
-    description: "Blog post description 2",
+    url: "https://blog.sei.io/real-world-assets-on-sei-what-are-rwas/",
+    image: "https://blog.sei.io/content/images/size/w2000/2023/12/NEW-Templates--38-.png",
+    title: "Real World Assets on Sei: what are RWAs?",
+    description: "Real World Assets (RWAs) are transforming the blockchain landscape, bridging the gap between physical and digital worlds.",
   },
   {
-    url: "/",
-    image: "",
-    title: "Blog post 3",
-    description: "Blog post description 3",
+    url: "https://blog.sei.io/sei-v2-the-first-parallelized-evm/",
+    image: "https://blog.sei.io/content/images/size/w2000/2023/11/image--70--1.png",
+    title: "Sei v2 - The First Parallelized EVM Blockchain",
+    description: "Sei Labs introduces and proposes an upgrade to Sei: v2 - the first parallelized EVM.",
   },
   {
-    url: "/",
-    image: "",
-    title: "Blog post 4",
-    description: "Blog post description 4",
+    url: "https://blog.sei.io/sei-acc/",
+    image: "https://blog.sei.io/content/images/size/w2000/2024/01/Sei-Launchpad-Program.jpeg",
+    title: "The sei/acc Accelerator (Launchpad) Program is here",
+    description: "Aims to identify the strongest founders in crypto, facilitate revolutionary decentralized applications (dapps) and accelerate ecosystem expansion",
   },
 ];
 

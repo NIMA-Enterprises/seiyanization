@@ -13,10 +13,10 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
     <div className={cn("flex flex-col gap-6", className)}>
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between gap-4">
-          <h1 className="text-2xl font-semibold">Blog posts</h1>
-          <Link href="/">
+          <h1 className="text-2xl font-semibold">SEI Blog posts</h1>
+          <Link href="https://blog.sei.io/">
             <Button className="hidden sm:flex rounded" size="sm">
-              <span className="mr-1">View all blog posts</span>
+              <span className="mr-1">View SEI blog</span>
               <ArrowRightIcon size={14} />
             </Button>
           </Link>
