@@ -140,7 +140,7 @@ export function OGImage({
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_101_632)">
+            <g clipPath="url(#clip0_101_632)">
               <path
                 d="M24 0C10.7456 0 0 10.7456 0 24C0 37.2544 10.7456 48 24 48C37.2544 48 48 37.2544 48 24C48 10.7456 37.2544 0 24 0Z"
                 fill="white"

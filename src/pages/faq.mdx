@@ -1,54 +1,198 @@
 ---
-title: FAQ 
+title: FAQ
 description: Get answers to the most frequently asked questions about SEI.
 ---
 
-
-import { Card } from '@/components/Card'
+import { Card } from "@/components/Card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 <div className='pb-12'>
-<div className="mb-12 py-20  header h-[256px]">
-  <div className="mx-auto px-6 max-w-[90rem]">
-    <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-dark">
-    Frequently Asked Questions
+  <div className="mb-12 py-20  header h-[256px]">
+    <div className="mx-auto px-6 max-w-[90rem]">
+      <h1 className="text-3xl md:text-5xl font-bold mb-4 text-sei-heading-dark">
+       Frequently Asked Questions
     </h1>
-    <span className="opacity-80 text-xl text-sei-subheading-dark">
+      <span className="opacity-80 text-xl text-sei-subheading-dark">
       Get answers to the most frequently asked questions about SEI.
-    </span>
+      </span>
+    </div>
   </div>
-</div>
+  <div className=" flex flex-col gap-6 mt-8 px-6 w-full faq-container">
+  <Card>
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <div className="flex flex-col gap-4">
+          <AccordionTrigger> <h2 className="text-xl font-semibold">What’s the idea of Seiyanization?</h2> </AccordionTrigger>
+            <AccordionContent>
+              <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              The idea of Seiyanization is to establish a knowledge platform that simplifies the process of finding information about the Sei ecosystem that otherwise might be missed on other platforms. It is designed for both technical and non-technical people. One of the key features of Seiyanization is its search functionality, which ensures that users have access to the information they require in an efficient and user-friendly manner.
+              </div>
+          </AccordionContent>
+        </div>
+      </AccordionItem>
+  </Accordion>
+ </Card>
+ <Card>
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <div className="flex flex-col gap-4">
+          <AccordionTrigger> <h2 className="text-xl font-semibold">Is Seiyanization open source?</h2> </AccordionTrigger>
+            <AccordionContent>
+              <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+               Yes, it is open source. We believe in fostering collaboration and transparency within the SEI community, which is why our platform’s code and resources are freely accessible for anyone.
+              </div>
+          </AccordionContent>
+        </div>
+      </AccordionItem>
+  </Accordion>
+ </Card>
 
-<div className="flex flex-col gap-4 mt-8 px-6 ">
-  <Card>
-    <div className="flex flex-col gap-4">
-      <h2 className="text-xl font-semibold">First question?</h2>
-      <div>
-        Answer to the first question.
+<Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold"> Can anyone participate?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              Absolutely! Seiyanization welcomes participation from anyone who is passionate about the Sei ecosystem and possesses knowledge they are willing to share with the community.
+            </div>
+          </AccordionContent>
       </div>
-    </div>
-  </Card>
-  <Card>
-    <div className="flex flex-col gap-4">
-      <h2 className="text-xl font-semibold">Second question?</h2>
-      <div>
-        Answer to the second question. contact@sei.com
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+<Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold"> How can I add an article or guide?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+            
+              Contributing to Seiyanization by adding an article or guide is an easy process. Here's an easy-to-follow, <a className='font-bold text-sei-main-light dark:text-sei-main-dark hover:text-sei-card-bg-light hover:dark:text-sei-card-bg-dark' href='https://app.tango.us/app/workflow/How-to-upload-your-content-to-Seiyanization---STEP-BY-STEP-GUIDE-d60ecab69a8546c6aec27c34c6f073da'>step-by-step guide </a> to assist you in creating and publishing your first article
+            </div>
+          </AccordionContent>
       </div>
-    </div>
-  </Card>
-  <Card>
-    <div className="flex flex-col gap-4">
-      <h2 className="text-xl font-semibold">
-        Third question
-      </h2>
-      <div>
-        Answer to the third question with code example
-        ```bash filename="example" showLineNumbers
-        https://example.com
-        ```
-      </div>
-    </div>
-  </Card>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+
 
  
+ <Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold text-left">What is the Social Verification Page and how does it prevent impersonation in the SEI community?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+            The Social Verification Page showcases verified profiles of the SEI Foundation, Labs, and KOLs. This feature helps prevent scams and impersonation by confirming the authenticity of these accounts.
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+ <Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold">Can I request specific guides or tutorials to be created on Seiyanization? </h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              Yes, you can absolutely request specific guides or tutorials to be created on Seiyiniation. We encourage community engagement and value user feedback. If you have a particular topic or aspect related to the SEI ecosystem that you would like to see covered in a guide or tutorial, please feel free to reach out to us. 
+              <br/>
+              <b>You can submit your requests through our platform, and we will consider creating content that addresses your specific needs and interests. Your input helps us enhance the knowledge hub and make it even more valuable for the SEI community. </b>
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+
+ <Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold">What resources are available for developers looking to build on SEI?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              Developers interested in building on SEI can access a variety of resources to support their development efforts. These resources include SEI documentation, guides, and code snippets which offer valuable insights into SEI’s features and functionalities.The Tools section provides access to active tools such as faucets, boilerplates, and wallets, which can streamline the development process. 
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+<Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold">How often is new content added to Seiyanization?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              New content is added to Seiyanization regularly. We encourage continuous contributions from the community, ensuring that the knowledge base is updated with fresh and valuable information.
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+<Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold">Are there resources available to assist me in creating content for Seiyanization?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              Yes, we have a helpful resource to aid you in your content creation process. You can access it at this link: Content Creation Resource. This resource provides guidance, templates, and other useful information to make your content creation journey smoother and more efficient on Seiyanization.
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+  
+  <Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold">Is there a newsletter to stay informed about Seiyanization updates?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              Yes, there will be a newsletter. Follow <a className='font-bold text-sei-main-light dark:text-sei-main-dark hover:text-sei-card-bg-light hover:dark:text-sei-card-bg-dark' href='https://twitter.com/nima_global'>@nima_global </a> on Twitter to receive the latest updates. 
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
+
+ <Card>
+  <Accordion type="single" collapsible>
+    <AccordionItem value="item-1">
+      <div className="flex flex-col gap-4">
+        <AccordionTrigger> <h2 className="text-xl font-semibold">How can I report outdated information on Seiyanization?</h2> </AccordionTrigger>
+          <AccordionContent>
+            <div className='text-sei-subheading-light dark:text-sei-subheading-dark text-base'>
+              While we strive to keep everything updated, if you come across any inaccuracies or outdated information, please let us know. <b> You can use the platform’s built-in reporting tool. </b>  Your feedback will help maintain the accuracy and quality of information on Seiyanization. 
+            </div>
+          </AccordionContent>
+      </div>
+    </AccordionItem>
+  </Accordion>
+ </Card>
 </div>
 </div>
