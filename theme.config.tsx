@@ -48,8 +48,8 @@ const config: DocsThemeConfig = {
             y2="80.3146"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#780000" />
-            <stop offset="1" stop-color="#C1121F" />
+            <stop stopColor="#780000" />
+            <stop offset="1" stopColor="#C1121F" />
           </linearGradient>
           <clipPath id="clip0_101_578">
             <rect width="104" height="73" fill="white" />
@@ -96,8 +96,8 @@ const config: DocsThemeConfig = {
             y2="80.3146"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#780000" />
-            <stop offset="1" stop-color="#C1121F" />
+            <stop stopColor="#780000" />
+            <stop offset="1" stopColor="#C1121F" />
           </linearGradient>
           <clipPath id="clip0_101_579">
             <rect width="104" height="73" fill="white" />
