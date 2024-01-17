@@ -197,6 +197,14 @@ export const homeTools: HomeTool[] = [
         href: "https://sei-faucet.nima.enterprises/",
       },
       {
+        title: "SEI CosmWasm Faucet",
+        desc: "Faucet to claim CosmWasm testnet SEI tokens ",
+        icon: (
+            <Wrench className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://atlantic-2.app.sei.io/faucet",
+      },
+      {
         title: "Wormhole SEI Bridge",
         desc: "Bridge assets from other chains to SEI",
         icon: (
@@ -207,38 +215,6 @@ export const homeTools: HomeTool[] = [
       {
         title: "Sei Solidity Boilerplate",
         desc: "Boilerplate for easily starting SEI EVM project.",
-        icon: (
-          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
-        ),
-        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
-      },
-      {
-        title: "SEI CosmWasm Faucet",
-        desc: "Faucet to claim CosmWasm testnet SEI tokens ",
-        icon: (
-          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
-        ),
-        href: "https://atlantic-2.app.sei.io/faucet",
-      },
-      {
-        title: "example tool 1",
-        desc: "Sei solidy description",
-        icon: (
-          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
-        ),
-        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
-      },
-      {
-        title: "example tool 2",
-        desc: "Sei solidy description",
-        icon: (
-          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
-        ),
-        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
-      },
-      {
-        title: "example tool 3",
-        desc: "Sei solidy description",
         icon: (
           <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
