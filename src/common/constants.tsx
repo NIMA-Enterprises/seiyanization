@@ -189,16 +189,16 @@ export const homeTools: HomeTool[] = [
     title: TOOL_TAGS.GENERAL,
     items: [
       {
-        title: "Sei Faucet",
-        desc: "Sei faucet description",
+        title: "SEI EVM Faucet",
+        desc: "Faucet to claim EVM testnet SEI tokens.",
         icon: (
           <Wrench className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://sei-faucet.nima.enterprises/",
       },
       {
-        title: "Sei Bridge",
-        desc: "Sei bridge description",
+        title: "Wormhole SEI Bridge",
+        desc: "Bridge assets from other chains to SEI",
         icon: (
           <Settings className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
@@ -206,19 +206,19 @@ export const homeTools: HomeTool[] = [
       },
       {
         title: "Sei Solidity Boilerplate",
-        desc: "Sei solidy description",
+        desc: "Boilerplate for easily starting SEI EVM project.",
         icon: (
           <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
       },
       {
-        title: "example tool",
-        desc: "Sei solidy description",
+        title: "SEI CosmWasm Faucet",
+        desc: "Faucet to claim CosmWasm testnet SEI tokens ",
         icon: (
           <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
-        href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
+        href: "https://atlantic-2.app.sei.io/faucet",
       },
       {
         title: "example tool 1",
