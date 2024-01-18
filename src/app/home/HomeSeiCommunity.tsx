@@ -15,7 +15,11 @@ const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
           </p>
         </div>
         <div className="flex items-center justify-center mx-auto w-fit py-2 px-4 gap-4 border border-sei-border-light rounded-full">
-          <a href="" className="hover:opacity-80">
+          <a
+            href="https://github.com/sei-protocol"
+            target="_blank"
+            className="hover:opacity-80"
+          >
             <svg
               width="20"
               height="20"
@@ -30,7 +34,11 @@ const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
             </svg>
           </a>
 
-          <a href="" className="hover:opacity-80">
+          <a
+            href="https://twitter.com/SeiNetwork"
+            target="_blank"
+            className="hover:opacity-80"
+          >
             <svg
               width="15"
               height="15"
@@ -51,25 +59,12 @@ const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
               </defs>
             </svg>
           </a>
-          <a href="" className="hover:opacity-80">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 26 26"
-              fill="none"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M23.1111 0H2.88889C1.29278 0 0 1.29278 0 2.88889V23.1111C0 24.7072 1.29278 26 2.88889 26H23.1111C24.7072 26 26 24.7072 26 23.1111V2.88889C26 1.29278 24.7072 0 23.1111 0ZM7.86139 22.3889H3.98306V9.86917H7.86139V22.3889ZM5.90417 8.22972C4.63667 8.22972 3.61111 7.19694 3.61111 5.91861C3.61111 4.64028 4.63667 3.6075 5.90417 3.6075C7.17167 3.6075 8.19722 4.64028 8.19722 5.91861C8.19722 7.19694 7.17167 8.22972 5.90417 8.22972ZM22.3889 22.3889H18.5322V15.8167C18.5322 14.0147 17.8461 13.0072 16.4233 13.0072C14.8706 13.0072 14.0617 14.0544 14.0617 15.8167V22.3889H10.3422V9.86917H14.0617V11.5556C14.0617 11.5556 15.1811 9.48639 17.8353 9.48639C20.4894 9.48639 22.3925 11.1078 22.3925 14.4625V22.3889H22.3889Z"
-                fill="currentColor"
-                fillOpacity="0.9"
-              />
-            </svg>
-          </a>
 
-          <a href="" className="hover:opacity-80">
+          <a
+            href="https://discord.com/invite/sei"
+            target="_blank"
+            className="hover:opacity-80"
+          >
             <svg
               width="20"
               height="20"
@@ -83,17 +78,28 @@ const HomeSeiCommunity: React.FC<{ className?: string }> = ({ className }) => {
               />
             </svg>
           </a>
-          <a href="" className="hover:opacity-80">
+
+          <a href="https://t.me/seinetwork" target="_blank">
             <svg
               width="20"
               height="20"
+              viewBox="0 0 20 20"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 192 192"
             >
-              <path
-                d="M180.32,53.36c-2.02-7.62-7.99-13.62-15.56-15.66-13.73-3.7-68.76-3.7-68.76-3.7,0,0-55.04,0-68.76,3.7-7.57,2.04-13.54,8.04-15.56,15.66-3.68,13.81-3.68,42.64-3.68,42.64,0,0,0,28.82,3.68,42.64,2.02,7.62,7.99,13.62,15.56,15.66,13.73,3.7,68.76,3.7,68.76,3.7,0,0,55.04,0,68.76-3.7,7.57-2.04,13.54-8.04,15.56-15.66,3.68-13.81,3.68-42.64,3.68-42.64,0,0,0-28.82-3.68-42.64ZM78,122.17v-52.34l46,26.17-46,26.17Z"
-                fill="currentColor"
-              />
+              <g clip-path="url(#clip0_521_20355)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.4795 3.68987C17.386 3.30814 18.358 4.07475 18.1979 5.04532L16.3071 16.5092C16.1248 17.6146 14.9108 18.2488 13.8967 17.698C13.0481 17.2371 11.7891 16.5277 10.6545 15.7862C10.0879 15.416 8.35295 14.2288 8.5662 13.3837C8.74854 12.6612 11.6651 9.94625 13.3318 8.33167C13.9865 7.69744 13.6883 7.33105 12.9151 7.915C10.9971 9.36358 7.9178 11.566 6.8995 12.1858C6.00106 12.7327 5.53196 12.826 4.97242 12.7327C3.95064 12.5624 3.00334 12.2987 2.22994 11.9782C1.18463 11.5448 1.23554 10.1083 2.22923 9.69L16.4795 3.68987Z"
+                  fill="currentColor"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_521_20355">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
             </svg>
           </a>
         </div>
