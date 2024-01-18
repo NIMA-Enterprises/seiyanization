@@ -36,13 +36,13 @@ export const Page = (props) => {
 <Page>
  <div className="max-w-screen flex flex-col justify-center gap-4 mt-6 w-full h-full">
     <h1 className="text-2xl font-semibold">Code examples</h1>
-    <Tabs className="flex flex-col md:flex-row gap-4 items-start h-[300px]" defaultValue="example1">
+    <Tabs className="flex flex-col md:flex-row gap-4 items-start h-[300px]" defaultValue="connectToWeb3.js">
 
 
     <TabsList className="w-full  flex mt-2 h-[350px] flex-col items-start justify-center rounded gap-4 lg:p-4 lg:gap-6 pt-0 text-inherit bg-sei-card-bg-light dark:bg-sei-card-bg-dark  ">
       <TabsTrigger
         className="p-0 pb-2  lg:pb-5 w-full text-md font-semibold justify-start !rounded-none !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
-        value="example1"
+        value="connectToWeb3.js"
       >
         <div className="flex text-md w-full items-center border border-sei-border-light dark:border-sei-border-dark hover:border-transparent hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark flex-wrap gap-1 p-4 bg-sei-card-light dark:bg-sei-card-dark rounded">
           <span>Connecting to SEI Network[EVM]</span>
@@ -83,8 +83,8 @@ export const Page = (props) => {
     </TabsList>
 
     <div className='w-full flex-1 h-[350px]'>
-      <TabsContent value="example1">
-        ```bash filename="example1" showLineNumbers
+      <TabsContent value="connectToWeb3.js">
+        ```bash filename="connectToWeb3.js" showLineNumbers
             const Web3 = require('web3');
             const rpc_url = 'https://evm-devnet.seinetwork.io';
             const web3 = new Web3(rpc_url);
@@ -94,7 +94,7 @@ export const Page = (props) => {
               .catch(err => console.error('Error connecting to Sei node:', err));
         ```
 
-        <div className="mt-2 text-right text-sm">Learn more about [example](/)</div>
+        <div className="mt-2 text-right text-sm">Learn more about [connectToWeb3.js](/)</div>
       </TabsContent>
       <TabsContent value="example2">
         ```bash filename="example2" showLineNumbers
