@@ -1,4 +1,6 @@
 import { Footer } from "@/components/Footer";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
@@ -162,6 +164,40 @@ const config: DocsThemeConfig = {
         <meta name="apple-mobile-web-app-title" content="Seiyanization" />
       </>
     );
+  },
+  editLink: {
+    component: (props) => {
+      const baseUrl =
+        "https://github.com/NIMA-Enterprises/seiyanization/blob/main";
+
+      const fullUrl = `${baseUrl}/${props.filePath}`;
+
+      return (
+        <p
+          onClick={() => {
+            window.open(fullUrl, "_blank");
+          }}
+          className={cn("cursor-pointer", props.className)}
+        >
+          Edit this page →
+        </p>
+      );
+    },
+  },
+  feedback: {
+    content: (
+      <p
+        onClick={() => {
+          window.open(
+            "https://github.com/NIMA-Enterprises/seiyanization",
+            "_blank"
+          );
+        }}
+        className={cn("cursor-pointer")}
+      >
+        Become a contributor →
+      </p>
+    ),
   },
   color: {
     hue: {
