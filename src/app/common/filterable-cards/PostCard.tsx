@@ -7,6 +7,7 @@ const PostCard = ({
   title,
   description,
   xUsername,
+  author,
   image,
   href,
   featured,
@@ -19,7 +20,9 @@ const PostCard = ({
       title
     )}&description=${encodeURIComponent(
       description
-    )}&x_username=${encodeURIComponent(xUsername)}`;
+    )}&x_username=${encodeURIComponent(xUsername)}&author=${encodeURIComponent(
+      author
+    )}`;
 
   return (
     <Card className="!p-0 overflow-hidden w-full" href={href}>

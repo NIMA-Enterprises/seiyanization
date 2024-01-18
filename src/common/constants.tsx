@@ -457,12 +457,10 @@ export const featuredTopics: Topic[] = [
 
 // GUIDES PAGE
 export enum GUIDE_TAGS {
-  TAG1 = "tag1",
-  TAG2 = "tag2",
-  TAG3 = "tag3",
-  TAG4 = "tag4",
-  TAG5 = "tag5",
-  TAG6 = "tag6",
+  ENGINEERING = "Engineering",
+  MARKETING = "Marketing",
+  COMMUNITY = "Community",
+  TUTORIAL = "Tutorial",
 }
 
 export enum ECOSYSTEM_TAGS {
@@ -480,91 +478,33 @@ export enum ARTICLE_TAGS {
   ENGINEERING = "Engineering",
   MARKETING = "Marketing",
   COMMUNITY = "Community",
-  TUTORIAL = "Tutorial",
+  RESEARCH = "Research",
 }
 
 export const articles: PostType[] = [
   {
-    title: "How To Create A Wallet?",
+    title: "What makes sei so special?",
     description:
-      "In this section, we'll show you how to create a wallet. The best way to use native wallets, like the Compass wallet. Let's get started!  ",
+      "Comparative Analysis of SEI Network and Other General-Purpose Layer 1 Blockchains",
     date: "18.01.2024.",
-    author: "BoJack",
-    xUsername: "0xbezzub",
+    author: "Nikola Madjarevic",
+    xUsername: "@madjarevicn",
     href: "articles/how-to-create-a-wallet",
     image: "",
-    tags: [ARTICLE_TAGS.TUTORIAL, ARTICLE_TAGS.COMMUNITY],
+    tags: [ARTICLE_TAGS.RESEARCH],
   },
 ];
 
 export const guides: PostType[] = [
   {
-    title: "Guide title 1",
-    description: "Guide description",
-    xUsername: "author_1",
-    date: "01.09.2023.",
-    href: "guides/guide-1-example",
+    title: "How To Create A Wallet?",
+    description:
+      "In this section, we'll show you how to create a wallet. The best way to use native wallets, like the Compass wallet. Let's get started!",
+    date: "18.01.2024.",
+    author: "BoJack",
+    xUsername: "@0xbezzub",
+    href: "guides/how-to-create-a-wallet",
     image: "",
-    tags: [GUIDE_TAGS.TAG1, GUIDE_TAGS.TAG2],
-  },
-  {
-    title: "Guide title 2",
-    description: "Guide description",
-    xUsername: "author_2",
-    date: "24.08.2023.",
-    href: "guides/guide-1-example",
-    image: "",
-    tags: [GUIDE_TAGS.TAG1, GUIDE_TAGS.TAG2],
-    featured: true,
-  },
-  {
-    title: "Guide title 3",
-    description: "Guide description",
-    xUsername: "author_3",
-    date: "31.08.2023.",
-    href: "guides/guide-1-example",
-    image: "",
-    tags: [GUIDE_TAGS.TAG5],
-    featured: true,
-  },
-  {
-    title: "Guide title 4",
-    description: "Guide description",
-    xUsername: "author_4",
-    date: "11.08.2023.",
-    href: "guides/guide-1-example",
-    image: "",
-    tags: [GUIDE_TAGS.TAG3],
-    featured: true,
-  },
-  {
-    title: "Guide title 5",
-    description: "Guide description",
-    xUsername: "author_5",
-    date: "02.06.2023.",
-    href: "guides/guide-1-example",
-    image: "",
-    tags: [GUIDE_TAGS.TAG5],
-    featured: false,
-  },
-  {
-    title: "Guide title 6",
-    description: "Guide description",
-    xUsername: "author_6",
-    date: "14.07.2023.",
-    href: "guides/guide-1-example",
-    image: "",
-    tags: [GUIDE_TAGS.TAG1],
-    featured: false,
-  },
-  {
-    title: "Guide title 7",
-    description: "Guide description",
-    xUsername: "author_6",
-    image: "",
-    date: "04.08.2023.",
-    href: "guides/guide-1-example",
-    tags: [GUIDE_TAGS.TAG4],
-    featured: false,
+    tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
   },
 ];

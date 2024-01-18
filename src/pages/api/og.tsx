@@ -107,6 +107,7 @@ export function OGImage({
   xUsername: string;
   author?: string;
 }): React.JSX.Element {
+  console.log(title, description, xUsername, author);
   return (
     <div
       style={{
