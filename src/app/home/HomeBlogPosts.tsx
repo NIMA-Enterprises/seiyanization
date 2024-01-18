@@ -34,6 +34,7 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
               className="!p-0 overflow-hidden border-none"
               key={post.title}
               href={post.url}
+              isExternal={true}
             >
               <ImageWithLoading url={postImg} />
 

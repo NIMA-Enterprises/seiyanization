@@ -17,9 +17,9 @@ const HomeFeaturedTopics = () => {
   return (
     <Card className="rounded-xl p-0 overflow-hidden">
       <Tabs defaultValue={"communityArticles"} value={active} className="">
-        <TabsList className="flex items-center justify-start gap-4 p-6 overflow-hidden bg-sei-card-bg-light dark:bg-sei-card-bg-dark text-inherit">
+        <TabsList className="flex items-center md:max-w-none justify-start gap-4 p-6 overflow-hidden bg-sei-card-bg-light dark:bg-sei-card-bg-dark text-inherit">
           <TabsTrigger
-            className="p-0 text-md font-semibold justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
+            className="p-0 text-md font-semibold  justify-start !rounded-none !bg-transparent !shadow-none text-link-hover data-[state=active]:text-link-no-underline"
             value="communityArticles"
             // onClick={() => setActive("Comminity Articles")}
           >
