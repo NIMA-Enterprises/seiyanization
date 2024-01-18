@@ -93,7 +93,7 @@ const ToolsPage: React.FC<{ className?: string }> = ({ className }) => {
                     {/* <h2 className="text-md uppercase opacity-80">
                       {category.title}
                     </h2> */}
-                    <div className="grid gap-4 grid-cols-auto-fill-full grid-cols-2 md:grid-cols-4 2xl:grid-cols-5">
+                    <div className="grid gap-4 grid-cols-auto-fill-full grid-cols-2 md:grid-cols-3 2xl:grid-cols-4">
                       {category.items.map((tool) => (
                         <Card
                           className="flex items-center  cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
