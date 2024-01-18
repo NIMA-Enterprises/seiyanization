@@ -154,7 +154,9 @@ const config: DocsThemeConfig = {
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="description" content={ogDescription} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content={process.env.WEBSITE_NAME} />
+        <meta name="twitter:site" content="Seiyanization" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
         <meta property="twitter:image" content={ogUrl} />
         <link rel="canonical" href={fullUrl} />
         <meta property="og:type" content="website" />
