@@ -6,17 +6,21 @@ const Card = ({
   children,
   className,
   onClick,
+  isExternal,
   href,
 }: {
   children: React.ReactNode;
   className?: string;
+  isExternal?: boolean;
   onClick?: () => void;
+
   href?: string;
 }) => {
   if (href) {
     return (
       <Link
         href={href}
+        target={isExternal ? "_blank" : undefined}
         onClick={onClick}
         className={cn(
           "block cursor-pointer p-4 bg-sei-card-bg-light border border-sei-border-light rounded-xl  dark:bg-sei-card-bg-dark dark:border-sei-border-dark hover:dark:bg-sei-card-hover-dark hover:dark:border-transparent hover:border-transparent hover:bg-sei-card-hover-light",
