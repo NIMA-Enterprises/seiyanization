@@ -131,7 +131,7 @@ const config: DocsThemeConfig = {
       (!frontMatter.title && frontMatter.description)
     ) {
       ogTitle = "Seiyanization";
-      ogUrl = `${SITE_ROOT}/og/og-red.png`;
+      ogUrl = `${SITE_ROOT}/og/og-default.png`;
     } else if (frontMatter?.ogImage) {
       ogUrl = `${SITE_ROOT}${frontMatter.ogImage}`;
     } else {
