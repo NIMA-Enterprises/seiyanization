@@ -388,10 +388,10 @@ export const videos = [
   },
   {
     id: 4,
-    tags: [VIDEO_TAGS.OVERVIEW],
-    title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
-    image: "https://img.youtube.com/vi/1UgL7IXgjQM/maxresdefault.jpg",
-    href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
+    tags: [VIDEO_TAGS.FOUNDERS],
+    title: "Steady Lads #20: w/ Jeff Feng • Sei Labs — Co-Founder\n",
+    image: "https://img.youtube.com/vi/XQcZf4zpFcc/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=",
     description: "",
   },
   {
@@ -408,6 +408,14 @@ export const videos = [
     title: "Sei - The Fastest Blockchain Ever\n",
     image: "https://img.youtube.com/vi/TgUwqETffZs/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=TgUwqETffZs",
+    description: "",
+  },
+  {
+    id: 7,
+    tags: [VIDEO_TAGS.OVERVIEW],
+    title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
+    image: "https://img.youtube.com/vi/1UgL7IXgjQM/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
     description: "",
   },
 ];
