@@ -353,33 +353,6 @@ export const homeSupportedBy: Supporter[] = [
   },
 ];
 
-export const homeBuildingOnSei: SeiBuilder[] = [
-  {
-    id: "1",
-    image: "/builth-on-sei/builth-1.webp",
-    name: "",
-    href: "",
-  },
-  {
-    id: "2",
-    image: "/builth-on-sei/builth-2.webp",
-    name: "",
-    href: "",
-  },
-  {
-    id: "3",
-    image: "/builth-on-sei/builth-3.webp",
-    name: "",
-    href: "",
-  },
-  {
-    id: "4",
-    image: "/builth-on-sei/builth-4.webp",
-    name: "",
-    href: "",
-  },
-];
-
 export enum VIDEO_TAGS {
   TUTORIAL = "Tutorials",
   FOUNDERS = "SEI Founders",

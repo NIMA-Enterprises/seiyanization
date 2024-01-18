@@ -3,6 +3,32 @@ title: Ecosystem
 description: Explore Sei's ecosystem of products, tools, and services.
 ---
 
+import { useData } from "nextra/hooks";
 import { EcosystemPage } from '@/app/ecosystem/EcosystemPage'
 
-<EcosystemPage />
+export const getStaticProps = ({ params }) => {
+  return fetch(process.env.ECOSYSTEM_API_URL)
+    .then(res => res.json())
+    .then(res => ({
+      props: {
+        // We add an `ssg` field to the page props,
+        // which will be provided to the Nextra `useData` hook.
+        ssg: {
+          data: res
+        }
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60
+    }))
+}
+
+export const Page = () => {
+  
+  const { data } = useData()
+
+  return (<>
+  <EcosystemPage data={data}  />
+  </>)
+}
+
+<Page />

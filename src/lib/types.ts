@@ -11,6 +11,13 @@ export type PostType = {
   featured?: boolean;
 };
 
+export type EcosystemItem = {
+  url: string;
+  title: string;
+  logo: string;
+  tags: string[];
+};
+
 export type HomeTool = {
   title: string;
   items: {

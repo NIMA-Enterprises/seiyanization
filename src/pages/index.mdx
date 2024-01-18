@@ -2,11 +2,37 @@
 title: Seiyanization
 description: Learn all about SEI and new things SEI brings to web3 world.
 ---
-
 import {HomePage} from '../app/home';
+import { useData } from "nextra/hooks";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-<HomePage >
+
+export const getStaticProps = ({ params }) => {
+  return fetch(process.env.ECOSYSTEM_API_URL)
+    .then(res => res.json())
+    .then(res => ({
+      props: {
+        ssg: {
+          data: res
+        }
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60
+    }))
+}
+
+export const Page = (props) => {
+  
+  const { data } = useData()
+
+  return (
+  <HomePage data={data}>
+  {props.children}
+  </HomePage>
+  )
+}
+
+<Page>
  <div className="max-w-screen flex flex-col justify-center gap-4 mt-6 w-full h-full">
     <h1 className="text-2xl font-semibold">Code examples</h1>
     <Tabs className="flex flex-col md:flex-row gap-4 items-start h-[300px]" defaultValue="example1">
@@ -143,4 +169,4 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
   </div>
   </Tabs>
 </div>
-</HomePage>
+</Page>
