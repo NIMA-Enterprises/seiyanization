@@ -130,7 +130,7 @@ const config: DocsThemeConfig = {
       asPath === "/" ||
       (!frontMatter.title && frontMatter.description)
     ) {
-      ogTitle = "Seiyanization | AWS for Information within SEI Ecosystem";
+      ogTitle = "AWS for Information within SEI Ecosystem";
       ogUrl = `${SITE_ROOT}/og/og-default.png`;
     } else if (frontMatter?.ogImage) {
       ogUrl = `${SITE_ROOT}${frontMatter.ogImage}`;
