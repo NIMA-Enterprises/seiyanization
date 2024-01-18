@@ -8,7 +8,15 @@ import {
   Changelog,
   HomeVideo,
 } from "@/lib/types";
-import {Boxes, Cog, FileQuestion, ScrollText, Settings, Vault, Wrench} from "lucide-react";
+import {
+  Boxes,
+  Cog,
+  FileQuestion,
+  ScrollText,
+  Settings,
+  Vault,
+  Wrench,
+} from "lucide-react";
 
 // GLOBAL
 export const routes = {
@@ -200,7 +208,7 @@ export const homeTools: HomeTool[] = [
         title: "SEI CosmWasm Faucet",
         desc: "Faucet to claim CosmWasm testnet SEI tokens ",
         icon: (
-            <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+          <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://atlantic-2.app.sei.io/faucet",
       },
@@ -224,7 +232,7 @@ export const homeTools: HomeTool[] = [
         title: "Ethereum Signature Bank",
         desc: "Easily reverse engineer solidity function selector to function signature",
         icon: (
-            <Boxes className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+          <Boxes className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://esb.nima.enterprises",
       },
@@ -491,7 +499,7 @@ export enum ECOSYSTEM_TAGS {
 export enum JOB_TAGS {
   ENGINEERING = "Engineering",
   MARKETING = "Marketing",
-  COMMUNITY = "Community"
+  COMMUNITY = "Community",
 }
 
 export enum ARTICLE_TAGS {

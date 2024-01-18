@@ -8,12 +8,13 @@ import { PostCard } from "../common/filterable-cards/PostCard";
 // not in contstants because it will change frequently
 export const guides: PostType[] = [
   {
-    title: "Job post title 1",
-    description: "Job post description 1",
-    date: "01.09.2023.",
-    href: "jobs/example-job-post-1",
+    title: "DragonSwap - Community Manager",
+    description:
+      "Join NIMA as a Community Manager for DragonSwap! Foster vibrant communities, develop engagement strategies, and drive innovation in DeFi.",
+    date: "18.02.2024.",
+    href: "jobs/community-manager-dragonswap",
     image: "",
-    tags: [JOB_TAGS.ENGINEERING],
+    tags: [JOB_TAGS.COMMUNITY],
   },
   {
     title: "Job post title 2",

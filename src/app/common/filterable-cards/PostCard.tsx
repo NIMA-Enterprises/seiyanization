@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "@/components/Card";
 import { ImageWithLoading } from "@/components/ImageWithLoadings";
+import { excerpt } from "@/lib/utils";
 
 const PostCard = ({
   title,
@@ -39,7 +40,7 @@ const PostCard = ({
           </div>
         )}
         <h3 className="font-bold text-lg">{title}</h3>
-        <p className="text-sm">{description}</p>
+        <p className="text-sm">{excerpt(description, 80)}</p>
         {tags?.length > 0 && (
           <div className="flex items-center flex-wrap gap-2">
             {tags.map((tag: string) => (
