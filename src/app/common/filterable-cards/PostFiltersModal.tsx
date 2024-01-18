@@ -14,12 +14,14 @@ interface PostFilterModalProps {
   filters: Record<string, boolean>;
   onChange: (name: string, checked: boolean) => void;
   filterTags: any[];
+  uppercase?: boolean;
 }
 
 const PostFiltersModal = ({
   filters,
   onChange,
   filterTags,
+  uppercase,
 }: PostFilterModalProps) => {
   return (
     <Dialog>
@@ -38,6 +40,7 @@ const PostFiltersModal = ({
             filters={filters}
             onChange={onChange}
             filterTags={filterTags}
+            uppercase={uppercase}
           />
         </div>
       </DialogContent>

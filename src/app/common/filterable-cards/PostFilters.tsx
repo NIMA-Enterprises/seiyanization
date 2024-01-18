@@ -6,14 +6,21 @@ interface GuideFiltersProps {
   filters: Record<string, boolean>;
   onChange: (name: string, checked: boolean) => void;
   filtersTags: any;
+  uppercase?: boolean;
 }
 
-const PostFilters = ({ filters, onChange, filtersTags }: GuideFiltersProps) => {
+const PostFilters = ({
+  filters,
+  onChange,
+  filtersTags,
+  uppercase,
+}: GuideFiltersProps) => {
   return (
     <>
       <div className="block md:hidden">
         <PostFiltersModal
           filters={filters}
+          uppercase={true}
           onChange={onChange}
           filterTags={filtersTags}
         />
@@ -22,6 +29,7 @@ const PostFilters = ({ filters, onChange, filtersTags }: GuideFiltersProps) => {
         <h3 className="text-base font-bold">Filters</h3>
         <PostFilterItems
           filters={filters}
+          uppercase={true}
           onChange={onChange}
           filterTags={filtersTags}
         />

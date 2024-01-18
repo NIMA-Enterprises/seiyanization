@@ -6,12 +6,14 @@ interface PostFilterItemsProps {
   filters: Record<string, boolean>;
   onChange: (name: string, checked: boolean) => void;
   filterTags: any[];
+  uppercase?: boolean;
 }
 
 const PostFilterItems = ({
   filters,
   onChange,
   filterTags,
+  uppercase,
 }: PostFilterItemsProps) => {
   return (
     <div className="flex flex-col gap-2 text-sm font-medium">
@@ -42,7 +44,9 @@ const PostFilterItems = ({
                 htmlFor={tag}
                 className="w-full py-3 ml-2 text-sm font-medium sei-subheading-light dark:sei-subheading-dark"
               >
-                {filterTags[tag as keyof typeof filterTags]}
+                {uppercase
+                  ? filterTags[tag as keyof typeof filterTags].toUpperCase()
+                  : filterTags[tag as keyof typeof filterTags]}
               </label>
             </div>
           </div>

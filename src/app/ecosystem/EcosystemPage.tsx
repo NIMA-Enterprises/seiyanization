@@ -12,8 +12,7 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
   data,
 }) => {
   const ecosystem: EcosystemItem[] = data?.ecosystem || [];
-  const tags: string[] =
-    data.tags.map((item: string) => item?.toUpperCase()) || [];
+  const tags: string[] = data.tags || [];
 
   const [filters, setFilters] = useState<Record<string, boolean>>({});
 
