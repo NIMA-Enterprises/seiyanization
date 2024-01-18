@@ -30,7 +30,7 @@ const HomeVideoTutorials = () => {
               key={video.title}
               href={video.href}
             >
-              <img src={video.image} className="h-[200px]" />
+              <img src={video.image} className="h-[200px] object-cover" />
               <div className="flex flex-col gap-1">
                 <h3 className="text-sm leading-5 font-semibold">
                   {video.title}
