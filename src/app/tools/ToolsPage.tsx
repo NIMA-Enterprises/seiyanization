@@ -99,12 +99,15 @@ const ToolsPage: React.FC<{ className?: string }> = ({ className }) => {
                           className="flex items-center  cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
                           href={tool.href}
                           key={tool.title}
+                          isExternal={true}
                         >
                           <div className="flex items-center gap-6">
                             <div className="">{tool.icon}</div>
                             <div className="flex flex-col">
-                              <p>{tool.title}</p>
-                              <p className="text-sei-subheading-light dark:text-sei-subheading-dark">
+                              <p className="text-base font-bold">
+                                {tool.title}
+                              </p>
+                              <p className="text-sei-subheading-light dark:text-sei-subheading-dark text-sm">
                                 {tool.desc}
                               </p>
                             </div>

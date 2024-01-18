@@ -81,11 +81,6 @@ const VideosPage = () => {
             />
           </div>
           <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
-            <p className="opacity-70">
-              Showing{" "}
-              {videos.filter((video) => checkEnabledFilters(video.tags)).length}{" "}
-              of {videos.length} videos.
-            </p>
             {filteredResultsNum === 0 ? (
               <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
                 <p className="text-3xl font-bold">
@@ -117,6 +112,11 @@ const VideosPage = () => {
                   ))}
               </div>
             )}
+            <p className="opacity-70 mt-10">
+              Showing{" "}
+              {videos.filter((video) => checkEnabledFilters(video.tags)).length}{" "}
+              of {videos.length} videos.
+            </p>
           </div>
         </div>
       </div>

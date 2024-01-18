@@ -36,8 +36,8 @@ const HomeTools: React.FC<{ className?: string }> = ({ className }) => {
                 <div className="flex items-center gap-6">
                   <div className="">{tool.icon}</div>
                   <div className="flex flex-col">
-                    <p>{tool.title}</p>
-                    <p className="text-sei-subheading-light dark:text-sei-subheading-dark">
+                    <p className="text-base font-bold">{tool.title}</p>
+                    <p className="text-sei-subheading-light dark:text-sei-subheading-dark text-sm">
                       {tool.desc}
                     </p>
                   </div>

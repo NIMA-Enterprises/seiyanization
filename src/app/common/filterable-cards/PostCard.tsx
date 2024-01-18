@@ -45,6 +45,11 @@ const PostCard = ({
           </div>
         )}
         <h3 className="font-bold text-lg">{title}</h3>
+        {author && (
+          <p className="text-xs text-sei-subheading-light dark:sei-subheading-dark">
+            Author: {author}
+          </p>
+        )}
         <p className="text-sm">{excerpt(description, 80)}</p>
         {tags?.length > 0 && (
           <div className="flex items-center flex-wrap gap-2">
