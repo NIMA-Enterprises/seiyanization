@@ -373,9 +373,9 @@ export const videos = [
     id: 2,
     tags: [VIDEO_TAGS.FOUNDERS],
     title:
-      "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
-    image: "https://img.youtube.com/vi/VdEWHZIQrQE/maxresdefault.jpg",
-    href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
+      "DeFi by Design EP120: Sei Network Explained",
+    image: "https://img.youtube.com/vi/6MlC_JDBU74/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=6MlC_JDBU74",
     description: "",
   },
   {
@@ -416,6 +416,15 @@ export const videos = [
     title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
     image: "https://img.youtube.com/vi/1UgL7IXgjQM/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
+    description: "",
+  },
+  {
+    id: 8,
+    tags: [VIDEO_TAGS.FOUNDERS],
+    title:
+        "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
+    image: "https://img.youtube.com/vi/VdEWHZIQrQE/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
     description: "",
   },
 ];
