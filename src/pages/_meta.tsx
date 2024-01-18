@@ -35,7 +35,6 @@ const meta: Meta = {
     },
   },
   videos: {
-    display: "hidden",
     title: "Videos",
     type: "page",
     theme: {

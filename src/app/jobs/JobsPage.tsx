@@ -16,15 +16,7 @@ export const guides: PostType[] = [
     image: "",
     tags: [JOB_TAGS.COMMUNITY],
     featured: true,
-  },
-  {
-    title: "Job post title 2",
-    description: "Job post description 2",
-    date: "01.09.2023.",
-    href: "jobs/example-job-post-1",
-    image: "",
-    tags: [JOB_TAGS.MARKETING],
-  },
+  }
 ];
 
 const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
