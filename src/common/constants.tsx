@@ -8,7 +8,7 @@ import {
   Changelog,
   HomeVideo,
 } from "@/lib/types";
-import { Cog, FileQuestion, Settings, Wrench } from "lucide-react";
+import {Boxes, Cog, FileQuestion, ScrollText, Settings, Vault, Wrench} from "lucide-react";
 
 // GLOBAL
 export const routes = {
@@ -192,7 +192,7 @@ export const homeTools: HomeTool[] = [
         title: "SEI EVM Faucet",
         desc: "Faucet to claim EVM testnet SEI tokens.",
         icon: (
-          <Wrench className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+          <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://sei-faucet.nima.enterprises/",
       },
@@ -200,7 +200,7 @@ export const homeTools: HomeTool[] = [
         title: "SEI CosmWasm Faucet",
         desc: "Faucet to claim CosmWasm testnet SEI tokens ",
         icon: (
-            <Wrench className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+            <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://atlantic-2.app.sei.io/faucet",
       },
@@ -216,9 +216,17 @@ export const homeTools: HomeTool[] = [
         title: "Sei Solidity Boilerplate",
         desc: "Boilerplate for easily starting SEI EVM project.",
         icon: (
-          <Cog className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+          <ScrollText className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://github.com/NIMA-Enterprises/solidity-boilerplate",
+      },
+      {
+        title: "Ethereum Signature Bank",
+        desc: "Easily reverse engineer solidity function selector to function signature",
+        icon: (
+            <Boxes className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://esb.nima.enterprises",
       },
     ],
   },
@@ -367,7 +375,7 @@ export const homeBuildingOnSei: SeiBuilder[] = [
 export enum VIDEO_TAGS {
   TUTORIAL = "Tutorials",
   FOUNDERS = "SEI Founders",
-  CONCEPTS = "Concepts",
+  OVERVIEW = "Overview",
 }
 
 export const videos = [
@@ -399,7 +407,7 @@ export const videos = [
   },
   {
     id: 4,
-    tags: [VIDEO_TAGS.CONCEPTS],
+    tags: [VIDEO_TAGS.OVERVIEW],
     title: "Sei Network: The FASTEST Layer 1 for Crypto Trading??",
     image: "https://img.youtube.com/vi/1UgL7IXgjQM/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
@@ -411,6 +419,14 @@ export const videos = [
     title: "Sei Network: Interview with Sei Labs Co-Founder Jay Jog",
     image: "https://img.youtube.com/vi/J0AfMFLvc80/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=J0AfMFLvc80",
+    description: "",
+  },
+  {
+    id: 6,
+    tags: [VIDEO_TAGS.OVERVIEW],
+    title: "Sei - The Fastest Blockchain Ever\n",
+    image: "https://img.youtube.com/vi/TgUwqETffZs/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=TgUwqETffZs",
     description: "",
   },
 ];
@@ -473,13 +489,14 @@ export enum ECOSYSTEM_TAGS {
 }
 
 export enum JOB_TAGS {
-  ENGINEERING = "engineering",
-  MARKETING = "marketing",
+  ENGINEERING = "Engineering",
+  MARKETING = "Marketing",
+  COMMUNITY = "Community"
 }
 
 export enum ARTICLE_TAGS {
-  ENGINEERING = "engineering",
-  MARKETING = "marketing",
+  ENGINEERING = "Engineering",
+  MARKETING = "Marketing",
 }
 
 export const articles: PostType[] = [
