@@ -121,7 +121,7 @@ const config: DocsThemeConfig = {
     const asPath = router.asPath;
     const fullUrl = asPath === "/" ? SITE_ROOT : `${SITE_ROOT}${asPath}`;
     let ogDescription = frontMatter.description;
-    let ogTitle = `${frontMatter.title} | Seiyanization`;
+    let ogTitle = `${frontMatter.title}`;
     let ogUrl: string;
 
     if (
