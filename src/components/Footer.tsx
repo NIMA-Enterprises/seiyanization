@@ -98,7 +98,7 @@ const Footer: React.FC<{ className?: string; menu: boolean }> = ({
         <ThemeSwitch />
         <div className=" w-full opacity-40" />
         <p className=" mt-4  text-center text-sm pb-4">
-          © 2024 SEI Docs. All rights reserved.
+          © 2024 Seiyanization. All rights reserved.
         </p>
       </div>
     </div>

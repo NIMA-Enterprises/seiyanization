@@ -104,7 +104,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
           </div>
           <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
             <p className="opacity-70">
-              Showing {filteredResultsNum} of {guides.length} guides
+              Showing {filteredResultsNum} of {guides.length} jobs.
             </p>
 
             {filteredResultsNum === 0 ? (
