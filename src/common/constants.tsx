@@ -489,7 +489,7 @@ export const articles: PostType[] = [
     date: "18.01.2024.",
     author: "Nikola Madjarevic",
     xUsername: "@madjarevicn",
-    href: "articles/how-to-create-a-wallet",
+    href: "articles/what-makes-sei-so-special",
     image: "",
     tags: [ARTICLE_TAGS.RESEARCH],
   },
