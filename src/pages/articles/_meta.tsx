@@ -9,6 +9,6 @@ const meta: Meta = {
       toc: true,
     },
   },
-  "article-1-example": "Article 1 example",
+  "how-to-create-a-wallet": "How To Create A Wallet?",
 };
 export default meta;

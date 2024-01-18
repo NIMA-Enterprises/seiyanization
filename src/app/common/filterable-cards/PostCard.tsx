@@ -15,7 +15,7 @@ const PostCard = ({
 }: any) => {
   const imageUrl =
     image ||
-    `http://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
+    `https://seiyanization.com/api/og?title=${encodeURIComponent(
       title
     )}&description=${encodeURIComponent(
       description

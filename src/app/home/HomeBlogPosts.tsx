@@ -26,7 +26,7 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
         {homePosts.map((post) => {
           const postImg =
             post.image ||
-            `https://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
+            `https://seiyanization.com/api/og?title=${encodeURIComponent(
               post.title
             )}&description=${encodeURIComponent(post.description)}`;
           return (

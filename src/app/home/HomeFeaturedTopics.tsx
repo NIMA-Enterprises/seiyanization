@@ -81,7 +81,7 @@ const HomeFeaturedTopics = () => {
             {homeInstalls.map((item) => {
               const imageUrl =
                 item.image ||
-                `https://sei-docs.vercel.app/api/og?title=${encodeURIComponent(
+                `hhttps://seiyanization.com/api/og?title=${encodeURIComponent(
                   item.title
                 )}`;
               return (

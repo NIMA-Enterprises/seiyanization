@@ -2,10 +2,10 @@ import { Footer } from "@/components/Footer";
 import { useRouter } from "next/router";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
-const SITE_ROOT = "https://sei-docs.vercel.app";
+const SITE_ROOT = "https://seiyanization.com/";
 const config: DocsThemeConfig = {
   project: {
-    link: "https://github.com/shuding/nextra",
+    link: "https://github.com/NIMA-Enterprises/seiyanization",
   },
   logo: (
     <div className="w-16">

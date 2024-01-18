@@ -70,6 +70,7 @@ export default async function openGraphImage(
     // ?description=<description>
     const hasDescription = searchParams.has("description");
     const xUsername = searchParams.get("x_username");
+    const author = searchParams.get("author");
     const description = hasDescription ? searchParams.get("description") : "";
 
     return new ImageResponse(
@@ -77,6 +78,7 @@ export default async function openGraphImage(
         title: title || "",
         description: description || "",
         xUsername: xUsername || "",
+        author: author || "",
       }),
       {
         width: 1200,
@@ -88,7 +90,7 @@ export default async function openGraphImage(
     return new Response(undefined, {
       status: 302,
       headers: {
-        Location: "http://sei-docs.vercel.app/og/og-red.png",
+        Location: "https://seiyanization.com//og/og-red.png",
       },
     });
   }
@@ -98,10 +100,12 @@ export function OGImage({
   title,
   description,
   xUsername,
+  author,
 }: {
   title: string;
   description: string;
   xUsername: string;
+  author?: string;
 }): React.JSX.Element {
   return (
     <div
@@ -115,7 +119,7 @@ export function OGImage({
         fontWeight: 500,
         padding: 80,
         gap: 8,
-        backgroundImage: `url(http://sei-docs.vercel.app/og/og-red.png)`,
+        backgroundImage: `url(https://seiyanization.com/og/og-red.png)`,
         backgroundSize: "1200px 630px",
         color: "#fff",
       }}
@@ -130,7 +134,9 @@ export function OGImage({
             left: 80,
             display: "flex",
             alignItems: "center",
+            justifyItems: "center",
             gap: 8,
+            height: 18,
           }}
         >
           <svg
@@ -156,7 +162,16 @@ export function OGImage({
               </clipPath>
             </defs>
           </svg>
-          <p>@{xUsername}</p>
+          <div
+            style={{
+              display: "flex",
+              marginTop: "-18px",
+              flexDirection: "column",
+            }}
+          >
+            {author && <p>{author}</p>}
+            <p>{xUsername}</p>
+          </div>
         </div>
       )}
 

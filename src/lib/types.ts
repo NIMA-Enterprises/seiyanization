@@ -6,6 +6,7 @@ export type PostType = {
   xUsername?: string;
   date: string;
   href: string;
+  author?: string;
   image: string;
   tags: string[];
   featured?: boolean;
