@@ -9,6 +9,6 @@ const meta: Meta = {
       toc: true,
     },
   },
-  "what-makes-sei-so-special": "What makes ai so special?",
+  "what-makes-sei-so-special": "What makes SEI so special?",
 };
 export default meta;
