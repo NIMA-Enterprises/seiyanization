@@ -54,6 +54,10 @@ const ArticlesPage = () => {
     });
   };
 
+  const filteredResultsNum = articles.filter((article) =>
+    checkEnabledFilters(article.tags)
+  ).length;
+
   return (
     <div className="pb-12">
       <div className="mb-12 py-20 header ">
@@ -62,7 +66,7 @@ const ArticlesPage = () => {
             Articles
           </h1>
           <p className="opacity-80 text-xl text-sei-subheading-dark">
-            Read community written guides on how to use SEI and its ecosystem
+            Read community written articles on how to use SEI and its ecosystem
           </p>
         </div>
       </div>
@@ -75,32 +79,39 @@ const ArticlesPage = () => {
               filtersTags={ARTICLE_TAGS}
             />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
             <p className="opacity-70">
-              Showing{" "}
-              {
-                articles.filter((guide) => checkEnabledFilters(guide.tags))
-                  .length
-              }{" "}
-              of {articles.length} articles
+              Showing {filteredResultsNum} of {articles.length} articles
             </p>
-            <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {articles
-                .filter(
-                  (guide) => guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
 
-              {articles
-                .filter(
-                  (guide) => !guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
-            </div>
+            {filteredResultsNum === 0 ? (
+              <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
+                <p className="text-3xl font-bold">
+                  There are no articles, <br /> try changing filters
+                </p>
+                <img src="/memes/meme-two.png" className="w-[200px]" />
+              </div>
+            ) : (
+              <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {articles
+                  .filter(
+                    (article) =>
+                      article.featured && checkEnabledFilters(article.tags)
+                  )
+                  .map((article) => (
+                    <PostCard key={article.title} {...article} />
+                  ))}
+
+                {articles
+                  .filter(
+                    (article) =>
+                      !article.featured && checkEnabledFilters(article.tags)
+                  )
+                  .map((article) => (
+                    <PostCard key={article.title} {...article} />
+                  ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

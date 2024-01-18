@@ -55,6 +55,10 @@ const VideosPage = () => {
     });
   };
 
+  const filteredResultsNum = videos.filter((video) =>
+    checkEnabledFilters(video.tags)
+  ).length;
+
   return (
     <div className="pb-12">
       <div className="mb-12 py-20 header ">
@@ -76,32 +80,43 @@ const VideosPage = () => {
               filtersTags={VIDEO_TAGS}
             />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
             <p className="opacity-70">
               Showing{" "}
               {videos.filter((video) => checkEnabledFilters(video.tags)).length}{" "}
               of {videos.length} videos.
             </p>
-            <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {videos
-                .filter((video) => checkEnabledFilters(video.tags))
-                .map((video) => (
-                  <Link
-                    target="_blank"
-                    className="flex flex-col gap-2 text-link-hover"
-                    key={video.title}
-                    href={video.href}
-                  >
-                    <img src={video.image} className="h-[200px]" />
-                    <div className="flex flex-col gap-1">
-                      <h3 className="text-sm leading-5 font-semibold">
-                        {video.title}
-                      </h3>
-                      <p className="text-xs opacity-80">{video.description}</p>
-                    </div>
-                  </Link>
-                ))}
-            </div>
+            {filteredResultsNum === 0 ? (
+              <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
+                <p className="text-3xl font-bold">
+                  There are no videos, <br /> try changing filters
+                </p>
+                <img src="/memes/meme-two.png" className="w-[200px]" />
+              </div>
+            ) : (
+              <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {videos
+                  .filter((video) => checkEnabledFilters(video.tags))
+                  .map((video) => (
+                    <Link
+                      target="_blank"
+                      className="flex flex-col gap-2 text-link-hover"
+                      key={video.title}
+                      href={video.href}
+                    >
+                      <img src={video.image} className="h-[200px]" />
+                      <div className="flex flex-col gap-1">
+                        <h3 className="text-sm leading-5 font-semibold">
+                          {video.title}
+                        </h3>
+                        <p className="text-xs opacity-80">
+                          {video.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

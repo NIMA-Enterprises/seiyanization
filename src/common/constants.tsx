@@ -489,6 +489,7 @@ export enum GUIDE_TAGS {
   TAG3 = "tag3",
   TAG4 = "tag4",
   TAG5 = "tag5",
+  TAG6 = "tag6",
 }
 
 export enum ECOSYSTEM_TAGS {
@@ -505,6 +506,7 @@ export enum JOB_TAGS {
 export enum ARTICLE_TAGS {
   ENGINEERING = "Engineering",
   MARKETING = "Marketing",
+  COMMUNITY = "Community",
 }
 
 export const articles: PostType[] = [

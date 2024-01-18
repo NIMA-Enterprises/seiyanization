@@ -77,6 +77,10 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
     });
   };
 
+  const filteredResultsNum = guides.filter((guide) =>
+    checkEnabledFilters(guide.tags)
+  ).length;
+
   return (
     <div className="pb-12">
       <div className="mb-12 py-20  header">
@@ -98,29 +102,38 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
               filtersTags={JOB_TAGS}
             />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
             <p className="opacity-70">
-              Showing{" "}
-              {guides.filter((guide) => checkEnabledFilters(guide.tags)).length}{" "}
-              of {guides.length} guides
+              Showing {filteredResultsNum} of {guides.length} guides
             </p>
-            <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {guides
-                .filter(
-                  (guide) => guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
 
-              {guides
-                .filter(
-                  (guide) => !guide.featured && checkEnabledFilters(guide.tags)
-                )
-                .map((guide) => (
-                  <PostCard key={guide.title} {...guide} />
-                ))}
-            </div>
+            {filteredResultsNum === 0 ? (
+              <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
+                <p className="text-3xl font-bold">
+                  There are no job posts, <br /> try changing filters
+                </p>
+                <img src="/memes/meme-two.png" className="w-[200px]" />
+              </div>
+            ) : (
+              <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {guides
+                  .filter(
+                    (guide) => guide.featured && checkEnabledFilters(guide.tags)
+                  )
+                  .map((guide) => (
+                    <PostCard key={guide.title} {...guide} />
+                  ))}
+
+                {guides
+                  .filter(
+                    (guide) =>
+                      !guide.featured && checkEnabledFilters(guide.tags)
+                  )
+                  .map((guide) => (
+                    <PostCard key={guide.title} {...guide} />
+                  ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
