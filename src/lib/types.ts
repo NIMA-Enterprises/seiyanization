@@ -9,6 +9,7 @@ export type PostType = {
   author?: string;
   image: string;
   tags: string[];
+  open?: boolean;
   featured?: boolean;
 };
 

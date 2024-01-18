@@ -3,6 +3,11 @@
 @tailwind base;
 @tailwind utilities;
 
+html,
+body,
+#__next {
+    height: 100%;
+}
 
 main a {
     color: #00D181 !important;
@@ -32,7 +37,6 @@ main a {
 .dark .logo-dark {
     display: block !important;
 }
-
 
 .nextra-code {
 

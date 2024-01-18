@@ -9,6 +9,7 @@ const PostCard = ({
   xUsername,
   author,
   image,
+  open,
   href,
   featured,
   date,
@@ -35,6 +36,7 @@ const PostCard = ({
         {(date || featured) && (
           <div className="flex items-center justify-between gap-2">
             {date && <p className="text-[12px]">{date}</p>}
+
             {featured && (
               <p className="px-1 text-[10px] rounded  bg-sei-main-light dark:bg-sei-main-dark text-sei-card-bg-dark font-bold uppercase ">
                 FEATURED
