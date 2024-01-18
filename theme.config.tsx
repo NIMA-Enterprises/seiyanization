@@ -120,18 +120,19 @@ const config: DocsThemeConfig = {
     const { frontMatter } = useConfig();
     const asPath = router.asPath;
     const fullUrl = asPath === "/" ? SITE_ROOT : `${SITE_ROOT}${asPath}`;
-    const ogDescription =
-      frontMatter.description || process.env.WEBSITE_DESCRIPTION;
+    let ogDescription = frontMatter.description;
     let ogTitle = `${frontMatter.title} | Seiyanization`;
     let ogUrl: string;
 
     if (
       // If landing or there's no title & description show default og image
       asPath === "/" ||
-      (!frontMatter.title && frontMatter.description)
+      !frontMatter.title
     ) {
-      ogTitle = "AWS for Information within SEI Ecosystem";
+      ogTitle = "Seiyanization | From novice to SuperSeiyan";
       ogUrl = `${SITE_ROOT}/og/og-default.png`;
+      ogDescription =
+        "The first platform, exclusively built for SEI Ecosystem, to present collaborative effort of all ecosystem participants in order to enforce knowledge sharing.";
     } else if (frontMatter?.ogImage) {
       ogUrl = `${SITE_ROOT}${frontMatter.ogImage}`;
     } else {
