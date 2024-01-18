@@ -15,6 +15,7 @@ export const guides: PostType[] = [
     href: "jobs/community-manager-dragonswap",
     image: "",
     tags: [JOB_TAGS.COMMUNITY],
+    featured: true,
   },
   {
     title: "Job post title 2",
@@ -23,7 +24,6 @@ export const guides: PostType[] = [
     href: "jobs/example-job-post-1",
     image: "",
     tags: [JOB_TAGS.MARKETING],
-    featured: true,
   },
 ];
 
