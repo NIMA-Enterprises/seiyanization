@@ -4,8 +4,8 @@ import "../styles/main.css";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log('test');
-  
+  console.log("test");
+
   return (
     <>
       <Script
@@ -20,6 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
       </Script>
+      <Script
+        id="algolia"
+        rel="preconnect"
+        src={`https://${process.env.ALGOLIA_APP_ID}-dsn.algolia.net`}
+      ></Script>
       <Component {...pageProps} />;
     </>
   );
