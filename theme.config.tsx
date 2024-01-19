@@ -171,8 +171,16 @@ const config: DocsThemeConfig = {
         <meta name="twitter:title" content={ogTitle} />
         <meta name="twitter:description" content={ogDescription} />
         <meta property="twitter:image" content={ogUrl} />
+        <meta
+          name="twitter:creator"
+          content={frontMatter.xUsername ? frontMatter.xUsername : ""}
+        />
+        <meta property="og:image:secure_url" content={ogUrl} />
         <link rel="canonical" href={fullUrl} />
-        <meta property="og:type" content="website" />
+        <meta
+          property="og:type"
+          content={frontMatter.author ? "article" : "webite"}
+        />
         <meta property="og:url" content={fullUrl} />
         <meta property="og:image" content={ogUrl} />
         <meta property="og:title" content={ogTitle} />
