@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://seiyanization.com
+
+# Sitemaps
+Sitemap: https://seiyanization.com/sitemap.xml
