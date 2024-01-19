@@ -9,9 +9,6 @@ const SearchAlgolia: React.FC<{ className?: string }> = ({ className }) => {
       indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME || ""}
       placeholder="Search Docs..."
       maxResultsPerGroup={20}
-      searchParameters={{
-        facetFilters: ["language:en", "version:1.0.0"],
-      }}
       insights
     />
   );
