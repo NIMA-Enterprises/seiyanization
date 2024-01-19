@@ -4,8 +4,6 @@ import "../styles/main.css";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log("test");
-
   return (
     <>
       <Script
@@ -23,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script
         id="algolia"
         rel="preconnect"
-        src={`https://${process.env.ALGOLIA_APP_ID}-dsn.algolia.net`}
+        src={`https://${process.env.NEXT_PUBLIC_ALGOLIA_APP_ID}-dsn.algolia.net`}
       ></Script>
       <Component {...pageProps} />;
     </>
