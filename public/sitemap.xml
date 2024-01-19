@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://seiyanization.com/articles</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/ecosystem</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/faq</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/guides</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>1.00</priority></url>
-  <url><loc>https://seiyanization.com/jobs</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/overview</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/tools</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/videos</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/articles/what-makes-parallelized-evm-special</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/jobs/community-manager-dragonswap</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/guides/how-to-create-a-wallet</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://seiyanization.com/guides/how-to-transfer-an-nft-in-compass-wallet</loc><lastmod>2024-01-19T11:10:02.268Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/articles</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/ecosystem</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/faq</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/guides</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>1.00</priority></url>
+  <url><loc>https://seiyanization.com/jobs</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/overview</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/tools</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/videos</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/articles/meme-marketing-in-web3-communities</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/articles/what-makes-parallelized-evm-special</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/guides/how-to-create-a-wallet</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/guides/how-to-transfer-an-nft-in-compass-wallet</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://seiyanization.com/jobs/community-manager-dragonswap</loc><lastmod>2024-01-19T15:17:34.691Z</lastmod><changefreq>weekly</changefreq><priority>0.80</priority></url>
 </urlset>
