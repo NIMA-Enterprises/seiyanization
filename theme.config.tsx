@@ -121,6 +121,7 @@ const config: DocsThemeConfig = {
     const asPath = router.asPath;
     const fullUrl = asPath === "/" ? SITE_ROOT : `${SITE_ROOT}${asPath}`;
     let ogDescription = frontMatter.description;
+
     let ogTitle = `${frontMatter.title}`;
     let ogUrl: string;
 
@@ -143,7 +144,14 @@ const config: DocsThemeConfig = {
         ? `&description=${encodeURIComponent(frontMatter.description)}`
         : "";
 
-      ogUrl = `${SITE_ROOT}/api/og?${title}${description}`;
+      const author = frontMatter.author
+        ? `&author=${encodeURIComponent(frontMatter.author)}`
+        : "";
+
+      const xUsername = frontMatter.xUsername
+        ? `&x_username=@${encodeURIComponent(frontMatter.xUsername)}`
+        : "";
+      ogUrl = `${SITE_ROOT}/api/og?${title}${description}${xUsername}${author}`;
     }
 
     return (
