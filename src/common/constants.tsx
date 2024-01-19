@@ -509,6 +509,17 @@ export const articles: PostType[] = [
     image: "",
     tags: [ARTICLE_TAGS.RESEARCH],
   },
+  {
+    title: "Meme Marketing in Web3 Communities - with Sei Case Study",
+    description:
+      "Discover the power of meme marketing in Web3 communities with a focus on Sei's Red Pepe. Learn best practices and the impact of memes on brand engagement and relatability.",
+    date: "18.01.2024.",
+    author: "Milica B",
+    xUsername: "@MilicaBalaban4",
+    href: "articles/meme-marketing-in-web3-communities",
+    image: "",
+    tags: [ARTICLE_TAGS.MARKETING],
+  },
 ];
 
 export const guides: PostType[] = [

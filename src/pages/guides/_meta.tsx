@@ -4,7 +4,7 @@ const meta: Meta = {
   "*": {
     theme: {
       layout: "default",
-      sidebar: true,
+      sidebar: false,
       breadcrumb: true,
       toc: true,
     },
