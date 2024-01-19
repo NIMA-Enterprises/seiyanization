@@ -1,7 +1,7 @@
 /* Variables */
 
 :root {
-    --docsearch-primary-color: #6E56CF;
+    --docsearch-primary-color: #00D181;
     --docsearch-text-color: rgb(28, 30, 33);
     --docsearch-spacing: 12px;
     --docsearch-icon-stroke-width: 1.4;
@@ -77,7 +77,7 @@ html.dark {
 
 /* Button */
 .DocSearch-Button {
-    @apply w-fit flex items-center justify-between gap-4 text-sm leading-6 text-black/80 dark:text-white/80 rounded-md ring-1 ring-black/10 shadow-sm py-1.5 px-2 hover:ring-[#6E56CF] md:w-[250px] dark:bg-[#1c1c1c] dark:hover:bg-[#1a1a1a];
+    @apply w-fit flex items-center justify-between gap-4 text-sm leading-6 text-black/80 dark:text-white/80 rounded-md ring-1 ring-black/10 shadow-sm py-1.5 px-2 hover:ring-[#00D181] md:w-[250px] dark:bg-[#1c1c1c] dark:hover:bg-[#1a1a1a];
 }
 
 .DocSearch-Button-Container {
