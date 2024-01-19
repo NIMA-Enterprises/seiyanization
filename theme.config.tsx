@@ -112,6 +112,9 @@ const config: DocsThemeConfig = {
   footer: {
     component: Footer,
   },
+  search: {
+    component: SearchAlgolia,
+  },
   sidebar: {
     toggleButton: false,
   },
