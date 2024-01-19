@@ -506,7 +506,7 @@ export const articles: PostType[] = [
     date: "18.01.2024.",
     author: "Nikola Madjarevic",
     xUsername: "@madjarevicn",
-    href: "articles/what-makes-sei-so-special",
+    href: "articles/what-makes-parallelized-evm-special",
     image: "",
     tags: [ARTICLE_TAGS.RESEARCH],
   },
