@@ -21,7 +21,7 @@ const HomeVideoTutorials = () => {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-2 md:grid-cols-4 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
+      <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-4 bg-sei-card-inner-light dark:bg-sei-card-inner-dark">
         {videos.slice(0, 4).map((video) => {
           return (
             <Link
