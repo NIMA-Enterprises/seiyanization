@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         rel="preconnect"
         src={`https://${process.env.NEXT_PUBLIC_ALGOLIA_APP_ID}-dsn.algolia.net`}
       ></Script>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

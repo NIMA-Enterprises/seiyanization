@@ -14,7 +14,7 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between gap-4">
           <h1 className="text-2xl font-semibold">SEI Blog posts</h1>
-          <Link href="https://blog.sei.io/">
+          <Link target="_blank" href="https://blog.sei.io/">
             <Button className="hidden sm:flex rounded" size="sm">
               <span className="mr-1">View SEI blog</span>
               <ArrowRightIcon size={14} />
@@ -50,9 +50,9 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
           );
         })}
       </div>
-      <Link href="/">
-        <Button className="sm:hidden rounded" size="sm">
-          <span className="mr-1">View all case studies</span>
+      <Link target="_blank" href="https://blog.sei.io/">
+        <Button className="hidden sm:flex rounded" size="sm">
+          <span className="mr-1">View SEI blog</span>
           <ArrowRightIcon size={14} />
         </Button>
       </Link>

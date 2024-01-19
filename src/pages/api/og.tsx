@@ -90,7 +90,7 @@ export default async function openGraphImage(
     return new Response(undefined, {
       status: 302,
       headers: {
-        Location: "https://seiyanization.com//og/og-red.png",
+        Location: "https://seiyanization.com/og/og-red.png",
       },
     });
   }
