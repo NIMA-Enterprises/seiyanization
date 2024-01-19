@@ -500,7 +500,7 @@ export enum ARTICLE_TAGS {
 
 export const articles: PostType[] = [
   {
-    title: "What makes sei so special?",
+    title: "What makes Parallelized EVM so special?",
     description:
       "Comparative Analysis of SEI Network and Other General-Purpose Layer 1 Blockchains",
     date: "18.01.2024.",

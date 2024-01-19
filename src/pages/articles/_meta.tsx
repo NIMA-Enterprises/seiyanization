@@ -9,6 +9,6 @@ const meta: Meta = {
       toc: true,
     },
   },
-  "what-makes-sei-so-special": "What makes SEI so special?",
+  "what-makes-parallelized-evm-special": "What makes Parallelized EVM so special?",
 };
 export default meta;
