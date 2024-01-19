@@ -99,8 +99,8 @@ export const homeCards = [
         className="size-8 text-sei-main-light dark:text-sei-main-dark"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
         />
       </svg>
@@ -372,8 +372,7 @@ export const videos = [
   {
     id: 2,
     tags: [VIDEO_TAGS.FOUNDERS],
-    title:
-      "DeFi by Design EP120: Sei Network Explained",
+    title: "DeFi by Design EP120: Sei Network Explained",
     image: "https://img.youtube.com/vi/6MlC_JDBU74/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=6MlC_JDBU74",
     description: "",
@@ -422,7 +421,7 @@ export const videos = [
     id: 8,
     tags: [VIDEO_TAGS.FOUNDERS],
     title:
-        "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
+      "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
     image: "https://img.youtube.com/vi/VdEWHZIQrQE/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
     description: "",

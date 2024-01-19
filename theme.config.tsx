@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { SearchAlgolia } from "@/components/SearchAlgolia";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -108,7 +109,6 @@ const config: DocsThemeConfig = {
       </svg>
     </div>
   ),
-
   footer: {
     component: Footer,
   },
@@ -140,6 +140,7 @@ const config: DocsThemeConfig = {
       const title = frontMatter.title
         ? `&title=${encodeURIComponent(frontMatter.title)}`
         : "";
+
       const description = frontMatter.description
         ? `&description=${encodeURIComponent(frontMatter.description)}`
         : "";
@@ -151,6 +152,7 @@ const config: DocsThemeConfig = {
       const xUsername = frontMatter.xUsername
         ? `&x_username=@${encodeURIComponent(frontMatter.xUsername)}`
         : "";
+
       ogUrl = `${SITE_ROOT}/api/og?${title}${description}${xUsername}${author}`;
     }
 

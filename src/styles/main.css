@@ -1,4 +1,5 @@
 @import "globals.css";
+@import "docsearch.css";
 
 @tailwind base;
 @tailwind utilities;
@@ -10,8 +11,6 @@ body,
 }
 
 
-
-
 main a {
     color: #00D181 !important;
     font-weight: 600 !important;
@@ -19,7 +18,6 @@ main a {
 }
 
 .faq-container {
-
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
