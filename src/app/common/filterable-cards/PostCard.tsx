@@ -26,13 +26,13 @@ const PostCard = ({
     )}`;
 
   return (
-    <Card className="!p-0 overflow-hidden w-full" href={href}>
+    <Card className="!p-0 overflow-hidden w-full flex flex-col" href={href}>
       <ImageWithLoading
         url={imageUrl}
         className="rounded-lg object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
       />
 
-      <div className="flex flex-col gap-2 p-4">
+      <div className="flex flex-col gap-2 p-4 flex-1">
         {(date || featured) && (
           <div className="flex items-center justify-between gap-2">
             {date && <p className="text-[12px]">{date}</p>}
@@ -52,7 +52,7 @@ const PostCard = ({
         )}
         <p className="text-sm">{excerpt(description, 80)}</p>
         {tags?.length > 0 && (
-          <div className="flex items-center flex-wrap gap-2">
+          <div className="flex items-center flex-wrap gap-2 mt-auto">
             {tags.map((tag: string) => (
               <div
                 key={tag}

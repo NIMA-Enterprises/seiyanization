@@ -523,4 +523,15 @@ export const guides: PostType[] = [
     image: "",
     tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
   },
+  {
+    title: "How to Transfer an NFT in Compass Wallet",
+    description:
+      "Learn how to securely transfer an NFT in Compass Wallet: Find steps from selecting your NFT to obtaining a transaction ID for verification.",
+    date: "19.01.2024.",
+    author: "Bobini",
+    xUsername: "@0xbezzub",
+    href: "guides/how-to-transfer-an-nft-in-compass-wallet",
+    image: "",
+    tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
+  },
 ];

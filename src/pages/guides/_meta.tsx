@@ -10,5 +10,7 @@ const meta: Meta = {
     },
   },
   "how-to-create-a-wallet": "How to create a wallet",
+  "how-to-transfer-an-nft-in-compass-wallet":
+    "How to Transfer an NFT in Compass Wallet",
 };
 export default meta;
