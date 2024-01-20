@@ -357,6 +357,8 @@ export enum VIDEO_TAGS {
   TUTORIAL = "Tutorials",
   FOUNDERS = "SEI Founders",
   OVERVIEW = "Overview",
+  ECOSYSTEM = "Ecosystem",
+  PODCAST = "Podcast"
 }
 
 export const videos = [
@@ -424,6 +426,15 @@ export const videos = [
       "Thesis Ep 23 - How Sei Network solves for blockchain’s trading trilemma",
     image: "https://img.youtube.com/vi/VdEWHZIQrQE/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
+    description: "",
+  },
+  {
+    id: 9,
+    tags: [VIDEO_TAGS.ECOSYSTEM, VIDEO_TAGS.PODCAST],
+    title:
+      "DragonSwap w/ Vasco and Cooltimes",
+    image: "https://img.youtube.com/vi/drcPer2JxAQ/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=drcPer2JxAQ",
     description: "",
   },
 ];
