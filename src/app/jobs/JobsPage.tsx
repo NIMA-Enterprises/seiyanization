@@ -18,6 +18,17 @@ export const guides: PostType[] = [
     featured: true,
     open: true,
   },
+  {
+    title: "Position: Pallet Exchange - Full Stack Engineer",
+    description:
+      "If you're passionate about NFTs, we want you on our team.",
+    date: "20.02.2024.",
+    href: "jobs/full-stack-engineer-pallet",
+    image: "",
+    tags: [JOB_TAGS.ENGINEERING],
+    featured: true,
+    open: true,
+  },
 ];
 
 const JobsPage: React.FC<{ className?: string }> = ({ className }) => {

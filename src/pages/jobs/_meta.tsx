@@ -10,5 +10,6 @@ const meta: Meta = {
     },
   },
   "community-manager-dragonswap": "Position: DragonSwap - Community Manager",
+  "full-stack-engineer-pallet": "Position: Pallet Exchange - Full Stack Engineer"
 };
 export default meta;
