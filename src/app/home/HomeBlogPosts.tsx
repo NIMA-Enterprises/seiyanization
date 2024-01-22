@@ -51,7 +51,7 @@ const HomeBlogPosts: React.FC<{ className?: string }> = ({ className }) => {
         })}
       </div>
       <Link target="_blank" href="https://blog.sei.io/">
-        <Button className="hidden sm:flex rounded" size="sm">
+        <Button className="flex sm:hidden rounded" size="sm">
           <span className="mr-1">View SEI blog</span>
           <ArrowRightIcon size={14} />
         </Button>
