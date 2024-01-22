@@ -559,7 +559,7 @@ export const guides: PostType[] = [
     title: "Deposit and withdraw from CEX",
     description:
       "Guide on depositing and withdrawing $SEI to/from a centralized exchange (CEX), emphasizing the mandatory use of MEMO for deposits, but not for withdrawals, with step-by-step instructions for both processes.",
-    date: "19.01.2024.",
+    date: "22.01.2024.",
     author: "BoJack",
     xUsername: "@0xbezzub",
     href: "guides/deposit-and-withdraw-from-cex",
