@@ -12,6 +12,11 @@ import { HomeVideoTutorials } from "./HomeVideoTutorials";
 import { HomeFeaturedTopics } from "./HomeFeaturedTopics";
 import { HomeBlogPosts } from "@/app/home/HomeBlogPosts";
 import { EcosystemItem } from "@/lib/types";
+import { Card } from "@/components/Card";
+import { Link, ArrowRightIcon, DivideCircleIcon } from "lucide-react";
+import { Button } from "@/components/ui";
+import { becomeSeiyanizationWriterForm } from "@/common/constants";
+import Contribute from "./Contribute";
 
 const HomePage: React.FC<{
   className?: string;
@@ -32,6 +37,7 @@ const HomePage: React.FC<{
       {/* <HomeRoadMap /> */}
       <HomeBlogPosts />
       {/* <SupportedBy /> */}
+      <Contribute />
       <HomeSeiCommunity />
     </div>
   );

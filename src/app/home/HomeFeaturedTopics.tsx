@@ -35,7 +35,7 @@ const HomeFeaturedTopics = () => {
           <div className="ml-auto">
             <Link href={urls[active]}>
               <Button className="hidden sm:flex rounded" size="sm">
-                <span className="mr-1">View all articles</span>
+                <span className="mr-1">View all Articles</span>
                 <ArrowRightIcon size={14} />
               </Button>
             </Link>

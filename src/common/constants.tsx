@@ -29,10 +29,13 @@ export const routes = {
   faq: "/faq",
 };
 
+export const becomeSeiyanizationWriterForm =
+  "https://docs.google.com/forms/d/e/1FAIpQLSccQRYEorCMBX3Y-tq55GINpMnTHaiGu3wkv1by1nJJMLV91Q/viewform";
+
 // HOME PAGE
 export const homeCards = [
   {
-    title: "Seiyanization overview",
+    title: "Seiyanization Overview",
     description:
       "Learn more about this platform, idea, inspiration, and future plans.",
     icon: (
@@ -146,7 +149,7 @@ export const homeCards = [
   //   href: routes.ecosystemKOls,
   // },
   {
-    title: "JOB Board",
+    title: "Job Board",
     description: "Explore job opportunities in the SEI ecosystem projects.",
     icon: (
       <svg
@@ -197,7 +200,7 @@ export const homeTools: HomeTool[] = [
     title: TOOL_TAGS.GENERAL,
     items: [
       {
-        title: "SEI EVM Faucet",
+        title: "Sei EVM Faucet",
         desc: "Faucet to claim EVM testnet SEI tokens.",
         icon: (
           <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
@@ -205,7 +208,7 @@ export const homeTools: HomeTool[] = [
         href: "https://sei-faucet.nima.enterprises/",
       },
       {
-        title: "SEI CosmWasm Faucet",
+        title: "Sei CosmWasm Faucet",
         desc: "Faucet to claim CosmWasm testnet SEI tokens ",
         icon: (
           <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
@@ -213,7 +216,7 @@ export const homeTools: HomeTool[] = [
         href: "https://atlantic-2.app.sei.io/faucet",
       },
       {
-        title: "Wormhole SEI Bridge",
+        title: "Wormhole Sei Bridge",
         desc: "Bridge assets from other chains to SEI",
         icon: (
           <Settings className="stroke-sei-main-light dark:stroke-sei-main-dark" />

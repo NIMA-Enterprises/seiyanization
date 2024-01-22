@@ -10,7 +10,7 @@ const HomeVideoTutorials = () => {
   return (
     <Card className="rounded-xl p-0 overflow-hidden">
       <div className="flex items-center   border-b w-full border-sei-border-light dark:border-sei-border-dark px-5 py-3">
-        <h1 className="text-md font-semibold">Video tutorials</h1>
+        <h1 className="text-md font-semibold">Video Tutorials</h1>
 
         <div className="ml-auto">
           <Link href={"/videos"}>

@@ -25,12 +25,12 @@ const BuildingOnSei: React.FC<{
       )}
     >
       <div className="flex flex-col gap-2">
-        <span className="text-md font-semibold">Projects building on SEI</span>
+        <span className="text-md font-semibold">Projects building on Sei</span>
         <Link
           className="flex items-center gap-1 text-sm text-link-no-underline"
           href="/ecosystem"
         >
-          <span>See all</span>
+          <span>See All</span>
           <ArrowRightIcon size={14} />
         </Link>
       </div>
