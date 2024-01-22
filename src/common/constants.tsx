@@ -530,6 +530,17 @@ export const articles: PostType[] = [
     image: "",
     tags: [ARTICLE_TAGS.MARKETING],
   },
+  {
+    title: "Getting Started: Your Guide to Sei Marines",
+    description:
+      "Description: Introduction to the Sei Marines Ambassador Program, offering community engagement, growth, and exclusive benefits within the Sei ecosystem.",
+    date: "22.01.2024.",
+    author: "",
+    xUsername: "",
+    href: "articles/getting-started-your-guide-to-sei-marines",
+    image: "",
+    tags: [ARTICLE_TAGS.COMMUNITY],
+  },
 ];
 
 export const guides: PostType[] = [

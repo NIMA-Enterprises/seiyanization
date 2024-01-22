@@ -13,5 +13,7 @@ const meta: Meta = {
     "What makes Parallelized EVM so special?",
   "meme-marketing-in-web3-communities":
     "Meme Marketing in Web3 Communities - with Sei Case Study",
+  "getting-started-your-guide-to-sei-marines":
+    "Getting Started: Your Guide to Sei Marines",
 };
 export default meta;
