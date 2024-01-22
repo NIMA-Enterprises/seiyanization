@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import { ARTICLE_TAGS, articles } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
+import SortByDate from "@/components/SortByDate";
 
 const ArticlesPage = () => {
   const [filters, setFilters] = useState<Record<string, boolean>>({});
+  const [sortOrder, setSortOrder] = useState<"oldest" | "newest">("newest");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -54,9 +56,20 @@ const ArticlesPage = () => {
     });
   };
 
-  const filteredResultsNum = articles.filter((article) =>
-    checkEnabledFilters(article.tags)
-  ).length;
+  const sortedArticles = articles
+    .filter((article) => checkEnabledFilters(article.tags))
+    .sort((a, b) => {
+      const dateA = new Date(a.date.split(".").reverse().join("-")).getTime();
+      const dateB = new Date(b.date.split(".").reverse().join("-")).getTime();
+
+      if (sortOrder === "newest") {
+        return dateB - dateA;
+      } else {
+        return dateA - dateB;
+      }
+    });
+
+  const filteredResultsNum = sortedArticles.length;
 
   return (
     <div className="pb-12">
@@ -80,6 +93,11 @@ const ArticlesPage = () => {
             />
           </div>
           <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
+            <SortByDate
+              className="self-end"
+              sort={sortOrder}
+              onSortChange={(sort) => setSortOrder(sort as any)}
+            />
             {filteredResultsNum === 0 ? (
               <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
                 <p className="text-3xl font-bold">
@@ -89,7 +107,7 @@ const ArticlesPage = () => {
               </div>
             ) : (
               <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {articles
+                {sortedArticles
                   .filter(
                     (article) =>
                       article.featured && checkEnabledFilters(article.tags)
@@ -98,7 +116,7 @@ const ArticlesPage = () => {
                     <PostCard key={article.title} {...article} />
                   ))}
 
-                {articles
+                {sortedArticles
                   .filter(
                     (article) =>
                       !article.featured && checkEnabledFilters(article.tags)

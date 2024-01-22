@@ -26,7 +26,7 @@ const PostFilters = ({
         />
       </div>
       <div className="w-[250px] hidden flex-col gap-2 text-sm md:flex">
-        <h3 className="text-base font-bold">Filters</h3>
+        <h3 className="text-base font-bold h-9 flex  items-center">Filters</h3>
         <PostFilterItems
           filters={filters}
           uppercase={true}

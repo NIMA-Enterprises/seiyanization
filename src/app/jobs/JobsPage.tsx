@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 import { PostType } from "@/lib/types";
 import { JOB_TAGS } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
+import SortByDate from "@/components/SortByDate";
 
 // not in contstants because it will change frequently
-export const guides: PostType[] = [
+export const jobs: PostType[] = [
   {
     title: "DragonSwap - Community Manager",
     description:
@@ -16,7 +16,6 @@ export const guides: PostType[] = [
     image: "",
     tags: [JOB_TAGS.COMMUNITY],
     featured: true,
-    open: true,
   },
   {
     title: "Position: Pallet Exchange - Full Stack Engineer",
@@ -26,13 +25,12 @@ export const guides: PostType[] = [
     image: "",
     tags: [JOB_TAGS.ENGINEERING],
     featured: true,
-    open: true,
   },
 ];
 
 const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
   const [filters, setFilters] = useState<Record<string, boolean>>({});
-
+  const [sortOrder, setSortOrder] = useState<"oldest" | "newest">("newest");
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const urlFilters = params.getAll("filter");
@@ -80,9 +78,20 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
     });
   };
 
-  const filteredResultsNum = guides.filter((guide) =>
-    checkEnabledFilters(guide.tags)
-  ).length;
+  const sortedJobs = jobs
+    .filter((job) => checkEnabledFilters(job.tags))
+    .sort((a, b) => {
+      const dateA = new Date(a.date.split(".").reverse().join("-")).getTime();
+      const dateB = new Date(b.date.split(".").reverse().join("-")).getTime();
+
+      if (sortOrder === "newest") {
+        return dateB - dateA;
+      } else {
+        return dateA - dateB;
+      }
+    });
+
+  const filteredResultsNum = sortedJobs.length;
 
   return (
     <div className="pb-12">
@@ -106,6 +115,11 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
             />
           </div>
           <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
+            <SortByDate
+              className="self-end"
+              sort={sortOrder}
+              onSortChange={(sort) => setSortOrder(sort as any)}
+            />
             {filteredResultsNum === 0 ? (
               <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
                 <p className="text-3xl font-bold">
@@ -115,18 +129,17 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
               </div>
             ) : (
               <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {guides
+                {sortedJobs
                   .filter(
-                    (guide) => guide.featured && checkEnabledFilters(guide.tags)
+                    (job) => job.featured && checkEnabledFilters(job.tags)
                   )
                   .map((guide) => (
                     <PostCard key={guide.title} {...guide} />
                   ))}
 
-                {guides
+                {sortedJobs
                   .filter(
-                    (guide) =>
-                      !guide.featured && checkEnabledFilters(guide.tags)
+                    (job) => !job.featured && checkEnabledFilters(job.tags)
                   )
                   .map((guide) => (
                     <PostCard key={guide.title} {...guide} />
@@ -135,7 +148,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
             )}
 
             <p className="opacity-70 mt-10">
-              Showing {filteredResultsNum} of {guides.length} jobs.
+              Showing {filteredResultsNum} of {sortedJobs.length} jobs.
             </p>
           </div>
         </div>
