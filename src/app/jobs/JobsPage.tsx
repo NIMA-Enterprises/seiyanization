@@ -20,8 +20,7 @@ export const guides: PostType[] = [
   },
   {
     title: "Position: Pallet Exchange - Full Stack Engineer",
-    description:
-      "If you're passionate about NFTs, we want you on our team.",
+    description: "If you're passionate about NFTs, we want you on our team.",
     date: "20.02.2024.",
     href: "jobs/full-stack-engineer-pallet",
     image: "",

@@ -358,7 +358,7 @@ export enum VIDEO_TAGS {
   FOUNDERS = "SEI Founders",
   OVERVIEW = "Overview",
   ECOSYSTEM = "Ecosystem",
-  PODCAST = "Podcast"
+  PODCAST = "Podcast",
 }
 
 export const videos = [
@@ -431,8 +431,7 @@ export const videos = [
   {
     id: 9,
     tags: [VIDEO_TAGS.ECOSYSTEM, VIDEO_TAGS.PODCAST],
-    title:
-      "DragonSwap w/ Vasco and Cooltimes",
+    title: "DragonSwap w/ Vasco and Cooltimes",
     image: "https://img.youtube.com/vi/drcPer2JxAQ/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=drcPer2JxAQ",
     description: "",
@@ -553,6 +552,17 @@ export const guides: PostType[] = [
     author: "Bobini",
     xUsername: "@0xbezzub",
     href: "guides/how-to-transfer-an-nft-in-compass-wallet",
+    image: "",
+    tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
+  },
+  {
+    title: "Deposit and withdraw from CEX",
+    description:
+      "Guide on depositing and withdrawing $SEI to/from a centralized exchange (CEX), emphasizing the mandatory use of MEMO for deposits, but not for withdrawals, with step-by-step instructions for both processes.",
+    date: "19.01.2024.",
+    author: "BoJack",
+    xUsername: "@0xbezzub",
+    href: "guides/deposit-and-withdraw-from-cex",
     image: "",
     tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
   },
