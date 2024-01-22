@@ -1,9 +1,9 @@
 import { Footer } from "@/components/Footer";
 import { SearchAlgolia } from "@/components/SearchAlgolia";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+
 import { useRouter } from "next/router";
-import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
+import { DocsThemeConfig, ThemeSwitch, useConfig } from "nextra-theme-docs";
 
 const SITE_ROOT = "https://seiyanization.com/";
 const config: DocsThemeConfig = {
@@ -114,6 +114,9 @@ const config: DocsThemeConfig = {
   },
   search: {
     component: SearchAlgolia,
+  },
+  navbar: {
+    extraContent: <ThemeSwitch />,
   },
   sidebar: {
     toggleButton: false,
