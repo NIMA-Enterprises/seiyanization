@@ -160,9 +160,10 @@ const config: DocsThemeConfig = {
         ? `&x_username=@${encodeURIComponent(frontMatter.xUsername)}`
         : "";
 
-      const type = getImageType(asPath);
+      const type = `&type=${getImageType(asPath)}`;
 
       ogUrl = `${SITE_ROOT}/api/og?${title}${description}${xUsername}${author}${type}`;
+      console.log(ogUrl);
     }
 
     return (
