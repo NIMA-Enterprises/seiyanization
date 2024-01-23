@@ -1,11 +1,12 @@
 import { Footer } from "@/components/Footer";
 import { SearchAlgolia } from "@/components/SearchAlgolia";
-import { cn } from "@/lib/utils";
+import { cn, getImageType } from "@/lib/utils";
 
 import { useRouter } from "next/router";
 import { DocsThemeConfig, ThemeSwitch, useConfig } from "nextra-theme-docs";
 
 const SITE_ROOT = "https://seiyanization.com/";
+
 const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/NIMA-Enterprises/seiyanization",
@@ -159,7 +160,9 @@ const config: DocsThemeConfig = {
         ? `&x_username=@${encodeURIComponent(frontMatter.xUsername)}`
         : "";
 
-      ogUrl = `${SITE_ROOT}/api/og?${title}${description}${xUsername}${author}`;
+      const type = getImageType(asPath);
+
+      ogUrl = `${SITE_ROOT}/api/og?${title}${description}${xUsername}${author}${type}`;
     }
 
     return (

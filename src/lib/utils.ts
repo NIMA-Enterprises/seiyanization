@@ -12,3 +12,21 @@ export const excerpt = (value: string, charLimit: number = 100): string => {
 
   return value.substring(0, charLimit - 3) + "...";
 };
+
+
+//This is used for social og images on sharing link
+export const getImageType = (path: string) => {
+  if (path.includes("/jobs")) {
+    return "job";
+  }
+
+  if (path.includes("/articles")) {
+    return "article";
+  }
+
+  if (path.includes("/guides")) {
+    return "guide";
+  }
+
+  return "default";
+};

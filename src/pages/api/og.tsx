@@ -64,14 +64,34 @@ export default async function openGraphImage(
     const [fonts] = await loadAssets();
     const { searchParams } = new URL(req.url || "");
 
-    // ?title=<title>
     const hasTitle = searchParams.has("title");
     const title = hasTitle ? searchParams.get("title") : "";
-    // ?description=<description>
+
     const hasDescription = searchParams.has("description");
     const xUsername = searchParams.get("x_username");
     const author = searchParams.get("author");
     const description = hasDescription ? searchParams.get("description") : "";
+
+    const imgType = searchParams.get("type") || "default";
+    var ogImage = "";
+
+    switch (imgType) {
+      case "article":
+        ogImage = "https://seiyanization.com/og/og-red.png";
+        break;
+
+      case "guide":
+        ogImage = "https://seiyanization.com/og/og-2.jpg";
+        break;
+
+      case "job":
+        ogImage = "https://seiyanization.com/og/og-3.jpg";
+        break;
+
+      default:
+        ogImage = "https://seiyanization.com/og/og-red.png";
+        break;
+    }
 
     return new ImageResponse(
       createElement(OGImage, {
@@ -79,6 +99,7 @@ export default async function openGraphImage(
         description: description || "",
         xUsername: xUsername || "",
         author: author || "",
+        ogImage: ogImage,
       }),
       {
         width: 1200,
@@ -100,14 +121,15 @@ export function OGImage({
   title,
   description,
   xUsername,
+  ogImage,
   author,
 }: {
   title: string;
   description: string;
   xUsername: string;
+  ogImage: string;
   author?: string;
 }): React.JSX.Element {
-  console.log(title, description, xUsername, author);
   return (
     <div
       style={{
@@ -120,7 +142,7 @@ export function OGImage({
         fontWeight: 500,
         padding: 80,
         gap: 8,
-        backgroundImage: `url(https://seiyanization.com/og/og-red.png)`,
+        backgroundImage: `url(${ogImage})`,
         backgroundSize: "1200px 630px",
         color: "#fff",
       }}

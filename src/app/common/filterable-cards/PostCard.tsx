@@ -3,6 +3,23 @@ import { Card } from "@/components/Card";
 import { ImageWithLoading } from "@/components/ImageWithLoadings";
 import { excerpt } from "@/lib/utils";
 
+//used for card image generation
+export const getImageType = (path: string) => {
+  if (path.includes("jobs/")) {
+    return "job";
+  }
+
+  if (path.includes("articles/")) {
+    return "article";
+  }
+
+  if (path.includes("guides/")) {
+    return "guide";
+  }
+
+  return "default";
+};
+
 const PostCard = ({
   title,
   description,
@@ -15,6 +32,8 @@ const PostCard = ({
   date,
   tags,
 }: any) => {
+  const ogImgType = getImageType(href);
+
   const imageUrl =
     image ||
     `https://seiyanization.com/api/og?title=${encodeURIComponent(
@@ -23,7 +42,7 @@ const PostCard = ({
       description
     )}&x_username=${encodeURIComponent(xUsername)}&author=${encodeURIComponent(
       author
-    )}`;
+    )}&type=${encodeURIComponent(ogImgType)}`;
 
   return (
     <Card className="!p-0 overflow-hidden w-full flex flex-col" href={href}>
