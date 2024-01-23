@@ -29,6 +29,7 @@ const HomePage: React.FC<{
     <div className={cn("flex flex-col gap-6", className)}>
       <HomeIntroSection />
       <HomeCards />
+      <Contribute />
       <HomeVideoTutorials />
       <HomeFeaturedTopics />
       <div className="w-full">{children}</div>
@@ -37,7 +38,6 @@ const HomePage: React.FC<{
       {/* <HomeRoadMap /> */}
       <HomeBlogPosts />
       {/* <SupportedBy /> */}
-      <Contribute />
       <HomeSeiCommunity />
     </div>
   );
