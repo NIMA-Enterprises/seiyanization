@@ -6,7 +6,7 @@ const Contribute = () => {
   return (
     <div
       className={
-        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between mt-10 dark:bg-sei-card-inner-dark bg-sei-card-inner-light  py-5 px-5 rounded-xl"
+        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between mt-10 dark:bg-sei-card-inner-dark bg-sei-card-inner-light  py-2 px-5 rounded-xl"
       }
     >
       <div className="flex flex-col">
