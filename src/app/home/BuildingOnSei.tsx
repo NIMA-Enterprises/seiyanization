@@ -20,7 +20,7 @@ const BuildingOnSei: React.FC<{
   return (
     <Card
       className={cn(
-        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between mt-10",
+        "flex flex-col gap-6 md:flex-row md:items-center md:justify-between",
         className
       )}
     >

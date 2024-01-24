@@ -62,7 +62,7 @@ main a {
 }
 
 .nextra-code pre {
-    height: 295px !important;
+    height: 325px !important;
 }
 
 .nextra-code div {
@@ -83,6 +83,7 @@ main a {
 
 .dark .nextra-nav-container {
     background-color: #0F172A !important;
+
 }
 
 .dark .nextra-nav-container-blur {

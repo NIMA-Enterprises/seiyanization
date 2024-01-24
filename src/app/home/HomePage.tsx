@@ -26,7 +26,7 @@ const HomePage: React.FC<{
   const ecosystem: EcosystemItem[] = data?.ecosystem || [];
 
   return (
-    <div className={cn("flex flex-col gap-6", className)}>
+    <div className={cn("flex flex-col gap-10", className)}>
       <HomeIntroSection />
       <HomeCards />
       <Contribute />

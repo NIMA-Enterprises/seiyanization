@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const HomeIntroSection: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={cn("mt-6 mb-12 py-20 header rounded-xl", className)}>
+    <div className={cn("mt-6 py-20 header rounded-xl", className)}>
       <div className="text-sei-heading-dark px-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">
           {"Seiyanization, "}

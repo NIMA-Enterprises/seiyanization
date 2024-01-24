@@ -9,7 +9,7 @@ import { homeTools } from "@/common/constants";
 
 const HomeTools: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={cn("mt-10 flex flex-col gap-6")}>
+    <div className={cn("flex flex-col gap-6")}>
       <div className="flex items-center">
         <h1 className="text-2xl font-semibold">Tools</h1>
 
