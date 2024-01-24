@@ -53,7 +53,7 @@ const SubMenu = (props: Props) => {
           href={becomeSeiyanizationWriterForm}
           className="flex items-center gap-1 cursor-pointer text-sm min-w-fit text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white"
         >
-          <h3>Contribute</h3>
+          <h3>Contribute to Seiyanization</h3>
         </Link>
       </div>
       {/* Desktop */}
@@ -90,7 +90,7 @@ const SubMenu = (props: Props) => {
           href={becomeSeiyanizationWriterForm}
           className="flex items-center gap-1 cursor-pointer text-sm min-w-fit text-black/70 hover:text-black dark:text-white/70 dark:hover:text-white"
         >
-          <h3>Contribute (to Seiyanization)</h3>
+          <h3>Contribute to Seiyanization</h3>
         </Link>
       </div>
     </>
