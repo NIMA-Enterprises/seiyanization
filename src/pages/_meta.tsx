@@ -20,6 +20,7 @@ const meta: Meta = {
   },
   ecosystem: {
     title: "Ecosystem",
+    display: "hidden",
     type: "page",
     theme: {
       layout: "raw",
