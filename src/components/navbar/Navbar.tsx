@@ -117,7 +117,7 @@ const Navbar = (props: Props) => {
             <NextraNavbar items={props.items} />
           </div>
         </div>
-        <div className="relative overflow-scroll  bg-sei-card-bg-light dark:bg-sei-card-bg-dark -mt-2 z-100 ">
+        <div className="relative overflow-scroll md:overflow-hidden  bg-sei-card-bg-light dark:bg-sei-card-bg-dark -mt-2 z-100 ">
           <div className="flex items-center pt-2 pb-3 gap-4 w-full mx-auto max-w-[90rem] px-5 md:px-8 ml-2">
             <SubMenu />
           </div>

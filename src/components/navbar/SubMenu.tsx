@@ -57,7 +57,7 @@ const SubMenu = (props: Props) => {
         </Link>
       </div>
       {/* Desktop */}
-      <div className="hidden items-center gap-4 lg:flex overflow-scroll scroll-m-0">
+      <div className="hidden items-center gap-4 lg:flex overflow-scroll md:overflow-hidden scroll-m-0">
         {submenuItems.map((productCategory) => (
           <HoverCard
             key={productCategory.title}
