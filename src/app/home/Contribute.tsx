@@ -1,5 +1,4 @@
 import { becomeSeiyanizationWriterForm } from "@/common/constants";
-import { cn } from "@/lib/utils";
 import React from "react";
 
 const Contribute = () => {

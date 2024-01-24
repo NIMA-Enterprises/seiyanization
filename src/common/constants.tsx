@@ -91,7 +91,7 @@ export const homeCards = [
   {
     title: "Guides",
     description:
-      "Find step-by-step guides for using, building, and launching dapps on SEI.",
+      "Find step-by-step guides for using, building, and launching dapps on Sei.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ export const homeCards = [
   // },
   {
     title: "Job Board",
-    description: "Explore job opportunities in the SEI ecosystem projects.",
+    description: "Explore job opportunities in the Sei ecosystem projects.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -509,6 +509,116 @@ export enum ARTICLE_TAGS {
   COMMUNITY = "Community",
   RESEARCH = "Research",
 }
+
+export const submenuItems = [
+  {
+    title: "Seiyanization",
+    items: [
+      {
+        title: "Overview",
+        shortDescription:
+          "Learn more about this platform, idea, inspiration, and future plans.",
+        icon: "note",
+        href: "/overview",
+      },
+      {
+        title: "Guides",
+        shortDescription:
+          "Find step-by-step guides for using, building, and launching dapps on Sei.",
+        icon: "terminal",
+        href: "/guides",
+      },
+      {
+        title: "Articles",
+        shortDescription:
+          "Read Community written Articles on how to use Sei and its Ecosystem",
+        icon: "folder-open",
+        href: "/articles",
+      },
+      {
+        title: "Videos",
+        shortDescription: "Learn more by watching some of the Videos",
+        icon: "video",
+        href: "/videos",
+      },
+      {
+        title: "Job Board",
+        shortDescription:
+          "Explore job opportunities in the Sei ecosystem projects.",
+        icon: "case",
+        href: "/jobs",
+      },
+      {
+        title: "FAQ",
+        shortDescription:
+          "Get answers to the Frequently Asked Questions about the Platform",
+        icon: "question",
+        href: "/faq",
+      },
+    ],
+  },
+  {
+    title: "Ecosystem",
+    items: [
+      {
+        title: "Projects",
+        shortDescription: "Explore Projects in Sei Ecosystem",
+        icon: "globe",
+        href: "/ecosystem",
+      },
+      {
+        title: "Tools",
+        shortDescription: "Explore Tools in Sei Ecosystem",
+        icon: "wrench",
+        href: "/tools",
+      },
+    ],
+  },
+  {
+    title: "Sei",
+    items: [
+      {
+        title: "About Sei",
+        shortDescription: "Learn more about Sei.",
+        icon: "cloud",
+        href: "https://docs.sei.io/learn/about-sei",
+      },
+      {
+        title: "Get Started (Documentation)",
+        shortDescription:
+          "Use this beginner-friendly guide to start building on Sei.",
+        icon: "codesandbox",
+        href: "https://docs.sei.io/develop/get-started",
+      },
+      {
+        title: "Whitepaper",
+        shortDescription: "Technical Details of Sei Chain.",
+        icon: "scroll",
+        href: "https://github.com/sei-protocol/sei-chain/blob/3c9576fee3494ce039df684624f918dd8066ba3f/whitepaper/Sei_Whitepaper.pdf",
+      },
+      {
+        title: "Resources",
+        shortDescription:
+          "Resources that can be used for Development and Testing",
+        icon: "settings",
+        href: "https://docs.sei.io/develop/resources",
+      },
+      {
+        title: "Blog",
+        shortDescription: "Sei Project Updates and Partnership announcements",
+        icon: "folder-open",
+        href: "https://blog.sei.io/",
+      },
+      {
+        title: "FAQ",
+        shortDescription:
+          "Get answers to the Frequently Asked Questions about Sei",
+        icon: "question",
+        href: "https://docs.sei.io/develop/faq",
+      },
+    ],
+  },
+];
 
 export const articles: PostType[] = [
   {

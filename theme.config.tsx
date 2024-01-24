@@ -1,7 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { SearchAlgolia } from "@/components/SearchAlgolia";
+import Navbar from "@/components/navbar/Navbar";
 import { cn, getImageType } from "@/lib/utils";
-
 import { useRouter } from "next/router";
 import { DocsThemeConfig, ThemeSwitch, useConfig } from "nextra-theme-docs";
 
@@ -117,6 +117,7 @@ const config: DocsThemeConfig = {
     component: SearchAlgolia,
   },
   navbar: {
+    component: (props: any) => <Navbar {...props} />,
     extraContent: <ThemeSwitch />,
   },
   sidebar: {
