@@ -29,7 +29,7 @@ const Contribute = () => {
       </div>
 
       <a href={becomeSeiyanizationWriterForm} target="_blank">
-        <div className="border rounded-xl cursor-pointer border-sei-main-light dark:border-sei-main-dark px-6 py-2 flex justify-center items-center">
+        <div className="border rounded-xl text-sei-main-light dark:text-sei-main-dark cursor-pointer border-sei-main-light dark:border-sei-main-dark px-6 py-2 flex justify-center items-center">
           Join
         </div>
       </a>
