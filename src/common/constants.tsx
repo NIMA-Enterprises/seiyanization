@@ -373,6 +373,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/OOhwd7VoFcw/hqdefault.jpg",
     href: "https://www.youtube.com/watch?v=OOhwd7VoFcw",
     description: "",
+    featured: false,
   },
   {
     id: 2,
@@ -381,6 +382,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/6MlC_JDBU74/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=6MlC_JDBU74",
     description: "",
+    featured: false,
   },
   {
     id: 3,
@@ -389,6 +391,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/k3MhT8Ashig/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=k3MhT8Ashig",
     description: "",
+    featured: false,
   },
   {
     id: 4,
@@ -397,6 +400,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/XQcZf4zpFcc/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=",
     description: "",
+    featured: false,
   },
   {
     id: 5,
@@ -405,6 +409,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/J0AfMFLvc80/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=J0AfMFLvc80",
     description: "",
+    featured: false,
   },
   {
     id: 6,
@@ -413,6 +418,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/TgUwqETffZs/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=TgUwqETffZs",
     description: "",
+    featured: false,
   },
   {
     id: 7,
@@ -421,6 +427,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/1UgL7IXgjQM/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=1UgL7IXgjQM",
     description: "",
+    featured: false,
   },
   {
     id: 8,
@@ -430,6 +437,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/VdEWHZIQrQE/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=VdEWHZIQrQE",
     description: "",
+    featured: false,
   },
   {
     id: 9,
@@ -438,6 +446,7 @@ export const videos = [
     image: "https://img.youtube.com/vi/drcPer2JxAQ/maxresdefault.jpg",
     href: "https://www.youtube.com/watch?v=drcPer2JxAQ",
     description: "",
+    featured: false,
   },
 ];
 

@@ -1,13 +1,16 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { VIDEO_TAGS, videos } from "@/common/constants";
 import { PostFilters } from "../common/filterable-cards/PostFilters";
-import Link from "next/link";
-import { ImageWithLoading } from "@/components/ImageWithLoadings";
+import PostPagination from "@/components/pagination/PostPagination";
+
+const PAGE_SIZE = 9;
 
 const VideosPage = () => {
   const [filters, setFilters] = useState<Record<string, boolean>>({});
 
+  const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const urlFilters = params.getAll("filter");
@@ -55,6 +58,21 @@ const VideosPage = () => {
     });
   };
 
+  const sortedVideos = videos
+    .filter((videos) => checkEnabledFilters(videos.tags))
+    .sort((a, b) => {
+      if (a.featured && !b.featured) {
+        // Featured come first
+        return -1;
+      }
+      // non featured
+      return 1;
+    });
+
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = startIndex + PAGE_SIZE;
+  const paginatedVideos = sortedVideos.slice(startIndex, endIndex);
+
   const filteredResultsNum = videos.filter((video) =>
     checkEnabledFilters(video.tags)
   ).length;
@@ -80,7 +98,7 @@ const VideosPage = () => {
               filtersTags={VIDEO_TAGS}
             />
           </div>
-          <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
+          <div className="flex-1 min-h-[940px]  w-full flex flex-col gap-2">
             {filteredResultsNum === 0 ? (
               <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
                 <p className="text-3xl font-bold">
@@ -90,8 +108,33 @@ const VideosPage = () => {
               </div>
             ) : (
               <div className="grid grid-cols-auto-fill-full gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {videos
-                  .filter((video) => checkEnabledFilters(video.tags))
+                {paginatedVideos
+                  .filter(
+                    (video) => video.featured && checkEnabledFilters(video.tags)
+                  )
+                  .map((video) => (
+                    <Link
+                      target="_blank"
+                      className="flex flex-col gap-2 text-link-hover"
+                      key={video.title}
+                      href={video.href}
+                    >
+                      <img src={video.image} className="h-[200px]" />
+                      <div className="flex flex-col gap-1">
+                        <h3 className="text-sm leading-5 font-semibold">
+                          {video.title}
+                        </h3>
+                        <p className="text-xs opacity-80">
+                          {video.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                {paginatedVideos
+                  .filter(
+                    (video) =>
+                      !video.featured && checkEnabledFilters(video.tags)
+                  )
                   .map((video) => (
                     <Link
                       target="_blank"
@@ -112,11 +155,28 @@ const VideosPage = () => {
                   ))}
               </div>
             )}
-            <p className="opacity-70 mt-10">
-              Showing{" "}
-              {videos.filter((video) => checkEnabledFilters(video.tags)).length}{" "}
-              of {videos.length} videos.
-            </p>
+            {filteredResultsNum > PAGE_SIZE && (
+              <p className="opacity-70 text-center mt-auto ">
+                Showing{" "}
+                {
+                  videos.filter((video) => checkEnabledFilters(video.tags))
+                    .length
+                }{" "}
+                of {videos.length} videos.
+              </p>
+            )}
+
+            <div className="h-[100px]">
+              <PostPagination
+                className="mb-10"
+                currentPage={currentPage}
+                onPageChange={(newPage: number) => {
+                  setCurrentPage(newPage);
+                }}
+                totalItemNum={filteredResultsNum}
+                pageSize={PAGE_SIZE}
+              />
+            </div>
           </div>
         </div>
       </div>

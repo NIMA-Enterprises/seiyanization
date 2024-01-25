@@ -6,6 +6,9 @@ import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/Card";
+import PostPagination from "@/components/pagination/PostPagination";
+
+const PAGE_SIZE = 21;
 
 const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
   className,
@@ -13,6 +16,7 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
 }) => {
   const ecosystem: EcosystemItem[] = data?.ecosystem || [];
   const tags: string[] = data.tags || [];
+  const [currentPage, setCurrentPage] = useState(1);
 
   const [filters, setFilters] = useState<Record<string, boolean>>({});
 
@@ -26,6 +30,11 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
     });
 
     setFilters(initialFilters);
+    //pagination
+    const urlPage = params.get("page");
+    if (urlPage) {
+      setCurrentPage(parseInt(urlPage));
+    }
   }, []);
 
   const handleFilterChange = (name: string, checked: boolean) => {
@@ -67,6 +76,12 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
     checkEnabledFilters(tool.tags)
   ).length;
 
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = startIndex + PAGE_SIZE;
+  const paginatedEcosystem = ecosystem
+    .filter((item) => checkEnabledFilters(item.tags))
+    .slice(startIndex, endIndex);
+
   return (
     <div className="pb-12">
       <div className="mb-12 py-20 header ">
@@ -89,7 +104,7 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
             />
           </div>
 
-          <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
+          <div className="flex-1 min-h-[850px]  w-full flex flex-col gap-2">
             {filteredResultsNum === 0 ? (
               <div className="w-full  text-center flex flex-col md:flex-row justify-center items-center py-[90px]">
                 <p className="text-3xl font-bold">
@@ -99,7 +114,7 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
               </div>
             ) : (
               <div className="w-full grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-                {ecosystem
+                {paginatedEcosystem
                   .filter((item) => checkEnabledFilters(item.tags))
                   .map((item, i) => (
                     <Card
@@ -132,9 +147,23 @@ const EcosystemPage: React.FC<{ className?: string; data: any }> = ({
                   ))}
               </div>
             )}
-            <p className="opacity-70 mt-10">
-              Showing {filteredResultsNum} of {ecosystem.length} articles
-            </p>
+            {filteredResultsNum !== 0 && (
+              <p className="opacity-70 text-center mt-auto">
+                Showing {filteredResultsNum} of {ecosystem.length} projects
+              </p>
+            )}
+
+            <div className="h-[100px]">
+              <PostPagination
+                className="mb-10"
+                currentPage={currentPage}
+                onPageChange={(newPage: number) => {
+                  setCurrentPage(newPage);
+                }}
+                totalItemNum={filteredResultsNum}
+                pageSize={PAGE_SIZE}
+              />
+            </div>
           </div>
         </div>
       </div>

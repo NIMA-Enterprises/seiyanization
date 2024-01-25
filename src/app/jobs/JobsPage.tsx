@@ -5,34 +5,43 @@ import { PostFilters } from "../common/filterable-cards/PostFilters";
 import { PostCard } from "../common/filterable-cards/PostCard";
 import SortByDate from "@/components/SortByDate";
 
+import PostPagination from "@/components/pagination/PostPagination";
+
 // not in contstants because it will change frequently
 export const jobs: PostType[] = [
   {
     title: "DragonSwap - Community Manager",
     description:
       "Join NIMA as a Community Manager for DragonSwap! Foster vibrant communities, develop engagement strategies, and drive innovation in DeFi.",
-    date: "18.02.2024.",
+    date: "18.01.2024.",
     href: "jobs/community-manager-dragonswap",
     image: "",
     tags: [JOB_TAGS.COMMUNITY],
-    featured: true,
+    featured: false,
   },
   {
     title: "Position: Pallet Exchange - Full Stack Engineer",
     description: "If you're passionate about NFTs, we want you on our team.",
-    date: "20.02.2024.",
+    date: "20.01.2024.",
     href: "jobs/full-stack-engineer-pallet",
     image: "",
     tags: [JOB_TAGS.ENGINEERING],
-    featured: true,
+    featured: false,
   },
 ];
+
+const PAGE_SIZE = 6;
 
 const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
   const [filters, setFilters] = useState<Record<string, boolean>>({});
   const [sortOrder, setSortOrder] = useState<"oldest" | "newest">("newest");
+
+  const [currentPage, setCurrentPage] = useState(1);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+
+    //filter
     const urlFilters = params.getAll("filter");
     const initialFilters = {} as Record<string, boolean>;
 
@@ -41,6 +50,12 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
     });
 
     setFilters(initialFilters);
+
+    //pagination
+    const urlPage = params.get("page");
+    if (urlPage) {
+      setCurrentPage(parseInt(urlPage));
+    }
   }, []);
 
   const handleFilterChange = (name: string, checked: boolean) => {
@@ -84,12 +99,25 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
       const dateA = new Date(a.date.split(".").reverse().join("-")).getTime();
       const dateB = new Date(b.date.split(".").reverse().join("-")).getTime();
 
-      if (sortOrder === "newest") {
-        return dateB - dateA;
+      if (a.featured && !b.featured) {
+        // Featured come first
+        return -1;
+      } else if (!a.featured && b.featured) {
+        // non featured
+        return 1;
       } else {
-        return dateA - dateB;
+        // Both featured or both non-featured, sort by date
+        if (sortOrder === "newest") {
+          return dateB - dateA;
+        } else {
+          return dateA - dateB;
+        }
       }
     });
+
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const endIndex = startIndex + PAGE_SIZE;
+  const paginatedJobs = sortedJobs.slice(startIndex, endIndex);
 
   const filteredResultsNum = sortedJobs.length;
 
@@ -114,7 +142,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
               filtersTags={JOB_TAGS}
             />
           </div>
-          <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center">
+          <div className="flex-1 min-h-[1000px]  w-full flex flex-col gap-2">
             <SortByDate
               className="self-end"
               sort={sortOrder}
@@ -129,15 +157,15 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
               </div>
             ) : (
               <div className="grid grid-cols-auto-fill-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {sortedJobs
+                {paginatedJobs
                   .filter(
                     (job) => job.featured && checkEnabledFilters(job.tags)
                   )
-                  .map((guide) => (
-                    <PostCard key={guide.title} {...guide} />
+                  .map((guide, i) => (
+                    <PostCard key={guide.title + i} {...guide} />
                   ))}
 
-                {sortedJobs
+                {paginatedJobs
                   .filter(
                     (job) => !job.featured && checkEnabledFilters(job.tags)
                   )
@@ -147,9 +175,21 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
               </div>
             )}
 
-            <p className="opacity-70 mt-10">
-              Showing {filteredResultsNum} of {sortedJobs.length} jobs.
-            </p>
+            {filteredResultsNum > PAGE_SIZE && (
+              <p className="opacity-70 text-center mt-auto">
+                Showing {filteredResultsNum} of {jobs.length} job posts
+              </p>
+            )}
+            <div className="h-[100px]">
+              <PostPagination
+                currentPage={currentPage}
+                onPageChange={(newPage: number) => {
+                  setCurrentPage(newPage);
+                }}
+                totalItemNum={filteredResultsNum}
+                pageSize={PAGE_SIZE}
+              />
+            </div>
           </div>
         </div>
       </div>
