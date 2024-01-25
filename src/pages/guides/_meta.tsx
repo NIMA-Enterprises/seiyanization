@@ -14,5 +14,6 @@ const meta: Meta = {
     "How to Transfer an NFT in Compass Wallet",
   "deposit-and-withdraw-from-cex": "Deposit and withdraw from CEX",
   "bridge-to-sei": "Bridge to Sei",
+  "swap-via-simpleswap": "Swap via SimpleSwap",
 };
 export default meta;

@@ -710,4 +710,15 @@ export const guides: PostType[] = [
     image: "",
     tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
   },
+  {
+    title: "Swap via Simpleswap",
+    description:
+      "SimpleSwap tutorial for obtaining $SEI on Sei Network: Select tokens, choose $SEI, specify amount, input Sei wallet details, and execute the swap. Quick and efficient process with additional wallet funding options included.",
+    date: "25.01.2024.",
+    author: "BoJack",
+    xUsername: "@0xbezzub",
+    href: "guides/swap-via-simpleswap",
+    image: "",
+    tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
+  },
 ];
