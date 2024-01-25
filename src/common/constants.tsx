@@ -448,6 +448,15 @@ export const videos = [
     description: "",
     featured: false,
   },
+  {
+    id: 10,
+    tags: [VIDEO_TAGS.FOUNDERS, VIDEO_TAGS.PODCAST],
+    title: "A Guide to Sei V2: Parallelizing The EVM ",
+    image: "https://img.youtube.com/vi/8dNGOKjDfIg/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=8dNGOKjDfIg",
+    description: "",
+    featured: true,
+  },
 ];
 
 export const featuredTopics: Topic[] = [
