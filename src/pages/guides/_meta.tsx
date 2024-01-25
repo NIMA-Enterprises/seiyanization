@@ -13,5 +13,6 @@ const meta: Meta = {
   "how-to-transfer-an-nft-in-compass-wallet":
     "How to Transfer an NFT in Compass Wallet",
   "deposit-and-withdraw-from-cex": "Deposit and withdraw from CEX",
+  "bridge-to-sei": "Bridge to Sei",
 };
 export default meta;

@@ -690,4 +690,15 @@ export const guides: PostType[] = [
     image: "",
     tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
   },
+  {
+    title: "Bridge to Sei",
+    description:
+      "Guide on transferring assets to Sei Network: Check liquidity, use $USDC for optimal results, connect to Sei and Metamask wallets, bridge assets, and complete the swap on Astroport. Offers additional alternatives.",
+    date: "24.01.2024.",
+    author: "BoJack",
+    xUsername: "@0xbezzub",
+    href: "guides/bridge-to-sei",
+    image: "",
+    tags: [GUIDE_TAGS.TUTORIAL, GUIDE_TAGS.COMMUNITY],
+  },
 ];
