@@ -85,7 +85,7 @@ const ToolsPage: React.FC<{ className?: string }> = ({ className }) => {
               }{" "}
               of {homeTools.length} tools categories
             </p> */}
-            <div className="flex flex-col gap-6">
+            <div className="flex min-h-[650px] flex-col gap-6">
               {homeTools
                 // .filter((guide) => checkEnabledFilters([guide.title]))
                 .map((category) => (
@@ -93,7 +93,7 @@ const ToolsPage: React.FC<{ className?: string }> = ({ className }) => {
                     {/* <h2 className="text-md uppercase opacity-80">
                       {category.title}
                     </h2> */}
-                    <div className="grid gap-4 grid-cols-auto-fill-full grid-cols-2 md:grid-cols-3 2xl:grid-cols-4">
+                    <div className="grid mb-80 gap-4 grid-cols-auto-fill-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4">
                       {category.items.map((tool) => (
                         <Card
                           className="flex items-center  cursor-pointer hover:bg-sei-card-inner-light hover:dark:bg-sei-card-inner-dark border-none p-2 px-4"
