@@ -95,7 +95,7 @@ export const Page = (props) => {
               .catch(err => console.error('Error connecting to Sei node:', err));
         ```
 
-       
+
       </TabsContent>
       <TabsContent value="example2">
         ```bash filename="example2" showLineNumbers
@@ -125,7 +125,7 @@ export const Page = (props) => {
             process.stdin.resume();
         ```
 
-        
+
       </TabsContent>
       <TabsContent value="example3">
         ```bash filename="example3" showLineNumbers
@@ -142,7 +142,7 @@ export const Page = (props) => {
         //Both the above functions have optional parameters for selecting a certain account index in a given wallet
         ```
 
-        
+
       </TabsContent>
       <TabsContent value="example4">
         ```bash filename="example4" showLineNumbers
@@ -151,22 +151,23 @@ export const Page = (props) => {
         const isValidSeiAddress = isValidAddress(ADDRESS_TO_TEST);
         ```
 
-        
+
       </TabsContent>
        <TabsContent value="example5">
         ```bash filename="example5" showLineNumbers
             module.exports = {
               networks: {
                 testnet: {
-                  url: 'https://evm-devnet.seinetwork.io',
+                  url: 'https://evm-rpc.arctic-1.seinetwork.io',
                   chainId: 713715,
+                  gasLimit: 5000000000,
                   timeout,
                   accounts,
                 },
               },
             }
         ```
-       
+
       </TabsContent>
   </div>
   </Tabs>
