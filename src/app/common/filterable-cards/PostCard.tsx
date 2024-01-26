@@ -27,6 +27,7 @@ const PostCard = ({
   author,
   image,
   open,
+  expiresAt,
   href,
   featured,
   date,
@@ -44,12 +45,40 @@ const PostCard = ({
       author
     )}&type=${encodeURIComponent(ogImgType)}`;
 
+  const isJob = href.includes("jobs/");
+
+  const expiresDate = new Date(
+    expiresAt?.split(".")?.reverse()?.join("-")
+  )?.getTime();
+
+  const isJobExpired = isJob && Date.now() > expiresDate;
+
   return (
     <Card className="!p-0 overflow-hidden w-full flex flex-col" href={href}>
-      <ImageWithLoading
-        url={imageUrl}
-        className="rounded-lg object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
-      />
+      {isJob ? (
+        <div className="relative md:h-[200px] lg:h-[180px]">
+          <ImageWithLoading
+            url={imageUrl}
+            className="rounded-lg absolute object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
+          />
+          <div className="absolute right-2 top-2">
+            {isJobExpired || !expiresAt ? (
+              <p className="px-1 text-[10px] rounded  bg-red-400 dark:bg-red-400 text-sei-card-bg-dark font-bold uppercase ">
+                Closed
+              </p>
+            ) : (
+              <p className="px-1 text-[10px] rounded  bg-sei-main-light dark:bg-sei-main-dark text-sei-card-bg-dark font-bold uppercase ">
+                {"Active Until " + expiresAt}
+              </p>
+            )}
+          </div>
+        </div>
+      ) : (
+        <ImageWithLoading
+          url={imageUrl}
+          className="rounded-lg object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
+        />
+      )}
 
       <div className="flex flex-col gap-2 p-4 flex-1">
         {(date || featured) && (

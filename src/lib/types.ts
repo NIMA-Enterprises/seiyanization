@@ -7,6 +7,7 @@ export type PostType = {
   date: string;
   href: string;
   author?: string;
+  expiresAt?: string;
   image: string;
   tags: string[];
   open?: boolean;

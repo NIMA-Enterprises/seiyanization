@@ -17,16 +17,18 @@ export const jobs: PostType[] = [
     href: "jobs/community-manager-dragonswap",
     image: "",
     tags: [JOB_TAGS.COMMUNITY],
-    featured: false,
+    expiresAt: "20.02.2024.",
+    featured: true,
   },
   {
     title: "Position: Pallet Exchange - Full Stack Engineer",
     description: "If you're passionate about NFTs, we want you on our team.",
     date: "20.01.2024.",
+    expiresAt: "26.02.2024.",
     href: "jobs/full-stack-engineer-pallet",
     image: "",
     tags: [JOB_TAGS.ENGINEERING],
-    featured: false,
+    featured: true,
   },
 ];
 
@@ -98,6 +100,12 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
     .sort((a, b) => {
       const dateA = new Date(a.date.split(".").reverse().join("-")).getTime();
       const dateB = new Date(b.date.split(".").reverse().join("-")).getTime();
+      const expiresAtA = new Date(
+        a?.expiresAt?.split(".")?.reverse()?.join("-") || ""
+      )?.getTime();
+      const expiresAtB = new Date(
+        b?.expiresAt?.split(".")?.reverse()?.join("-") || ""
+      )?.getTime();
 
       if (a.featured && !b.featured) {
         // Featured come first
@@ -106,11 +114,27 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
         // non featured
         return 1;
       } else {
-        // Both featured or both non-featured, sort by date
-        if (sortOrder === "newest") {
-          return dateB - dateA;
+        // Both featured or both non-featured, sort by date and expiresAt
+        if (expiresAtA > Date.now() && expiresAtB > Date.now()) {
+          // Both jobs are not expired, sort by date
+          if (sortOrder === "newest") {
+            return dateB - dateA;
+          } else {
+            return dateA - dateB;
+          }
+        } else if (expiresAtA > Date.now()) {
+          // Job A is not expired
+          return -1;
+        } else if (expiresAtB > Date.now()) {
+          // Job B is not expired
+          return 1;
         } else {
-          return dateA - dateB;
+          // Both jobs are expired, sort by date
+          if (sortOrder === "newest") {
+            return dateB - dateA;
+          } else {
+            return dateA - dateB;
+          }
         }
       }
     });
