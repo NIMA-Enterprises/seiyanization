@@ -56,10 +56,10 @@ const PostCard = ({
   return (
     <Card className="!p-0 overflow-hidden w-full flex flex-col" href={href}>
       {isJob ? (
-        <div className="relative md:h-[200px] lg:h-[180px]">
+        <div className="relative h-[200px] md:h-[200px] lg:h-[180px]">
           <ImageWithLoading
             url={imageUrl}
-            className="rounded-lg absolute object-cover w-full h-auto md:h-[200px] lg:h-[180px]"
+            className="rounded-lg absolute object-cover h-[200px] w-full md:h-[200px] lg:h-[180px]"
           />
           <div className="absolute right-2 top-2">
             {isJobExpired || !expiresAt ? (
