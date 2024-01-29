@@ -17,7 +17,7 @@ export const jobs: PostType[] = [
     href: "jobs/community-manager-dragonswap",
     image: "",
     tags: [JOB_TAGS.COMMUNITY],
-    expiresAt: "20.02.2024.",
+    expiresAt: "28.01.2024.",
     featured: true,
   },
   {
