@@ -554,6 +554,15 @@ export const videos = [
     description: "",
     featured: false,
   },
+  {
+    id: 31,
+    tags: [VIDEO_TAGS.TUTORIAL],
+    title: "How To Buy And List Sei NFTs On Pallet Exchange",
+    image: "https://img.youtube.com/vi/5w7Lfk-zsnk/maxresdefault.jpg",
+    href: "https://www.youtube.com/watch?v=5w7Lfk-zsnk",
+    description: "",
+    featured: false,
+  },
 ];
 
 export const featuredTopics: Topic[] = [
