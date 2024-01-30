@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+
 import { PostType } from "@/lib/types";
 import { JOB_TAGS } from "@/common/constants";
-import { PostFilters } from "../common/filterable-cards/PostFilters";
-import { PostCard } from "../common/filterable-cards/PostCard";
 import SortByDate from "@/components/SortByDate";
-
+import { PostCard } from "../common/filterable-cards/PostCard";
 import PostPagination from "@/components/pagination/PostPagination";
+import { PostFilters } from "../common/filterable-cards/PostFilters";
 
 // not in contstants because it will change frequently
 export const jobs: PostType[] = [
@@ -19,6 +19,7 @@ export const jobs: PostType[] = [
     tags: [JOB_TAGS.COMMUNITY],
     expiresAt: "28.01.2024.",
     featured: true,
+    open: true,
   },
   {
     title: "Position: Pallet Exchange - Full Stack Engineer",
@@ -29,6 +30,7 @@ export const jobs: PostType[] = [
     image: "",
     tags: [JOB_TAGS.ENGINEERING],
     featured: true,
+    open: true,
   },
 ];
 
@@ -96,7 +98,7 @@ const JobsPage: React.FC<{ className?: string }> = ({ className }) => {
   };
 
   const sortedJobs = jobs
-    .filter((job) => checkEnabledFilters(job.tags))
+    .filter((job) => job.open && checkEnabledFilters(job.tags))
     .sort((a, b) => {
       const dateA = new Date(a.date.split(".").reverse().join("-")).getTime();
       const dateB = new Date(b.date.split(".").reverse().join("-")).getTime();
