@@ -616,6 +616,7 @@ export enum JOB_TAGS {
   ENGINEERING = "Engineering",
   MARKETING = "Marketing",
   COMMUNITY = "Community",
+  ACTIVE = "Active Now",
 }
 
 export enum ARTICLE_TAGS {

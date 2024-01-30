@@ -28,7 +28,7 @@ export const jobs: PostType[] = [
     expiresAt: "26.02.2024.",
     href: "jobs/full-stack-engineer-pallet",
     image: "",
-    tags: [JOB_TAGS.ENGINEERING],
+    tags: [JOB_TAGS.ENGINEERING, JOB_TAGS.ACTIVE],
     featured: true,
     open: true,
   },
