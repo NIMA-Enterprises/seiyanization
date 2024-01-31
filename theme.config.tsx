@@ -20,7 +20,7 @@ const config: DocsThemeConfig = {
   },
   navbar: {
     component: (props: any) => <Navbar {...props} />,
-    extraContent: <ThemeSwitch />,
+    extraContent: <ThemeSwitch className="hidden md:block" />,
   },
   sidebar: {
     toggleButton: false,
