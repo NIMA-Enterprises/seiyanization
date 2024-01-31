@@ -51,7 +51,7 @@ const SubMenu = (props: Props) => {
         <Link
           target="_blank"
           href={becomeSeiyanizationWriterForm}
-          className="flex items-center gap-1 cursor-pointer border p-2 rounded border-sei-main-light dark:border-sei-main-dark hover:border-sei-main-light/70 hover:dark:border-sei-main-dark/70 text-sm min-w-fit text-sei-main-light hover:text-sei-main-light/70 dark:text-sei-main-dark dark:hover:text-sei-main-dark/70"
+          className="hidden sm:flex items-center gap-1 cursor-pointer border p-2 rounded border-sei-main-light dark:border-sei-main-dark hover:border-sei-main-light/70 hover:dark:border-sei-main-dark/70 text-sm min-w-fit text-sei-main-light hover:text-sei-main-light/70 dark:text-sei-main-dark dark:hover:text-sei-main-dark/70"
         >
           <h3>Contribute to Seiyanization</h3>
         </Link>
