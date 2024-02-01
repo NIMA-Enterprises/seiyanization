@@ -6,7 +6,14 @@ import {
   Topic,
   Changelog,
 } from "@/lib/types";
-import { Boxes, FileQuestion, ScrollText, Settings, Vault } from "lucide-react";
+import {
+  Boxes,
+  FileQuestion,
+  PackageSearch,
+  ScrollText,
+  Settings,
+  Vault,
+} from "lucide-react";
 
 // GLOBAL
 export const routes = {
@@ -159,6 +166,30 @@ export const homeTools: HomeTool[] = [
           <Boxes className="stroke-sei-main-light dark:stroke-sei-main-dark" />
         ),
         href: "https://esb.nima.enterprises",
+      },
+      {
+        title: "Faucetme Sei Faucet",
+        desc: "Faucet to claim EVM testnet SEI tokens.",
+        icon: (
+          <Vault className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://sei-evm.faucetme.pro/",
+      },
+      {
+        title: "Seitrace Explorer",
+        desc: "SEI Network Explorer (EVM only, Cosmos coming)",
+        icon: (
+          <PackageSearch className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://seitrace.com/",
+      },
+      {
+        title: "Seistream Explorer",
+        desc: "SEI Network Explorer (EVM and Cosmos)",
+        icon: (
+          <PackageSearch className="stroke-sei-main-light dark:stroke-sei-main-dark" />
+        ),
+        href: "https://seistream.app/ ",
       },
     ],
   },
