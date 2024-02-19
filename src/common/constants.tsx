@@ -328,6 +328,15 @@ export const videos = [
     featured: false,
   },
   {
+    id: 32,
+    tags: [VIDEO_TAGS.TUTORIAL],
+    title: "Sei Starter Kit & Video Tutorial",
+    image: "https://img.youtube.com/vi/Nc3N-W0Vqyw/hqdefault.jpg",
+    href: "https://www.youtube.com/watch?v=Nc3N-W0Vqyw",
+    description: "",
+    featured: true,
+  },
+  {
     id: 2,
     tags: [VIDEO_TAGS.FOUNDERS],
     title: "DeFi by Design EP120: Sei Network Explained",
