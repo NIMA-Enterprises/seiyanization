@@ -810,6 +810,17 @@ export const articles: PostType[] = [
     image: "",
     tags: [ARTICLE_TAGS.COMMUNITY],
   },
+  {
+    title: "Sei v2 Public Devnet is Live",
+    description:
+      "Description: It's been almost a week since the public devnet was launched, marking a significant milestone for the Sei ecosystem. Already, we've witnessed the birth of the first EVM devnet projects tailored for Sei, and we're ready to dive in and put them through their paces.",
+    date: "19.02.2024.",
+    author: "BoJack",
+    xUsername: "@0xbezzub",
+    href: "articles/sei-v2-public-devnet-is-live",
+    image: "",
+    tags: [ARTICLE_TAGS.COMMUNITY, ARTICLE_TAGS.ENGINEERING],
+  },
 ];
 
 export const guides: PostType[] = [
