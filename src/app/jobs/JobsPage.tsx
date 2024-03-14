@@ -10,18 +10,6 @@ import { PostFilters } from "../common/filterable-cards/PostFilters";
 // not in contstants because it will change frequently
 export const jobs: PostType[] = [
   {
-    title: "DragonSwap - Community Manager",
-    description:
-      "Join NIMA as a Community Manager for DragonSwap! Foster vibrant communities, develop engagement strategies, and drive innovation in DeFi.",
-    date: "18.01.2024.",
-    href: "jobs/community-manager-dragonswap",
-    image: "",
-    tags: [JOB_TAGS.COMMUNITY],
-    expiresAt: "28.01.2024.",
-    featured: true,
-    open: true,
-  },
-  {
     title: "Position: Pallet Exchange - Full Stack Engineer",
     description: "If you're passionate about NFTs, we want you on our team.",
     date: "20.01.2024.",
@@ -29,6 +17,18 @@ export const jobs: PostType[] = [
     href: "jobs/full-stack-engineer-pallet",
     image: "",
     tags: [JOB_TAGS.ENGINEERING, JOB_TAGS.ACTIVE],
+    featured: true,
+    open: true,
+  },
+  {
+    title: "Seijin - Community Manager",
+    description:
+      "Shape fundraising's future with NIMA's blockchain innovation.",
+    date: "14.03.2024.",
+    expiresAt: "14.04.2024.",
+    href: "jobs/seijin-community-manager",
+    image: "",
+    tags: [JOB_TAGS.COMMUNITY, JOB_TAGS.ACTIVE],
     featured: true,
     open: true,
   },
